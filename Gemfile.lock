@@ -7,6 +7,16 @@ GIT
       jekyll (>= 3.7, < 5.0)
       posix-spawn (~> 0.3.9)
 
+GIT
+  remote: https://github.com/shth/jekyll-org.git
+  revision: 9a2efd93913668e89d3104c2700b0efa349c3bc0
+  branch: master
+  specs:
+    jekyll-org (1.1.1)
+      jekyll (>= 3.5.0)
+      json
+      org-ruby (>= 0.9.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,6 +54,7 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    json (2.6.3)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -57,6 +68,8 @@ GEM
     nokogiri (1.15.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    org-ruby (0.9.12)
+      rubypants (~> 0.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     posix-spawn (0.3.15)
@@ -68,6 +81,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (4.1.0)
+    rubypants (0.7.1)
     safe_yaml (1.0.5)
     sass-embedded (1.59.3)
       google-protobuf (~> 3.21)
@@ -83,6 +97,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-last-modified-at!
+  jekyll-org!
   nokogiri
   webrick (~> 1.8)
 

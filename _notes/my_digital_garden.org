@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       9b725f0d-415d-452f-bad4-c39b1be6c33f
+:END:
+#+title: My Digital Garden
+#+category: My Digital Garden
+#+date: [2023-10-07 Sat 18:27]
+hihi
