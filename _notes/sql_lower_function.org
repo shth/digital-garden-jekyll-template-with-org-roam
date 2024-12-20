@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b315b91c-f4b8-43d7-84c3-c6774dd0b9c3
+:END:
+#+title: SQL Lower function
+#+category: SQL Lower function
+#+date: [2023-02-14 Tue 15:39]

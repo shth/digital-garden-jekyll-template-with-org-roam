@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5c3af3e3-bedc-4b40-b9b9-94729b9b6755
+:END:
+#+title: HTTP Proxy vs Gateway
+#+category: HTTP Proxy vs Gateway
+#+date: [2023-01-02 Mon 17:02]
+[[id:b48d5830-ca09-4875-9398-7710c84930c9][HTTP proxy]] connects a client to a server
+
+[[id:def1d088-1965-4640-805e-8d7641c04bfc][HTTP Gateways]] connects 2 or more parties with different protocols

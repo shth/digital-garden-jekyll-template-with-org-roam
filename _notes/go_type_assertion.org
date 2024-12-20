@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5e6a2afd-1768-4876-9901-93fbff54b529
+:END:
+#+title: Go Type Assertion
+#+category: Go Type Assertion
+#+date: [2022-08-08 Mon 20:16]

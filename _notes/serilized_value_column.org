@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4c980d99-e933-408f-81e6-26dce142502a
+:END:
+#+title: Serilized value column
+#+category: Serilized value column
+#+date: [2023-03-01 Wed 17:35]

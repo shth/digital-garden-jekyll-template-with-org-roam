@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       c906789c-168f-4a77-b50a-e8d53f4ba69a
+:END:
+#+title: Counting Semaphore
+#+category: Counting Semaphore
+#+date: [2022-08-12 Fri 19:03]
+
+a buffered channel which act as counters for how many goroutines can run at a time
+
+the reversed action (sending = acquire, receiving = release) is to avoid having to fill the channel upfront
+
+a [[id:bc46fa6a-1cba-424b-b3e0-73304aadf2fa][Go Mutex]] is just a counting semaphore with capacity of 1
+#+begin_src go
+sema := make(chan struct{}, 20)
+
+func() {
+  sema <- struct{}{}  // acquire token
+  // ...
+  <-sema              // release token
+}
+#+end_src

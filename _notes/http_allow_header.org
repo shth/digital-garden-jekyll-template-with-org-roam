@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       698d4633-4757-4e30-973f-4f5d643fdc3e
+:END:
+#+title: HTTP Allow Header
+#+category: HTTP Allow Header
+#+date: [2023-01-10 Tue 13:10]

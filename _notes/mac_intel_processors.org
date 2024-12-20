@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1bcfbcea-960d-42e0-84ed-cec8a39222e6
+:END:
+#+title: Mac Intel processors
+#+category: Mac Intel processors
+#+date: [2023-10-07 Sat 17:34]

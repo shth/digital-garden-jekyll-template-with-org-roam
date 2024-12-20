@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       0ba05085-1dd8-4250-8fdb-7a3c67720333
+:END:
+#+title: Go Concurrency
+#+category: Go Concurrency
+#+date: [2022-09-06 Tue 22:07]
+[[id:98e984df-3e49-4194-aa5c-d7d7489e68a0][Go Race Conditions]]:
+when 2 goroutines access the same variable concurrently and at least one contains a write
+
+solutions:
+1. never write to the variable
+2. confine the variable to a single goroutine - [[id:45d49f7a-15c7-4b34-b06c-3573060e39f3][Monitor routine]]
+3. mutual exclusion (Mutex)

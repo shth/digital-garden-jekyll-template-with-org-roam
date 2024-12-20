@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       558f924a-7af8-467b-bddd-42aa95ba123c
+:END:
+#+title: Stop words
+#+category: Stop words
+#+date: [2023-06-24 Sat 13:50]

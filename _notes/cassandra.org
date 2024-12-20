@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       136525b0-4c2a-4f45-8b25-01abf2032f92
+:END:
+#+title: Cassandra
+#+category: Cassandra
+#+date: [2022-07-19 Tue 09:48]

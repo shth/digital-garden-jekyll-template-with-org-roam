@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       10e7ad73-c25a-415d-b42b-38c7aa674671
+:END:
+#+title: In store raffle
+#+category: In store raffle
+#+date: [2022-07-12 Tue 11:32]
+
+[[https://hypebeast.atlassian.net/browse/PRDEV-307][jira]]
+
+Difference from online [[id:e70808a6-a43f-4842-af9a-6c83156c1231][Raffle]]
+- doesn't capture payment
+- doesn't need to input address

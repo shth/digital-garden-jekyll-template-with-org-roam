@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       55c4b464-f6a1-4cd5-aa57-afeb72191db8
+:END:
+#+title: Finite State Machine
+#+category: Finite State Machine
+#+date: [2023-02-04 Sat 00:02]
+
+e.g. [[id:5152b3f7-dd74-45d3-a7ab-beaa549ebab8][XState]]

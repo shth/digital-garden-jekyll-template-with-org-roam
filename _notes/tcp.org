@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       fa5cf477-c629-498d-86a9-365197a3763d
+:END:
+#+title: TCP
+#+category: TCP
+#+date: [2023-01-02 Mon 17:25]
+more bandwidth is gived to local connections instead of remote ones
+
+each request is sent with unique [[id:190fe163-77c8-4667-9c61-ca81835487b5][TCP sequcne number]]
+
+if any sequence number is missing, the packet is considered lost and will be re-requested
+
+
+
+* Packet loss
+will decrease the capacity of the connection
+
+[[id:20a4359e-7cb9-4028-9b9b-610759322ff6][HTTP2]] might be more affected than [[id:b10ceeb9-aad3-47f5-894d-33ad1a23d74b][HTTP]] because it only use 1 connection, a single packet loss can affect the entire connection
+* [[id:8f171f0c-1c33-41b5-8e50-55a9ffc5eabb][Head of line blocking]]
+[[id:391ee57f-d967-45c1-b47e-926674d1aaf4][TCP Selective acknowledgement]]

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       ec3d3bb9-a268-4809-a36f-fcd293dad886
+:END:
+#+title: HTTP Conditional headers
+#+category: HTTP Conditional headers
+#+date: [2023-01-30 Mon 15:12]
+e.g.
+- [[id:77b76896-8f8d-44f8-8737-5acacc413955][HTTP If-Modified-Since header]]
+- [[id:95603726-cd2c-42a1-a151-551fa98839ab][HTTP If-None-Match Header]]
+* weak validators
+may not uniquely identify the document
+e.g. file size
+
+
+* strong validators
+must uniquely identify the document
+e.g. checksum

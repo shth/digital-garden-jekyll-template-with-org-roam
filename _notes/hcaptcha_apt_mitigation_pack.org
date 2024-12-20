@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       14dfd48e-a778-4822-af62-0e3c9dddf1dc
+:END:
+#+title: Hcaptcha APT mitigation pack
+#+category: Hcaptcha APT mitigation pack
+#+date: [2023-07-18 Tue 14:48]

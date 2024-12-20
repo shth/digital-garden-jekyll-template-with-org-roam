@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       68a26b1e-eec7-4f87-8107-1ae8c23e1fab
+:END:
+#+title: HTTP From Header
+#+category: HTTP From Header
+#+date: [2023-01-19 Thu 09:15]
+contains client email, mainly used by web robots so web masters can contact the author if the robots are doing something wrong

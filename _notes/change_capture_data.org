@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       23669273-b6ae-449d-bf76-8bd581bc1534
+:END:
+#+title: Change Capture Data
+#+category: Change Capture Data
+#+date: [2022-07-19 Tue 09:38]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5996e0a9-84cb-4feb-ba43-c63b9027c4b7
+:END:
+#+title: HTTP 304 status code
+#+category: HTTP 304 status code
+#+date: [2023-01-10 Tue 13:11]
+used for [[id:99f921aa-7cf8-413f-b235-e3bfe0357ffa][HTTP Cache Revalidation]], telling the client that the resource is not modified and its safe to keep using the cache entry
+
+saves bandwidth coz no body was sent

@@ -4,4 +4,3 @@
 #+title: My Digital Garden
 #+category: My Digital Garden
 #+date: [2023-10-07 Sat 18:27]
-hihi

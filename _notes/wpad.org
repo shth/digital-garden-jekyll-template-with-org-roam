@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f78f607e-d808-4c13-8623-f33bd7dd0d7b
+:END:
+#+title: WPAD
+#+category: WPAD
+#+date: [2023-03-06 Mon 22:04]
+Stands for Web Proxy Auto-Discovery
+
+use the following techiques
+- [[id:8889b548-84e6-4379-807b-e5f05ac2af86][DHCP]]
+- [[id:cc230b50-86bc-4c38-927b-4ada95335783][DNS well known hostname]]

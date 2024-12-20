@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5d96b112-2a23-4010-b9fc-6229f67ae081
+:END:
+#+title: OOP
+#+category: OOP
+#+date: [2022-12-12 Mon 22:17]

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       6484823a-cc22-4930-8139-82a94a60d504
+:END:
+#+title: Lalamove KYB refinement
+#+category: Lalmove KYB refinement
+#+date: [2022-09-29 Thu 15:03]
+[[https://www.figma.com/file/8yiIKISbBFgJLcQHsrdJs1/%F0%9F%96%A5-Business-Verification?node-id=0%3A2][Figma]]
+[[https://huolala.feishu.cn/wiki/wikcnJUQr0TroZd7I0i1gQCL8Wb][PRD]]
+* no re-submission phase 1
+* document required configurable according to market
+* max filesize 5MB
+* "Welcome to lalamove business" modal is existing?
+* Changing uploaded documents is existing?
+* released market by market
+* Todos
+** TODO upload guideline modal
+** TODO upload file preview

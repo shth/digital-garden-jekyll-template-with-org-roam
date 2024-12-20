@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d5f2f858-9800-4962-9ebd-360af046744b
+:END:
+#+title: HTTP Accept-Language Header
+#+category: HTTP Accept-Language Header
+#+date: [2023-01-30 Mon 15:18]

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f1077309-e378-4622-b9b5-7c13b1bd3e34
+:END:
+#+title: Is HBX loyalty event sourced
+#+category: Is HBX loyalty event sourced
+#+date: [2022-07-14 Thu 11:54]
+Yes:
+- we have transaction records on XP and [[id:d7ee7ed3-9d5a-41f0-b11c-18801c3618a3][Hypecoin]]
+
+No:
+- vip level
+- vip expiry date
+- state is not derived
+  - there was concerns on performance because of loading all transactions with every read

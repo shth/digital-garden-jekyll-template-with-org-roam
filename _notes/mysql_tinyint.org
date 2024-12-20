@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       907258b1-b49c-4f81-b581-1c1a95709831
+:END:
+#+title: Mysql tinyint
+#+category: Mysql tinyint
+#+date: [2023-05-17 Wed 17:57]

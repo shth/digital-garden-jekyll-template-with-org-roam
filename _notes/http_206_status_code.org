@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fc8619dc-d6f4-4746-b7a7-467e863f655d
+:END:
+#+title: HTTP 206 status code
+#+category: HTTP 206 status code
+#+date: [2023-01-02 Mon 17:09]

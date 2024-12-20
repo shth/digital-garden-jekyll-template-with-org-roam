@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       778d9d0e-3785-4cc4-83b6-1c33675b9a4c
+:END:
+#+title: HTTP Set-Cookie Header
+#+category: HTTP Set-Cookie Header
+#+date: [2023-01-19 Thu 09:16]
+attributes:
+- domain=xxx
+  means this cookie is only intended for this domain
+- path=xxx
+  means this cookie is only intended for this path
+- secure
+  means this cookie should only be sent in SSL connections

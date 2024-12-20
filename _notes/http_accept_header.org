@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       edfa23b7-4b40-4282-a941-6c85c28c60fb
+:END:
+#+title: HTTP Accept Header
+#+category: HTTP Accept Header
+#+date: [2023-01-30 Mon 15:17]
+specify the desired media type of this client

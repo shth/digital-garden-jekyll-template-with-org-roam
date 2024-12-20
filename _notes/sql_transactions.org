@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       655973b9-84f4-4879-b16f-01da2913bbc1
+:END:
+#+title: SQL Transactions
+#+category: SQL Transactions
+#+date: [2023-11-14 Tue 17:21]

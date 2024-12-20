@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5c0cea94-422d-47dd-b5d1-ac4f878578d3
+:END:
+#+title: HTTP Option Method
+#+category: HTTP Option Method
+#+date: [2023-01-10 Tue 13:09]
+Allow client to check what capability the server supports
+
+No Body, only a [[id:698d4633-4757-4e30-973f-4f5d643fdc3e][HTTP Allow Header]] to list all supported methods

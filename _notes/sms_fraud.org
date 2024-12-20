@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9e7088b6-7335-4ee4-9947-6aa7e62c819c
+:END:
+#+title: SMS fraud
+#+category: SMS fraud
+#+date: [2023-05-03 Wed 16:20]

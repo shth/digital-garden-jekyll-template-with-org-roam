@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       20a4359e-7cb9-4028-9b9b-610759322ff6
+:END:
+#+title: HTTP2
+#+category: HTTP2
+#+date: [2023-01-02 Mon 17:26]
+
+features:
+- [[id:8d563176-4a24-44df-aadd-a099de23af1e][Header compression]]
+
+based on [[id:ed48b76d-45e4-47e1-acb1-a87f88834cfd][SPDY]] protocol developed by [[id:3a005338-cecf-4a2d-b935-c3d2653296c6][Google]]
+
+it's not necessary to implement HTTP2 all the way, because the internal connections between backend services are probably low latency
+
+Binary format
+
+* [[id:deb093c8-a114-42cb-b0cd-8f9be97cec28][HTTP2 streams]]
+client initiated streams have odd number stream id
+server initiated streams have even number stream id
+
+Stream id 0 is reserved for [[id:86d09071-a939-4d8c-87c0-027c391fac75][HTTP2 Control Stream]]
+
+browsers and servers will place a limit to the number of concurrent stream in 1 connection. usually around 100 to 200
+* [[id:0c83e254-ae3e-4fb5-9522-a3499b94af97][h2c]]
+HTTP 2 without [[id:ec5b68a4-dc08-453a-a0ea-53df340f6aac][HTTPS]]
+
+used in server-to-server connection only
+* [[id:5abc82c9-0e32-4dee-9697-fced68ae9518][h2]]
+HTTP2 with [[id:ec5b68a4-dc08-453a-a0ea-53df340f6aac][HTTPS]]
+
+used in browser-to-server connections
+* debugging tools
+
+- [[id:98059119-2167-4269-b849-288d6b43de9e][Chrome net export page]]
+- [[id:000a4f1f-3e75-4451-b2a2-d95454e15c2c][Wireshark]]
+  need to set the key to decrypt the message
+- [[id:0a37a6b0-2c20-4a53-a802-02d7af0db2f4][NGHttp Cli tool]]

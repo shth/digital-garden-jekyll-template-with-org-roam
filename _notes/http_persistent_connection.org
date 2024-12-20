@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       db9c7da8-d9dd-4ef5-a57c-7d60cfa5856b
+:END:
+#+title: HTTP Persistent connection
+#+category: HTTP Persistent connection
+#+date: [2023-01-02 Mon 17:00]

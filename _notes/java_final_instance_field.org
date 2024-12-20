@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0f480063-6570-4722-a62f-baf6f16320c5
+:END:
+#+title: Java Final instance field
+#+category: Java Final instance field
+#+date: [2022-12-03 Sat 13:08]
+
+the field must be initialized in the constructor
+useful when the field value is [[id:5876fb39-0f52-45bb-96d0-74bbebad30e0][Java primitive types]] or [[id:96337a72-e565-4c25-ad04-5cd2e339a1a0][Java Immutable class]] to ensure its value never changes

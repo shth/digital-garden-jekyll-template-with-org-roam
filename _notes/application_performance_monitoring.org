@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       391f70fa-7608-4b38-9d9a-3882cc9986e6
+:END:
+#+title: Application Performance Monitoring
+#+category: Application Performance Monitoring
+#+date: [2023-04-13 Thu 14:50]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       560bfcb4-a598-4418-adf5-6540641a58a5
+:END:
+#+title: Vault
+#+category: Vault
+#+date: [2023-04-06 Thu 15:46]

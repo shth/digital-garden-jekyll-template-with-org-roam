@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f7b3d06b-bd80-4800-9a2b-eeb59c276336
+:END:
+#+title: Lagom
+#+category: Lagom
+#+date: [2022-07-19 Tue 09:46]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       0e6b6166-260e-46ac-a446-889a12fb8124
+:END:
+#+title: Rollup
+#+category: Rollup
+#+date: [2022-09-16 Fri 14:26]

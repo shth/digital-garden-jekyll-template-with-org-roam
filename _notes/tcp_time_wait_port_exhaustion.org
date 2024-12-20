@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       84c013ca-adc5-466c-ad18-94abdf1c800c
+:END:
+#+title: TCP time_wait port exhaustion
+#+category: TCP time_wait port exhaustion
+#+date: [2023-01-02 Mon 17:41]
+
+servers maintains a cache of closed connections IP and port to make sure that stray packets after connection closed does not corrupt new connection of the same port

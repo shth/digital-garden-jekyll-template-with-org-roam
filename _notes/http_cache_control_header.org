@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       149d57c4-3b5c-4683-b432-2bba843cafdf
+:END:
+#+title: HTTP Cache-control Header
+#+category: HTTP Cache-control Header
+#+date: [2023-01-10 Tue 13:14]
+a response header that tells the client how long the respones data can be cached
+
+values:
+- max-age
+  how long in seconds it can be cached
+    #+begin_example
+    Cache-control: max-age=86400
+    #+end_example
+- no-cache
+  actually client can still cache it, but need to revalidate everytime
+- must-revalidate
+  require cache to revalidate stale entries but free to serve fresh entries
+- max-stale and min-fresh
+  request headers that control the freshness of response

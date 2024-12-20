@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       45270320-3df6-4f86-bc92-b9e44e8194cf
+:END:
+#+title: Go Blank imports
+#+category: Go Blank imports
+#+date: [2022-09-12 Mon 12:57]
+utilizing [[id:6a1349a5-8069-4267-8e98-3d1103f6e0c1][Go Renaming import]] but using "_" as the name
+can be used to run the package's init() method to get their side effects
+
+import _ "image/png"

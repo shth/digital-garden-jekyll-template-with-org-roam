@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       477e26dd-47df-4e27-b15b-0da10aa685ac
+:END:
+#+title: HTTP Pragma Header
+#+category: HTTP Pragma Header
+#+date: [2023-01-10 Tue 13:21]
+same as [[id:149d57c4-3b5c-4683-b432-2bba843cafdf][HTTP Cache-control Header]], but for HTTP 1.0 only
+
+mainly used for compatibility

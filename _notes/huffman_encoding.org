@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f3407403-30ad-4c63-900f-09d0f6d28075
+:END:
+#+title: Huffman encoding
+#+category: Huffman encoding
+#+date: [2023-03-06 Mon 23:39]

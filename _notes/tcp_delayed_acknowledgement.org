@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       638742cd-38bc-4f41-996f-c7e3438281b9
+:END:
+#+title: TCP delayed acknowledgement
+#+category: TCP delayed acknowledgement
+#+date: [2023-01-02 Mon 17:39]
+
+TCP server hold ack packet for a short time to find outgoing packets to piggyback the ack packet

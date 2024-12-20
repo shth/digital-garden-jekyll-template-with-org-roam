@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c4dcb09a-a641-4019-8a1b-651caba7a273
+:END:
+#+title: Lookback Compression
+#+category: Lookback Compression
+#+date: [2023-03-06 Mon 23:39]
+replace repeated patterens with reference to previous point of the data
+
+could lead to attacks like [[id:d2bb4e8d-1525-4891-bd4d-8707aaba360a][CRIME attack]]

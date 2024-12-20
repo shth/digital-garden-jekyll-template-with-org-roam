@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4c6daeb6-b76f-4695-b6e9-8da38dd165f2
+:END:
+#+title: Go sync.Once
+#+category: Go sync.Once
+#+date: [2022-09-10 Sat 10:29]
+provide lazy initialization for shared variable across goroutines

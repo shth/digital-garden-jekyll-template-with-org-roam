@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e70808a6-a43f-4842-af9a-6c83156c1231
+:END:
+#+title: Raffle
+#+category: Raffle
+#+date: [2022-07-12 Tue 11:30]

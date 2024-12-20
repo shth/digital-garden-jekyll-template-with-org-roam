@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2a7fac0e-a8c4-40f4-b869-1dbed75b0ef6
+:END:
+#+title: HTTP 302 status code
+#+category: HTTP 302 status code
+#+date: [2023-03-06 Mon 21:55]

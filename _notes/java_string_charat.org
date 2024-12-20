@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       2cbc9a61-5e5f-49ed-a608-b374f9d964b6
+:END:
+#+title: Java String.charAt()
+#+category: Java String.charAt()
+#+date: [2023-01-02 Mon 17:20]
+return the code unit (byte)
+
+to get the character, use [[id:634dc639-dc9b-4ee6-804f-74c9e046750c][Java String.codePointAt()]] instead

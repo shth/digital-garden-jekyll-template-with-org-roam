@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       eed79906-a45e-4ff3-9676-a56ffd46cb7c
+:END:
+#+title: Go Package
+#+category: Go Package
+#+date: [2022-09-12 Mon 12:51]

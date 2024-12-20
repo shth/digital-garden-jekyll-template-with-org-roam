@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       557371ea-da8f-4988-8b5b-09dd7529ead6
+:END:
+#+title: PHP register_shutdown_function()
+#+category: PHP __shutdown()
+#+date: [2023-05-16 Tue 18:06]

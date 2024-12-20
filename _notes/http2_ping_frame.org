@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       c11fab3b-0443-4790-aba2-0b243749a323
+:END:
+#+title: HTTP2 Ping frame
+#+category: HTTP2 Ping frame
+#+date: [2023-03-06 Mon 23:18]
+Used to measure the rount trip time or keep the connection alive

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       9631c493-dfc2-42fd-993a-89076b7a929a
+:END:
+#+title: RedisBloom
+#+category: RedisBloom
+#+date: [2023-01-02 Mon 17:36]
+
+a list of data structures for [[id:4e4bcdc0-6b91-41a5-b5d7-f7951848a679][Stream processing]]
+- [[id:f69f7b77-e43a-433c-96e1-8cf4f840d1e6][HyperLogLog]]
+- [[id:6364a2d2-eb9e-49b5-bdd0-afd5d5134458][Count min sketch]]
+- [[id:8ac8bc9e-dcb2-491f-85fa-c6e0355869cf][Top K]]
+- [[id:b1d68ed7-5433-43e9-b765-d7206011cac9][T digest]]
+- [[id:d7c07802-1464-4a54-b359-3f99d7c1c484][Cuckoo filter]]
+- [[id:4b036bd5-8792-4ece-97a4-63ce6354a2da][Bloom filter]]

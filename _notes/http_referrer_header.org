@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0adcab28-f613-423d-a46d-31b73ced58f3
+:END:
+#+title: HTTP Referrer Header
+#+category: HTTP Referrer Header
+#+date: [2023-01-19 Thu 09:15]
+contains what link user clicked that takes him to the server

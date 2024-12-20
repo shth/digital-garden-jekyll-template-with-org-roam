@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2f55f4a2-57f2-4146-bb84-0923a65a755e
+:END:
+#+title: Redis NX option
+#+category: Redis NX option
+#+date: [2023-04-11 Tue 15:04]
+means that only set a key when it does not exist

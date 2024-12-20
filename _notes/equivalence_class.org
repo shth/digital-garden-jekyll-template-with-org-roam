@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       42326a2d-89a3-4fc5-a9a5-3dc904339b44
+:END:
+#+title: Equivalence class
+#+category: Equivalence class
+#+date: [2023-04-06 Thu 16:52]

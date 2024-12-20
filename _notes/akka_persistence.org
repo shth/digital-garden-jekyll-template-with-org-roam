@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cc73c909-d978-468b-a98b-149be4541366
+:END:
+#+title: Akka persistence
+#+category: Akka persistence
+#+date: [2022-07-19 Tue 09:46]

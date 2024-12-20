@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       230f8fae-7508-467a-84fa-29f3818ec2b7
+:END:
+#+title: PHP Exception Class
+#+category: PHP Exception Class
+#+date: [2023-03-09 Thu 16:05]

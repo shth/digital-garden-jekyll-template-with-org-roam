@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4e4bcdc0-6b91-41a5-b5d7-f7951848a679
+:END:
+#+title: Stream processing
+#+category: Stream processing
+#+date: [2023-01-02 Mon 17:37]

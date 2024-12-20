@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b9a72b8f-e368-4682-b7b1-1d8a646e675f
+:END:
+#+title: PHP DatePeriod
+#+category: PHP DatePeriod
+#+date: [2023-03-03 Fri 10:21]

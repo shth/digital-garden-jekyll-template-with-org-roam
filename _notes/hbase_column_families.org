@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       93bb530e-4ace-4ecc-9e03-70bd2c038a5d
+:END:
+#+title: HBase Column families
+#+category: HBase Column families
+#+date: [2023-07-15 Sat 10:51]
+each column family contains arbitrary [[id:fb83913f-337b-4cc9-be3d-95ddae85a634][HBase columns]]

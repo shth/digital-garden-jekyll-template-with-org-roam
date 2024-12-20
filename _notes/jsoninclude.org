@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       eabd39cc-1f46-427b-9d28-c84449b84d43
+:END:
+#+title: @JsonInclude
+#+category: @JsonInclude
+#+date: [2023-10-10 Tue 11:35]

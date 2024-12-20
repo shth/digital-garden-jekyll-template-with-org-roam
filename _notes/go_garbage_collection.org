@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       70d5815a-47f6-49f1-ade6-3baa95ce3482
+:END:
+#+title: Go Garbage Collection
+#+category: Go Garbage Collection
+#+date: [2022-08-10 Wed 23:39]

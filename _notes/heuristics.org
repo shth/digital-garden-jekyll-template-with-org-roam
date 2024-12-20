@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       a33aeeee-aaa0-452a-8b60-09d5fc9837dd
+:END:
+#+title: Heuristics
+* [2021-06-04 Fri] How to generate migration script
+the diff command of [[id:e30b119e-4ecf-445f-a970-c055b2d89782][Symfony]] will compare your DB's state to the ORM annotations on your entities
+the former will be regard as old version, the latter will be newer version
+
+1. run `symfony console doctrine:schema:update --force` in your base branch (revert the DB state to previous)
+2. checkout feature branch (do not update schema)
+3. run `symfony console doctrine:migrations:diff`
+4. commit the migration file
+* [2021-06-04 Fri] How to fix "channel cannot be found error" when running [[id:0d7b7a04-38b7-4cf1-969d-eb921a971c1f][Behat]] test
+** modify these values in `.env.local`:
+- HBX_HOST="hbx.wip"
+
+the value need to match the value hard-coded [[https://github.com/101medialab/HBX/blob/master/behat.yml.dist#L53][here]]
+
+
+
+** check the masterRequest
+it needs to have _channel attribute
+
+* [2021-06-03 Thu] "input" is a restricted word when defining [[id:a4717b61-9567-4583-a2a0-0a9a2772ee17][Stimulus]] target
+* [2021-05-31 Mon] When rendering overlay mask for iframe element in [[id:5718a55e-3419-44be-bf02-768c8c215998][CSS]]
+use an "after" pseudo element instead
+
+e.g.
+[[https://github.com/paypal/paypal-checkout-components/issues/350#issuecomment-674388104][source]]
+.disabled-overlay {
+    position: relative;
+    margin-bottom: -8px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: .3;
+        z-index: 1000;
+    }
+}

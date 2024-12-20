@@ -1,0 +1,698 @@
+:PROPERTIES:
+:ID:       63881380-9465-4d1d-a62f-2b90adb68dc9
+:END:
+#+title: Macbook restart issue
+#+category: Macbook restart issue
+#+date: [2023-03-22 Wed 10:32]
+* issue report
+** 2023-03-22
+*** 1
+panic(cpu 7 caller 0xfffffe0028011090): "dart-usb0 (0xfffffe167da48000): DART(DARTBLK) error: SID 1 TTBR invalid exception after shutdown on write with DVA 0x14a00 (TTBR 0 SEG 0 PTE 0x5) ERROR_STATUS 0x81000401 TIME 0 TTE 0xffffffffffffffff AXI_ID 0)" @AppleT8020DART.cpp:1439
+Debugger message: panic
+Memory ID: 0xff
+OS release type: User
+OS version: 21G419
+Kernel version: Darwin Kernel Version 21.6.0: Mon Dec 19 20:46:01 PST 2022; root:xnu-8020.240.18~2/RELEASE_ARM64_T8101
+Fileset Kernelcache UUID: B58F220452BB9BEA5EF82BCC67F16FE1
+Kernel UUID: 370717C7-9E64-3A04-9DD4-A3A0E0B01E78
+iBoot version: iBoot-7459.141.1
+secure boot?: YES
+Paniclog version: 13
+KernelCache slide: 0x000000001f0c4000
+KernelCache base:  0xfffffe00260c8000
+Kernel slide:      0x000000001f874000
+Kernel text base:  0xfffffe0026878000
+Kernel text exec slide: 0x000000001f95c000
+Kernel text exec base:  0xfffffe0026960000
+mach_absolute_time: 0x84d000e679
+Epoch Time:        sec       usec
+  Boot    : 0x641948fa 0x0008b552
+  Sleep   : 0x641a6159 0x000e6223
+  Wake    : 0x641a615d 0x0001c391
+  Calendar: 0x641a631a 0x00026ffd
+
+Zone info:
+  Zone map: 0xfffffe1016e14000 - 0xfffffe3016e14000
+  . VM    : 0xfffffe1016e14000 - 0xfffffe14e3ae0000
+  . RO    : 0xfffffe14e3ae0000 - 0xfffffe167d478000
+  . GEN0  : 0xfffffe167d478000 - 0xfffffe1b4a144000
+  . GEN1  : 0xfffffe1b4a144000 - 0xfffffe2016e10000
+  . GEN2  : 0xfffffe2016e10000 - 0xfffffe24e3adc000
+  . GEN3  : 0xfffffe24e3adc000 - 0xfffffe29b07a8000
+  . DATA  : 0xfffffe29b07a8000 - 0xfffffe3016e14000
+  Metadata: 0xfffffe3f8bf4c000 - 0xfffffe3f93f4c000
+  Bitmaps : 0xfffffe3f93f4c000 - 0xfffffe3f99b3c000
+
+CORE 0 recently retired instr at 0xfffffe0026af9d28
+CORE 1 recently retired instr at 0xfffffe0026af9d28
+CORE 2 recently retired instr at 0xfffffe0026af9d28
+CORE 3 recently retired instr at 0xfffffe0026af9d28
+CORE 4 recently retired instr at 0xfffffe0026af9d2c
+CORE 5 recently retired instr at 0xfffffe0026af9d2c
+CORE 6 recently retired instr at 0xfffffe0026af9d2c
+CORE 7 recently retired instr at 0xfffffe0026af874c
+CORE 0 PVH locks held: None
+CORE 1 PVH locks held: None
+CORE 2 PVH locks held: None
+CORE 3 PVH locks held: None
+CORE 4 PVH locks held: None
+CORE 5 PVH locks held: None
+CORE 6 PVH locks held: None
+CORE 7 PVH locks held: None
+CORE 0: PC=0xfffffe0026aee924, LR=0xfffffe00269a72ac, FP=0xfffffe4d07b93af0
+CORE 1: PC=0xfffffe0026a29d04, LR=0xfffffe0026990b60, FP=0xfffffe4d08173c70
+CORE 2: PC=0xfffffe0026a26e20, LR=0xfffffe0026a776e8, FP=0xfffffe4d07d13ae0
+CORE 3: PC=0xfffffe0026c0de54, LR=0xfffffe0026c0de78, FP=0xfffffe4d07c636a0
+CORE 4: PC=0xfffffe00270f349c, LR=0xfffffe0026970e78, FP=0x0000000000000000
+CORE 5: PC=0x0000000114d6005c, LR=0x0000000114d0a4b0, FP=0x000000016db873d0
+CORE 6: PC=0xfffffe0029509d98, LR=0xfffffe0029509d6c, FP=0xfffffe4d08022df0
+CORE 7 is the one that panicked. Check the full backtrace for details.
+Compressor Info: 30% of compressed pages limit (OK) and 26% of segments limit (OK) with 5 swapfiles and OK swap space
+Panicked task 0xfffffe2016cf4678: 0 pages, 508 threads: pid 0: kernel_task
+Panicked thread: 0xfffffe24eaf0d040, backtrace: 0xfffffe4d07e8ae90, tid: 496994
+		  lr: 0xfffffe00269b96a4  fp: 0xfffffe4d07e8af00
+		  lr: 0xfffffe00269b936c  fp: 0xfffffe4d07e8af70
+		  lr: 0xfffffe0026b00340  fp: 0xfffffe4d07e8af90
+		  lr: 0xfffffe0026af25ac  fp: 0xfffffe4d07e8b000
+		  lr: 0xfffffe0026af0190  fp: 0xfffffe4d07e8b0c0
+		  lr: 0xfffffe00269677f8  fp: 0xfffffe4d07e8b0d0
+		  lr: 0xfffffe00269b8ff4  fp: 0xfffffe4d07e8b470
+		  lr: 0xfffffe00269b8ff4  fp: 0xfffffe4d07e8b4e0
+		  lr: 0xfffffe00271e4754  fp: 0xfffffe4d07e8b500
+		  lr: 0xfffffe0028011090  fp: 0xfffffe4d07e8b770
+		  lr: 0xfffffe002801254c  fp: 0xfffffe4d07e8b860
+		  lr: 0xfffffe002800e8c4  fp: 0xfffffe4d07e8b8b0
+		  lr: 0xfffffe002800f34c  fp: 0xfffffe4d07e8b8e0
+		  lr: 0xfffffe002800ed44  fp: 0xfffffe4d07e8b930
+		  lr: 0xfffffe002800eae8  fp: 0xfffffe4d07e8b990
+		  lr: 0xfffffe002899bad4  fp: 0xfffffe4d07e8ba20
+		  lr: 0xfffffe00289a2cec  fp: 0xfffffe4d07e8bac0
+		  lr: 0xfffffe00270ae2f4  fp: 0xfffffe4d07e8bb10
+		  lr: 0xfffffe0027fbf884  fp: 0xfffffe4d07e8bbd0
+		  lr: 0xfffffe00270f7430  fp: 0xfffffe4d07e8bc40
+		  lr: 0xfffffe00290b586c  fp: 0xfffffe4d07e8bc80
+		  lr: 0xfffffe00270cf2d4  fp: 0xfffffe4d07e8bd60
+		  lr: 0xfffffe00270ced84  fp: 0xfffffe4d07e8bda0
+		  lr: 0xfffffe0026a0e27c  fp: 0xfffffe4d07e8be20
+		  lr: 0xfffffe0026a0f3dc  fp: 0xfffffe4d07e8bf20
+		  lr: 0xfffffe0026970e78  fp: 0x0000000000000000
+      Kernel Extensions in backtrace:
+         com.apple.driver.IODARTFamily(1.0)[2226CEBB-2C91-3337-96A3-1B14BD05BE64]@0xfffffe0028995f60->0xfffffe00289a9863
+            dependency: com.apple.driver.AppleARMPlatform(1.0.2)[53256CE8-BC8F-34C4-800F-A9515170362C]@0xfffffe0027346b10->0xfffffe00273911ab
+         com.apple.iokit.IOUSBHostFamily(1.2)[DC92282E-45DA-3DB7-99AC-A9CACA16E1FB]@0xfffffe0029092ca0->0xfffffe0029148e0f
+            dependency: com.apple.driver.AppleSMC(3.1.9)[3329DC91-4E41-3501-ABE1-6832DC0F4935]@0xfffffe0027eb8780->0xfffffe0027ee87ab
+            dependency: com.apple.driver.usb.AppleUSBCommon(1.0)[AE2ACE5A-880D-35E3-B843-DBB22C65F7F4]@0xfffffe002833ed00->0xfffffe0028343e17
+            dependency: com.apple.driver.AppleUSBHostMergeProperties(1.2)[C51EE137-AD39-325F-BA7D-6FF201F661EA]@0xfffffe0029199040->0xfffffe0029199be3
+         com.apple.driver.AppleT8020DART(1.0)[172333AE-12AE-3B78-8422-46867FB01BC1]@0xfffffe002800b760->0xfffffe0028013397
+            dependency: com.apple.driver.AppleARMPlatform(1.0.2)[53256CE8-BC8F-34C4-800F-A9515170362C]@0xfffffe0027346b10->0xfffffe00273911ab
+            dependency: com.apple.driver.IODARTFamily(1)[2226CEBB-2C91-3337-96A3-1B14BD05BE64]@0xfffffe0028995f60->0xfffffe00289a9863
+         com.apple.driver.usb.AppleSynopsysUSB40XHCI(1.0)[BB7A5E3F-4668-3334-AC90-4D8F54571CC3]@0xfffffe0027fa9aa0->0xfffffe0027fded57
+            dependency: com.apple.driver.AppleARMPlatform(1.0.2)[53256CE8-BC8F-34C4-800F-A9515170362C]@0xfffffe0027346b10->0xfffffe00273911ab
+            dependency: com.apple.driver.AppleEmbeddedUSBHost(1)[74FC7B97-438F-3F84-80EF-78D14DE0369D]@0xfffffe002794bb10->0xfffffe002794edcb
+            dependency: com.apple.driver.usb.AppleSynopsysUSBXHCI(1)[CA0F600C-45C0-3C82-91FD-3A3CF21323BA]@0xfffffe0027fded60->0xfffffe0027ffcb93
+            dependency: com.apple.driver.usb.AppleUSBCommon(1.0)[AE2ACE5A-880D-35E3-B843-DBB22C65F7F4]@0xfffffe002833ed00->0xfffffe0028343e17
+            dependency: com.apple.driver.usb.AppleUSBXHCI(1.2)[ACF77A0F-495D-347C-852A-8731ABBAD335]@0xfffffe00291ec060->0xfffffe0029252bf3
+            dependency: com.apple.iokit.IOAccessoryManager(1.0.0)[BEAD553C-3CF3-3D25-A169-32F12A9403CC]@0xfffffe0028846030->0xfffffe00288f133f
+            dependency: com.apple.iokit.IOThunderboltFamily(9.3.3)[8AB2AC35-06AB-3413-A5AB-2A3800678A27]@0xfffffe0028e30660->0xfffffe0028f542cb
+            dependency: com.apple.iokit.IOUSBHostFamily(1.2)[DC92282E-45DA-3DB7-99AC-A9CACA16E1FB]@0xfffffe0029092ca0->0xfffffe0029148e0f
+
+last started kext at 3565679311: com.apple.driver.usb.cdc.acm	5.0.0 (addr 0xfffffe00264b99a0, size 2096)
+loaded kexts:
+com.apple.driver.usb.realtek8153patcher	5.0.0
+com.apple.filesystems.autofs	3.0
+com.apple.driver.AppleTopCaseHIDEventDriver	5450.8
+com.apple.driver.CoreKDL	1
+com.apple.driver.AppleBiometricServices	1
+com.apple.driver.DiskImages.ReadWriteDiskImage	493.0.0
+com.apple.driver.DiskImages.UDIFDiskImage	493.0.0
+com.apple.driver.DiskImages.RAMBackingStore	493.0.0
+com.apple.driver.DiskImages.FileBackingStore	493.0.0
+com.apple.driver.SEPHibernation	1
+com.apple.driver.BCMWLANFirmware4378.Hashstore	1
+com.apple.driver.AppleSmartBatteryManager	161.0.0
+com.apple.driver.AppleUSBDeviceNCM	5.0.0
+com.apple.driver.AppleThunderboltIP	4.0.3
+com.apple.driver.AppleALSColorSensor	1.0.0d1
+com.apple.driver.AppleAOPVoiceTrigger	140.1
+com.apple.driver.AppleFileSystemDriver	3.0.1
+com.apple.nke.l2tp	1.9
+com.apple.filesystems.tmpfs	1
+com.apple.filesystems.lifs	1
+com.apple.filesystems.apfs	1934.141.2
+com.apple.IOTextEncryptionFamily	1.0.0
+com.apple.filesystems.hfs.kext	583.100.10
+com.apple.security.BootPolicy	1
+com.apple.BootCache	40
+com.apple.AppleFSCompression.AppleFSCompressionTypeZlib	1.0.0
+com.apple.AppleFSCompression.AppleFSCompressionTypeDataless	1.0.0d1
+com.apple.driver.ApplePMP	1
+com.apple.driver.AppleSmartIO2	1
+com.apple.driver.ApplePMPFirmware	1
+com.apple.AppleEmbeddedSimpleSPINORFlasher	1
+com.apple.driver.AppleSPMIPMU	1.0.1
+com.apple.driver.AppleDPDisplayTCON	1
+com.apple.driver.AppleCS42L83Audio	550.3
+com.apple.driver.AppleTAS5770LAmp	550.3
+com.apple.driver.AppleSummitLCD	1.0.0
+com.apple.driver.AppleAVE2	560.5.0
+com.apple.driver.AppleMobileDispH13G-DCP	140.0
+com.apple.driver.AppleT8020SOCTuner	1
+com.apple.driver.AppleT8103CLPCv3	1
+com.apple.driver.AppleAVD	570
+com.apple.driver.AppleJPEGDriver	4.8.1
+com.apple.AGXG13G	190.22.3
+com.apple.driver.AudioDMAController-T8103	160.2
+com.apple.driver.AppleSerialShim	1
+com.apple.driver.usb.AppleSynopsysUSB40XHCI	1
+com.apple.driver.AppleEventLogHandler	1
+com.apple.driver.AppleS5L8960XNCO	1
+com.apple.driver.AppleT8103PMGR	1
+com.apple.driver.AppleS8000AES	1
+com.apple.driver.AppleS8000DWI	1.0.0d1
+com.apple.driver.AppleInterruptController	1.0.0d1
+com.apple.driver.AppleBluetoothModule	1
+com.apple.driver.AppleSamsungSerial	1.0.0d1
+com.apple.driver.AppleBCMWLANBusInterfacePCIe	1
+com.apple.driver.AppleT8020DART	1
+com.apple.driver.AppleSynopsysMIPIDSI	1.0.0
+com.apple.driver.AppleS5L8920XPWM	1.0.0d1
+com.apple.driver.AppleS5L8940XI2C	1.0.0d2
+com.apple.driver.AppleSPIMC	1
+com.apple.driver.AppleT8101	1
+com.apple.driver.AppleM68Buttons	1.0.0d1
+com.apple.iokit.IOUserEthernet	1.0.1
+com.apple.driver.usb.AppleUSBUserHCI	1
+com.apple.iokit.IOKitRegistryCompatibility	1
+com.apple.iokit.EndpointSecurity	1
+com.apple.driver.AppleDiskImages2	126.141.2
+com.apple.AppleSystemPolicy	2.0.0
+com.apple.nke.applicationfirewall	402
+com.apple.kec.InvalidateHmac	1
+com.apple.kec.AppleEncryptedArchive	1
+com.apple.driver.usb.cdc.acm	5.0.0
+com.apple.driver.usb.serial	6.0.0
+com.apple.driver.usb.cdc.ecm	5.0.0
+com.apple.driver.driverkit.serial	6.0.0
+com.apple.kext.triggers	1.0
+com.apple.iokit.IOAVBFamily	1040.6
+com.apple.plugin.IOgPTPPlugin	1040.3
+com.apple.iokit.IOEthernetAVBController	1.1.0
+com.apple.driver.AppleHIDKeyboard	228.2
+com.apple.driver.AppleActuatorDriver	5460.1
+com.apple.driver.AppleMultitouchDriver	5460.1
+com.apple.driver.AppleHSBluetoothDriver	5450.8
+com.apple.driver.IOBluetoothHIDDriver	9.0.0
+com.apple.driver.AppleMesaSEPDriver	100.99
+com.apple.iokit.IOBiometricFamily	1
+com.apple.driver.usb.IOUSBHostHIDDevice	1.2
+com.apple.driver.usb.cdc	5.0.0
+com.apple.driver.AppleUSBAudio	416.2
+com.apple.iokit.IOAudioFamily	340.2
+com.apple.vecLib.kext	1.2.0
+com.apple.driver.DiskImages.KernelBacked	493.0.0
+com.apple.driver.AppleSEPHDCPManager	1.0.1
+com.apple.driver.AppleTrustedAccessory	1
+com.apple.iokit.AppleSEPGenericTransfer	1
+com.apple.driver.AppleXsanScheme	3
+com.apple.driver.AppleConvergedIPCOLYBTControl	1
+com.apple.driver.AppleConvergedPCI	1
+com.apple.driver.AppleBluetoothDebug	1
+com.apple.driver.AppleBTM	1.0.1
+com.apple.driver.usb.networking	5.0.0
+com.apple.driver.AppleThunderboltUSBDownAdapter	1.0.4
+com.apple.driver.AppleThunderboltDPInAdapter	8.5.1
+com.apple.driver.AppleThunderboltDPAdapterFamily	8.5.1
+com.apple.driver.AppleThunderboltPCIDownAdapter	4.1.1
+com.apple.driver.AppleAOPAudio	150.2
+com.apple.driver.AppleDCPDPTXProxy	1.0.0
+com.apple.driver.DCPDPFamilyProxy	1
+com.apple.nke.ppp	1.9
+com.apple.driver.AppleBSDKextStarter	3
+com.apple.filesystems.hfs.encodings.kext	1
+com.apple.AGXFirmwareKextG13GRTBuddy	190.22.3
+com.apple.AGXFirmwareKextRTBuddy64	190.22.3
+com.apple.driver.AppleDiagnosticDataAccessReadOnly	1.0.0
+com.apple.iokit.IONVMeFamily	2.1.0
+com.apple.driver.AppleNANDConfigAccess	1.0.0
+com.apple.driver.AppleSPU	1
+com.apple.driver.AppleStockholmControl	1.0.0
+com.apple.driver.AppleHIDTransportSPI	5460.1
+com.apple.driver.AppleHIDTransport	5460.1
+com.apple.driver.AppleInputDeviceSupport	5460.1
+com.apple.driver.AppleDialogPMU	1.0.1
+com.apple.driver.AppleHPM	3.4.4
+com.apple.driver.AppleCSEmbeddedAudio	550.3
+com.apple.driver.AppleEmbeddedAudio	550.3
+com.apple.iokit.AppleARMIISAudio	140.2
+com.apple.driver.DCPAVFamilyProxy	1
+com.apple.driver.AppleSPMI	1.0.1
+com.apple.driver.AppleH11ANEInterface	5.68.0
+com.apple.iokit.IOMobileGraphicsFamily-DCP	343.0.0
+com.apple.driver.AppleDCP	1
+com.apple.driver.AppleFirmwareKit	1
+com.apple.driver.ApplePassthroughPPM	3.0
+com.apple.driver.AppleSART	1
+com.apple.driver.AppleH13CameraInterface	6.51.2
+com.apple.driver.AppleH10PearlCameraInterface	17.0.6
+com.apple.iokit.IOGPUFamily	35.29
+com.apple.driver.AppleT8103TypeCPhy	1
+com.apple.driver.AppleUSBXDCIARM	1.0
+com.apple.driver.AppleUSBXDCI	1.0
+com.apple.iokit.IOUSBDeviceFamily	2.0.0
+com.apple.driver.usb.AppleSynopsysUSBXHCI	1
+com.apple.driver.usb.AppleUSBXHCI	1.2
+com.apple.driver.AppleEmbeddedUSBHost	1
+com.apple.driver.usb.AppleUSBHub	1.2
+com.apple.driver.usb.AppleUSBHostCompositeDevice	1.2
+com.apple.driver.ApplePMGR	1
+com.apple.driver.AppleARMWatchdogTimer	1
+com.apple.driver.usb.AppleUSBHostPacketFilter	1.0
+com.apple.driver.AppleDisplayCrossbar	1.0.0
+com.apple.iokit.IODisplayPortFamily	1.0.0
+com.apple.driver.AppleTypeCPhy	1
+com.apple.driver.AppleThunderboltNHI	7.2.81
+com.apple.driver.AppleT8103PCIeC	1
+com.apple.iokit.IOThunderboltFamily	9.3.3
+com.apple.driver.ApplePIODMA	1
+com.apple.driver.AppleT8103PCIe	1
+com.apple.driver.AppleMultiFunctionManager	1
+com.apple.driver.AppleBluetoothDebugService	1
+com.apple.driver.AppleBCMWLANCore	1.0.0
+com.apple.iokit.IO80211Family	1200.12.2b2
+com.apple.driver.IOImageLoader	1.0.0
+com.apple.driver.AppleOLYHAL	1
+com.apple.driver.corecapture	1.0.4
+com.apple.driver.AppleEmbeddedPCIE	1
+com.apple.driver.AppleMobileDispH13G-DFR	140.0
+com.apple.iokit.IOMobileGraphicsFamily	343.0.0
+com.apple.driver.AppleMCA2-T8103	640.5
+com.apple.driver.AppleEmbeddedAudioLibs	140.1
+com.apple.driver.AppleFirmwareUpdateKext	1
+com.apple.driver.AppleGPIOICController	1.0.2
+com.apple.driver.AppleFireStormErrorHandler	1
+com.apple.driver.AppleMobileApNonce	1
+com.apple.iokit.IOTimeSyncFamily	1040.3
+com.apple.driver.DiskImages	493.0.0
+com.apple.iokit.IOGraphicsFamily	597
+com.apple.iokit.IOBluetoothSerialManager	9.0.0
+com.apple.iokit.IOBluetoothHostControllerUSBTransport	9.0.0
+com.apple.iokit.IOBluetoothHostControllerUARTTransport	9.0.0
+com.apple.iokit.IOBluetoothHostControllerTransport	9.0.0
+com.apple.driver.IOBluetoothHostControllerPCIeTransport	9.0.0
+com.apple.iokit.IOBluetoothFamily	9.0.0
+com.apple.driver.FairPlayIOKit	68.16.0
+com.apple.iokit.CSRBluetoothHostControllerUSBTransport	9.0.0
+com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport	9.0.0
+com.apple.driver.AppleSSE	1.0
+com.apple.driver.AppleSEPKeyStore	2
+com.apple.driver.AppleUSBTDM	533.120.2
+com.apple.iokit.IOUSBMassStorageDriver	210.120.3
+com.apple.iokit.IOPCIFamily	2.9
+com.apple.iokit.IOSCSIBlockCommandsDevice	456.140.3
+com.apple.iokit.IOSCSIArchitectureModelFamily	456.140.3
+com.apple.driver.AppleIPAppender	1.0
+com.apple.driver.AppleFDEKeyStore	28.30
+com.apple.driver.AppleEffaceableStorage	1.0
+com.apple.driver.AppleCredentialManager	1.0
+com.apple.driver.KernelRelayHost	1
+com.apple.iokit.IOUSBHostFamily	1.2
+com.apple.driver.AppleUSBHostMergeProperties	1.2
+com.apple.driver.usb.AppleUSBCommon	1.0
+com.apple.driver.AppleSMC	3.1.9
+com.apple.driver.RTBuddy	1.0.0
+com.apple.driver.AppleEmbeddedTempSensor	1.0.0
+com.apple.driver.AppleARMPMU	1.0
+com.apple.iokit.IOAccessoryManager	1.0.0
+com.apple.driver.AppleOnboardSerial	1.0
+com.apple.iokit.IOSkywalkFamily	1.0
+com.apple.driver.mDNSOffloadUserClient	1.0.1b8
+com.apple.iokit.IONetworkingFamily	3.4
+com.apple.iokit.IOSerialFamily	11
+com.apple.driver.AppleSEPManager	1.0.1
+com.apple.driver.AppleA7IOP	1.0.2
+com.apple.driver.IOSlaveProcessor	1
+com.apple.driver.AppleBiometricSensor	2
+com.apple.iokit.IOHIDFamily	2.0.0
+com.apple.iokit.CoreAnalyticsFamily	1
+com.apple.AUC	1.0
+com.apple.iokit.IOAVFamily	1.0.0
+com.apple.iokit.IOHDCPFamily	1.0.0
+com.apple.iokit.IOCECFamily	1
+com.apple.iokit.IOAudio2Family	1.0
+com.apple.driver.AppleIISController	140.1
+com.apple.driver.AppleAudioClockLibs	140.1
+com.apple.driver.AppleM2ScalerCSCDriver	265.0.0
+com.apple.iokit.IOSurface	302.14
+com.apple.driver.IODARTFamily	1
+com.apple.security.quarantine	4
+com.apple.security.sandbox	300.0
+com.apple.kext.AppleMatch	1.0.0d1
+com.apple.driver.AppleMobileFileIntegrity	1.0.5
+com.apple.security.AppleImage4	4.2.0
+com.apple.kext.CoreTrust	1
+com.apple.iokit.IOCryptoAcceleratorFamily	1.0.1
+com.apple.driver.AppleARMPlatform	1.0.2
+com.apple.iokit.IOStorageFamily	2.1
+com.apple.iokit.IOSlowAdaptiveClockingFamily	1.0.0
+com.apple.iokit.IOReportFamily	47
+com.apple.kec.pthread	1
+com.apple.kec.Libm	1
+com.apple.kec.corecrypto	12.0
+
+
+
+Stackshot Succeeded ** Bytes Traced 1277063 (Uncompressed 2664912) **
+*** 2
+panic(cpu 0 caller 0xfffffe001b251090): "dart-usb1 (0xfffffe20005c8000): DART(DARTLLT) error: SID 1 PTE invalid exception on write with DVA 0xa40c0 (TTBR 0 SEG 0 PTE 0x29) ERROR_STATUS 0x81000404 TIME 0x245b03c9a84 TTE 0 AXI_ID 0x1)" @AppleT8020DART.cpp:1439
+Debugger message: panic
+Memory ID: 0xff
+OS release type: User
+OS version: 21G419
+Kernel version: Darwin Kernel Version 21.6.0: Mon Dec 19 20:46:01 PST 2022; root:xnu-8020.240.18~2/RELEASE_ARM64_T8101
+Fileset Kernelcache UUID: B58F220452BB9BEA5EF82BCC67F16FE1
+Kernel UUID: 370717C7-9E64-3A04-9DD4-A3A0E0B01E78
+iBoot version: iBoot-7459.141.1
+secure boot?: YES
+Paniclog version: 13
+KernelCache slide: 0x0000000012304000
+KernelCache base:  0xfffffe0019308000
+Kernel slide:      0x0000000012ab4000
+Kernel text base:  0xfffffe0019ab8000
+Kernel text exec slide: 0x0000000012b9c000
+Kernel text exec base:  0xfffffe0019ba0000
+mach_absolute_time: 0xdf5eef147
+Epoch Time:        sec       usec
+  Boot    : 0x641a6338 0x000a6c42
+  Sleep   : 0x641a689d 0x00096b74
+  Wake    : 0x641a68a0 0x000a2c5a
+  Calendar: 0x641a6cf8 0x0003b05f
+
+Zone info:
+  Zone map: 0xfffffe1000028000 - 0xfffffe3000028000
+  . VM    : 0xfffffe1000028000 - 0xfffffe14cccf4000
+  . RO    : 0xfffffe14cccf4000 - 0xfffffe166668c000
+  . GEN0  : 0xfffffe166668c000 - 0xfffffe1b33358000
+  . GEN1  : 0xfffffe1b33358000 - 0xfffffe2000024000
+  . GEN2  : 0xfffffe2000024000 - 0xfffffe24cccf0000
+  . GEN3  : 0xfffffe24cccf0000 - 0xfffffe29999bc000
+  . DATA  : 0xfffffe29999bc000 - 0xfffffe3000028000
+  Metadata: 0xfffffe3f74960000 - 0xfffffe3f7c960000
+  Bitmaps : 0xfffffe3f7c960000 - 0xfffffe3f82564000
+
+CORE 0 recently retired instr at 0xfffffe0019d3874c
+CORE 1 recently retired instr at 0xfffffe0019d39d28
+CORE 2 recently retired instr at 0xfffffe0019d39d28
+CORE 3 recently retired instr at 0xfffffe0019d39d28
+CORE 4 recently retired instr at 0xfffffe0019d39d2c
+CORE 5 recently retired instr at 0xfffffe0019d39d2c
+CORE 6 recently retired instr at 0xfffffe0019d39d2c
+CORE 7 recently retired instr at 0xfffffe0019d39d2c
+CORE 0 PVH locks held: None
+CORE 1 PVH locks held: None
+CORE 2 PVH locks held: None
+CORE 3 PVH locks held: None
+CORE 4 PVH locks held: None
+CORE 5 PVH locks held: None
+CORE 6 PVH locks held: None
+CORE 7 PVH locks held: None
+CORE 0 is the one that panicked. Check the full backtrace for details.
+CORE 1: PC=0xfffffe0019cafc58, LR=0xfffffe0019cafcd0, FP=0xfffffe82935c37a0
+CORE 2: PC=0xfffffe001a2e77f8, LR=0xfffffe001a3808f8, FP=0xfffffe8292b7bb10
+CORE 3: PC=0x0000000104c42d5c, LR=0x00000001a44766a4, FP=0x000000016b871e20
+CORE 4: PC=0xfffffe0019c2f6f8, LR=0xfffffe0019c2f6f4, FP=0xfffffe8293763f00
+CORE 5: PC=0xfffffe0019c2f6f8, LR=0xfffffe0019c2f6f4, FP=0xfffffe8292bbbf00
+CORE 6: PC=0xfffffe0019c2f6f8, LR=0xfffffe0019c2f6f4, FP=0xfffffe8292e2bf00
+CORE 7: PC=0xfffffe0019c2f6f8, LR=0xfffffe0019c2f6f4, FP=0xfffffe82938c3f00
+Compressor Info: 11% of compressed pages limit (OK) and 12% of segments limit (OK) with 0 swapfiles and OK swap space
+Panicked task 0xfffffe1b3d7c2780: 16985 pages, 24 threads: pid 838: Postman Helper (
+Panicked thread: 0xfffffe24cb2c4100, backtrace: 0xfffffe8ff3df74a0, tid: 7277
+		  lr: 0xfffffe0019bf96a4  fp: 0xfffffe8ff3df7510
+		  lr: 0xfffffe0019bf936c  fp: 0xfffffe8ff3df7580
+		  lr: 0xfffffe0019d40340  fp: 0xfffffe8ff3df75a0
+		  lr: 0xfffffe0019d325ac  fp: 0xfffffe8ff3df7610
+		  lr: 0xfffffe0019d30190  fp: 0xfffffe8ff3df76d0
+		  lr: 0xfffffe0019ba77f8  fp: 0xfffffe8ff3df76e0
+		  lr: 0xfffffe0019bf8ff4  fp: 0xfffffe8ff3df7a80
+		  lr: 0xfffffe0019bf8ff4  fp: 0xfffffe8ff3df7af0
+		  lr: 0xfffffe001a424754  fp: 0xfffffe8ff3df7b10
+		  lr: 0xfffffe001b251090  fp: 0xfffffe8ff3df7d80
+		  lr: 0xfffffe001b250b48  fp: 0xfffffe8ff3df7e20
+		  lr: 0xfffffe001b25023c  fp: 0xfffffe8ff3df7ed0
+		  lr: 0xfffffe001a33aab8  fp: 0xfffffe8ff3df7f10
+		  lr: 0xfffffe001ade5d04  fp: 0xfffffe8ff3df7fb0
+		  lr: 0xfffffe001a3604cc  fp: 0xfffffe8ff3df7fc0
+		  lr: 0xfffffe0019d331f8  fp: 0xfffffe8ff3df7fe0
+		  lr: 0xfffffe0019ba786c  fp: 0xfffffe8ff3df7ff0
+      Kernel Extensions in backtrace:
+         com.apple.driver.AppleT8020DART(1.0)[172333AE-12AE-3B78-8422-46867FB01BC1]@0xfffffe001b24b760->0xfffffe001b253397
+            dependency: com.apple.driver.AppleARMPlatform(1.0.2)[53256CE8-BC8F-34C4-800F-A9515170362C]@0xfffffe001a586b10->0xfffffe001a5d11ab
+            dependency: com.apple.driver.IODARTFamily(1)[2226CEBB-2C91-3337-96A3-1B14BD05BE64]@0xfffffe001bbd5f60->0xfffffe001bbe9863
+         com.apple.driver.AppleInterruptController(1.0d1)[BABEF3F1-BD02-3B79-B809-8C6E8DA72FC4]@0xfffffe001ade35f0->0xfffffe001ade6d0b
+            dependency: com.apple.driver.AppleARMPlatform(1.0.2)[53256CE8-BC8F-34C4-800F-A9515170362C]@0xfffffe001a586b10->0xfffffe001a5d11ab
+
+last started kext at 33096493863: com.apple.driver.usb.cdc.acm	5.0.0 (addr 0xfffffe00196f99a0, size 2096)
+loaded kexts:
+com.apple.driver.usb.realtek8153patcher	5.0.0
+com.apple.filesystems.autofs	3.0
+com.apple.driver.AppleTopCaseHIDEventDriver	5450.8
+com.apple.driver.CoreKDL	1
+com.apple.driver.AppleBiometricServices	1
+com.apple.driver.DiskImages.ReadWriteDiskImage	493.0.0
+com.apple.driver.DiskImages.UDIFDiskImage	493.0.0
+com.apple.driver.DiskImages.RAMBackingStore	493.0.0
+com.apple.driver.DiskImages.FileBackingStore	493.0.0
+com.apple.driver.SEPHibernation	1
+com.apple.driver.BCMWLANFirmware4378.Hashstore	1
+com.apple.driver.AppleSmartBatteryManager	161.0.0
+com.apple.driver.AppleUSBDeviceNCM	5.0.0
+com.apple.driver.AppleThunderboltIP	4.0.3
+com.apple.driver.AppleALSColorSensor	1.0.0d1
+com.apple.driver.AppleAOPVoiceTrigger	140.1
+com.apple.driver.AppleFileSystemDriver	3.0.1
+com.apple.nke.l2tp	1.9
+com.apple.filesystems.tmpfs	1
+com.apple.driver.AppleSmartIO2	1
+com.apple.driver.ApplePMP	1
+com.apple.filesystems.lifs	1
+com.apple.filesystems.apfs	1934.141.2
+com.apple.IOTextEncryptionFamily	1.0.0
+com.apple.filesystems.hfs.kext	583.100.10
+com.apple.security.BootPolicy	1
+com.apple.BootCache	40
+com.apple.AppleFSCompression.AppleFSCompressionTypeZlib	1.0.0
+com.apple.AppleFSCompression.AppleFSCompressionTypeDataless	1.0.0d1
+com.apple.driver.ApplePMPFirmware	1
+com.apple.AppleEmbeddedSimpleSPINORFlasher	1
+com.apple.driver.AppleDPDisplayTCON	1
+com.apple.driver.AppleSPMIPMU	1.0.1
+com.apple.driver.AppleTAS5770LAmp	550.3
+com.apple.driver.AppleCS42L83Audio	550.3
+com.apple.driver.AppleSummitLCD	1.0.0
+com.apple.driver.AppleAVE2	560.5.0
+com.apple.driver.AppleMobileDispH13G-DCP	140.0
+com.apple.driver.AppleT8020SOCTuner	1
+com.apple.driver.AppleT8103CLPCv3	1
+com.apple.driver.AppleAVD	570
+com.apple.driver.AppleJPEGDriver	4.8.1
+com.apple.AGXG13G	190.22.3
+com.apple.driver.AudioDMAController-T8103	160.2
+com.apple.driver.AppleSerialShim	1
+com.apple.driver.usb.AppleSynopsysUSB40XHCI	1
+com.apple.driver.AppleEventLogHandler	1
+com.apple.driver.AppleS5L8960XNCO	1
+com.apple.driver.AppleT8103PMGR	1
+com.apple.driver.AppleS8000AES	1
+com.apple.driver.AppleS8000DWI	1.0.0d1
+com.apple.driver.AppleInterruptController	1.0.0d1
+com.apple.driver.AppleBluetoothModule	1
+com.apple.driver.AppleSamsungSerial	1.0.0d1
+com.apple.driver.AppleBCMWLANBusInterfacePCIe	1
+com.apple.driver.AppleT8020DART	1
+com.apple.driver.AppleSynopsysMIPIDSI	1.0.0
+com.apple.driver.AppleS5L8920XPWM	1.0.0d1
+com.apple.driver.AppleS5L8940XI2C	1.0.0d2
+com.apple.driver.AppleSPIMC	1
+com.apple.driver.AppleT8101	1
+com.apple.driver.AppleM68Buttons	1.0.0d1
+com.apple.iokit.IOUserEthernet	1.0.1
+com.apple.driver.usb.AppleUSBUserHCI	1
+com.apple.iokit.IOKitRegistryCompatibility	1
+com.apple.iokit.EndpointSecurity	1
+com.apple.driver.AppleDiskImages2	126.141.2
+com.apple.AppleSystemPolicy	2.0.0
+com.apple.nke.applicationfirewall	402
+com.apple.kec.InvalidateHmac	1
+com.apple.kec.AppleEncryptedArchive	1
+com.apple.driver.usb.cdc.acm	5.0.0
+com.apple.driver.usb.serial	6.0.0
+com.apple.driver.usb.cdc.ecm	5.0.0
+com.apple.driver.driverkit.serial	6.0.0
+com.apple.kext.triggers	1.0
+com.apple.iokit.IOAVBFamily	1040.6
+com.apple.plugin.IOgPTPPlugin	1040.3
+com.apple.iokit.IOEthernetAVBController	1.1.0
+com.apple.driver.AppleHSBluetoothDriver	5450.8
+com.apple.driver.IOBluetoothHIDDriver	9.0.0
+com.apple.driver.AppleActuatorDriver	5460.1
+com.apple.driver.AppleMultitouchDriver	5460.1
+com.apple.driver.AppleHIDKeyboard	228.2
+com.apple.driver.AppleMesaSEPDriver	100.99
+com.apple.iokit.IOBiometricFamily	1
+com.apple.driver.usb.IOUSBHostHIDDevice	1.2
+com.apple.driver.usb.cdc	5.0.0
+com.apple.driver.AppleUSBAudio	416.2
+com.apple.iokit.IOAudioFamily	340.2
+com.apple.vecLib.kext	1.2.0
+com.apple.driver.DiskImages.KernelBacked	493.0.0
+com.apple.driver.AppleSEPHDCPManager	1.0.1
+com.apple.driver.AppleTrustedAccessory	1
+com.apple.iokit.AppleSEPGenericTransfer	1
+com.apple.driver.AppleXsanScheme	3
+com.apple.driver.AppleConvergedIPCOLYBTControl	1
+com.apple.driver.AppleConvergedPCI	1
+com.apple.driver.AppleBluetoothDebug	1
+com.apple.driver.AppleBTM	1.0.1
+com.apple.driver.usb.networking	5.0.0
+com.apple.driver.AppleThunderboltPCIDownAdapter	4.1.1
+com.apple.driver.AppleThunderboltDPInAdapter	8.5.1
+com.apple.driver.AppleThunderboltDPAdapterFamily	8.5.1
+com.apple.driver.AppleThunderboltUSBDownAdapter	1.0.4
+com.apple.driver.AppleAOPAudio	150.2
+com.apple.driver.AppleDCPDPTXProxy	1.0.0
+com.apple.driver.DCPDPFamilyProxy	1
+com.apple.nke.ppp	1.9
+com.apple.driver.AppleSPU	1
+com.apple.driver.AppleBSDKextStarter	3
+com.apple.filesystems.hfs.encodings.kext	1
+com.apple.AGXFirmwareKextG13GRTBuddy	190.22.3
+com.apple.AGXFirmwareKextRTBuddy64	190.22.3
+com.apple.driver.AppleHIDTransportSPI	5460.1
+com.apple.driver.AppleHIDTransport	5460.1
+com.apple.driver.AppleInputDeviceSupport	5460.1
+com.apple.iokit.IONVMeFamily	2.1.0
+com.apple.driver.AppleDiagnosticDataAccessReadOnly	1.0.0
+com.apple.driver.AppleNANDConfigAccess	1.0.0
+com.apple.driver.AppleHPM	3.4.4
+com.apple.driver.AppleDialogPMU	1.0.1
+com.apple.driver.AppleCSEmbeddedAudio	550.3
+com.apple.driver.AppleEmbeddedAudio	550.3
+com.apple.iokit.AppleARMIISAudio	140.2
+com.apple.driver.AppleStockholmControl	1.0.0
+com.apple.driver.DCPAVFamilyProxy	1
+com.apple.driver.AppleSPMI	1.0.1
+com.apple.driver.AppleH11ANEInterface	5.68.0
+com.apple.iokit.IOMobileGraphicsFamily-DCP	343.0.0
+com.apple.driver.AppleDCP	1
+com.apple.driver.AppleFirmwareKit	1
+com.apple.driver.ApplePassthroughPPM	3.0
+com.apple.driver.AppleSART	1
+com.apple.driver.AppleH13CameraInterface	6.51.2
+com.apple.driver.AppleH10PearlCameraInterface	17.0.6
+com.apple.iokit.IOGPUFamily	35.29
+com.apple.driver.AppleT8103TypeCPhy	1
+com.apple.driver.AppleUSBXDCIARM	1.0
+com.apple.driver.AppleUSBXDCI	1.0
+com.apple.iokit.IOUSBDeviceFamily	2.0.0
+com.apple.driver.usb.AppleSynopsysUSBXHCI	1
+com.apple.driver.usb.AppleUSBXHCI	1.2
+com.apple.driver.AppleEmbeddedUSBHost	1
+com.apple.driver.usb.AppleUSBHub	1.2
+com.apple.driver.usb.AppleUSBHostCompositeDevice	1.2
+com.apple.driver.ApplePMGR	1
+com.apple.driver.AppleARMWatchdogTimer	1
+com.apple.driver.usb.AppleUSBHostPacketFilter	1.0
+com.apple.driver.AppleDisplayCrossbar	1.0.0
+com.apple.iokit.IODisplayPortFamily	1.0.0
+com.apple.driver.AppleTypeCPhy	1
+com.apple.driver.AppleThunderboltNHI	7.2.81
+com.apple.driver.AppleT8103PCIeC	1
+com.apple.iokit.IOThunderboltFamily	9.3.3
+com.apple.driver.ApplePIODMA	1
+com.apple.driver.AppleT8103PCIe	1
+com.apple.driver.AppleMultiFunctionManager	1
+com.apple.driver.AppleBluetoothDebugService	1
+com.apple.driver.AppleBCMWLANCore	1.0.0
+com.apple.iokit.IO80211Family	1200.12.2b2
+com.apple.driver.IOImageLoader	1.0.0
+com.apple.driver.AppleOLYHAL	1
+com.apple.driver.corecapture	1.0.4
+com.apple.driver.AppleEmbeddedPCIE	1
+com.apple.driver.AppleMobileDispH13G-DFR	140.0
+com.apple.iokit.IOMobileGraphicsFamily	343.0.0
+com.apple.driver.AppleMCA2-T8103	640.5
+com.apple.driver.AppleEmbeddedAudioLibs	140.1
+com.apple.driver.AppleFirmwareUpdateKext	1
+com.apple.driver.AppleGPIOICController	1.0.2
+com.apple.driver.AppleFireStormErrorHandler	1
+com.apple.driver.AppleMobileApNonce	1
+com.apple.iokit.IOTimeSyncFamily	1040.3
+com.apple.driver.DiskImages	493.0.0
+com.apple.iokit.IOGraphicsFamily	597
+com.apple.iokit.IOBluetoothSerialManager	9.0.0
+com.apple.iokit.IOBluetoothHostControllerUSBTransport	9.0.0
+com.apple.iokit.IOBluetoothHostControllerUARTTransport	9.0.0
+com.apple.iokit.IOBluetoothHostControllerTransport	9.0.0
+com.apple.driver.IOBluetoothHostControllerPCIeTransport	9.0.0
+com.apple.iokit.IOBluetoothFamily	9.0.0
+com.apple.driver.FairPlayIOKit	68.16.0
+com.apple.iokit.CSRBluetoothHostControllerUSBTransport	9.0.0
+com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport	9.0.0
+com.apple.driver.AppleSSE	1.0
+com.apple.driver.AppleSEPKeyStore	2
+com.apple.driver.AppleUSBTDM	533.120.2
+com.apple.iokit.IOUSBMassStorageDriver	210.120.3
+com.apple.iokit.IOPCIFamily	2.9
+com.apple.iokit.IOSCSIBlockCommandsDevice	456.140.3
+com.apple.iokit.IOSCSIArchitectureModelFamily	456.140.3
+com.apple.driver.AppleIPAppender	1.0
+com.apple.driver.AppleFDEKeyStore	28.30
+com.apple.driver.AppleEffaceableStorage	1.0
+com.apple.driver.AppleCredentialManager	1.0
+com.apple.driver.KernelRelayHost	1
+com.apple.iokit.IOUSBHostFamily	1.2
+com.apple.driver.AppleUSBHostMergeProperties	1.2
+com.apple.driver.usb.AppleUSBCommon	1.0
+com.apple.driver.AppleSMC	3.1.9
+com.apple.driver.RTBuddy	1.0.0
+com.apple.driver.AppleEmbeddedTempSensor	1.0.0
+com.apple.driver.AppleARMPMU	1.0
+com.apple.iokit.IOAccessoryManager	1.0.0
+com.apple.driver.AppleOnboardSerial	1.0
+com.apple.iokit.IOSkywalkFamily	1.0
+com.apple.driver.mDNSOffloadUserClient	1.0.1b8
+com.apple.iokit.IONetworkingFamily	3.4
+com.apple.iokit.IOSerialFamily	11
+com.apple.driver.AppleSEPManager	1.0.1
+com.apple.driver.AppleA7IOP	1.0.2
+com.apple.driver.IOSlaveProcessor	1
+com.apple.driver.AppleBiometricSensor	2
+com.apple.iokit.IOHIDFamily	2.0.0
+com.apple.iokit.CoreAnalyticsFamily	1
+com.apple.AUC	1.0
+com.apple.iokit.IOAVFamily	1.0.0
+com.apple.iokit.IOHDCPFamily	1.0.0
+com.apple.iokit.IOCECFamily	1
+com.apple.iokit.IOAudio2Family	1.0
+com.apple.driver.AppleIISController	140.1
+com.apple.driver.AppleAudioClockLibs	140.1
+com.apple.driver.AppleM2ScalerCSCDriver	265.0.0
+com.apple.iokit.IOSurface	302.14
+com.apple.driver.IODARTFamily	1
+com.apple.security.quarantine	4
+com.apple.security.sandbox	300.0
+com.apple.kext.AppleMatch	1.0.0d1
+com.apple.driver.AppleMobileFileIntegrity	1.0.5
+com.apple.security.AppleImage4	4.2.0
+com.apple.kext.CoreTrust	1
+com.apple.iokit.IOCryptoAcceleratorFamily	1.0.1
+com.apple.driver.AppleARMPlatform	1.0.2
+com.apple.iokit.IOStorageFamily	2.1
+com.apple.iokit.IOSlowAdaptiveClockingFamily	1.0.0
+com.apple.iokit.IOReportFamily	47
+com.apple.kec.pthread	1
+com.apple.kec.Libm	1
+com.apple.kec.corecrypto	12.0
+
+
+
+Stackshot Succeeded ** Bytes Traced 595225 (Uncompressed 1577504) **

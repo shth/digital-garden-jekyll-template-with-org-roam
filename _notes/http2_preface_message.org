@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       7e16d1a1-6756-415d-b83b-9046fee5ff1f
+:END:
+#+title: HTTP2 Preface message
+#+category: HTTP2 Preface message
+#+date: [2023-03-06 Mon 23:06]
+Looks like an HTTP 1 message so that server who only understand HTTP 1 can reject the message
+
+content must be:
+PRI * HTTP/2.0
+
+SM

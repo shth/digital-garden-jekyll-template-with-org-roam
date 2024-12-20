@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       fa21cce8-a425-41ab-b85c-0daa4a586dc6
+:END:
+#+title: Verdaccio
+#+category: Verdaccio
+#+date: [2023-01-27 Fri 15:41]
+a container as local private npm registry
+https://verdaccio.org/

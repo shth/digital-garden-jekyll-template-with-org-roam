@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d9bcc8d5-0f94-460e-ae33-c1904ba44674
+:END:
+#+title: Goroutine Leak
+#+category: Goroutine Leak
+#+date: [2022-08-10 Wed 23:38]
+A situation when a goroutine is stuck trying to send a value to a [[id:dd32691f-36d5-4ec1-b918-8af0a16d76ea][Go Channel]] that will never be received
+
+It will not be collected by [[id:70d5815a-47f6-49f1-ade6-3baa95ce3482][Go Garbage Collection]]

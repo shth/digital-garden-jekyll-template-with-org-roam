@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       385ab114-19a1-4ddf-9416-3bf61545b4f7
+:END:
+#+title: Java For each loop
+#+category: Java For each loop
+#+date: [2022-12-03 Sat 12:25]

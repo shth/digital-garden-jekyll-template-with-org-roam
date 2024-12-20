@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8d563176-4a24-44df-aadd-a099de23af1e
+:END:
+#+title: Header compression
+#+category: Header compression
+#+date: [2023-01-02 Mon 17:26]

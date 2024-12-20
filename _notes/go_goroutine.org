@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       76bd2de6-53b6-4be1-a6da-b8d529ec7d9a
+:END:
+#+title: Go goroutine
+#+category: Go goroutine
+#+date: [2022-08-13 Sat 00:19]

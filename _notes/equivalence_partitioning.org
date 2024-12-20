@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       e642fa9c-9294-4ef0-8804-8f4361b51748
+:END:
+#+title: Equivalence partitioning
+#+category: Equivalence partitioning
+#+date: [2023-04-06 Thu 16:52]
+a kind of [[id:945fb1fc-e582-4841-bd69-ef9fca81fb17][Software testing technique]]
+
+designing test cases that include all of the [[id:42326a2d-89a3-4fc5-a9a5-3dc904339b44][Equivalence class]] of a particular system input
+with one value to represent the equivalence class
+
+this can reduce number of test cases while maintaining decent test coverage
+
+e.g. for a text input that accept letter and symbols, with length 1-5
+
+Equivalence
+- valid value
+  "abc", "a1b2"
+- invalid value
+  "123456", ""
+- boundary values
+  "a", "abcde"

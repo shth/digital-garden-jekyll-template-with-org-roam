@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       eb5ab953-138b-4565-8547-6e4d85de117d
+:END:
+#+title: SMS short stopping
+#+category: SMS fraud short stopping
+#+date: [2023-05-03 Wed 16:20]
+the fraudster work directly with a dishonest carrier.
+
+1. fraudster request call traffic to locale that would pass the carrier
+2. the carrier terminate the traffic early without it reaching its destination
+3. fraudster and carrier share the generated revenue
+
+AKA [[id:943aa977-6883-4d25-a90b-9534eb3d97ec][SMS number hijacking]]
+
+what to do to prevent this kind of attack:
+- use 2FA to verify the account
+- prevent international calling if possible
+- rate limiting
+- form validations
+  - to prevent numbers to expensive routes
+- use exponential delays between retries
+- look up numbers to check the linetype
+- monitor OTP conversion rate

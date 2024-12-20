@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       07620dbd-4f2b-483f-b7ec-d03dc53964c3
+:END:
+#+title: HTTP Accept-Ranges header
+#+category: HTTP Accept-Ranges header
+#+date: [2023-01-02 Mon 17:04]
+Server response header saying that it support range request

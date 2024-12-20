@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f39c1f0b-5842-43f8-81d6-2dbcfd5c81a2
+:END:
+#+title: SQL GROUP BY statements
+#+category: SQL GROUP BY statements
+#+date: [2023-03-27 Mon 13:45]

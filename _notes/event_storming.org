@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4e15bf0f-25c0-46c2-9654-167d1e762882
+:END:
+#+title: Event Storming
+#+category: Event Storming
+#+date: [2022-07-25 Mon 22:56]

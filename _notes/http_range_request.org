@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       6fbd0484-2551-4e0d-bf19-bd0f0ed8b50d
+:END:
+#+title: HTTP Range request
+#+category: HTTP Range request
+#+date: [2023-01-02 Mon 17:03]
+
+an [[id:892bca56-66ea-4d0f-a0af-cf6306199101][HTTP Response header]] that tells the client that it support partial requests
+
+values:
+- byte: accept partial requests with unit of bytes
+- none: don't allow partial requests
+
+e.g.
+[[id:07620dbd-4f2b-483f-b7ec-d03dc53964c3][HTTP Accept-Ranges]]: byte  // byte as unit
+
+related [[id:cb82bbfe-c486-4686-a60a-5b66a78562bc][HTTP status code]]:
+- [[id:fc8619dc-d6f4-4746-b7a7-467e863f655d][206]] partial response
+- [[id:0a482a6f-634d-4a9c-a5ea-6ec8ddeb991a][200]] full response (that means partial request not supported)
+- [[id:03769f83-c0b2-46b7-a80d-1890f3a65be3][416]] range out of bounds

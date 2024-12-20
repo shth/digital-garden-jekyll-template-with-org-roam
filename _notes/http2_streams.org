@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       deb093c8-a114-42cb-b0cd-8f9be97cec28
+:END:
+#+title: HTTP2 streams
+#+category: HTTP2 streams
+#+date: [2023-03-06 Mon 22:30]
+used for 1 request and 1 response only
+
+* states
+** Idle
+Initial state of the stream
+** Open
+when request [[id:ed388d07-ecf2-45b4-ba9e-4a52fdaaeff9][HTTP2 Header frame]] is sent
+** half closed
+when the request [[id:ed388d07-ecf2-45b4-ba9e-4a52fdaaeff9][HTTP2 Header frame]] is ended by [[id:0126f162-6833-43d5-92ac-ddd9cc341554][HTTP2 end_stream flag]] flag
+** closed
+when the response is ended by [[id:0126f162-6833-43d5-92ac-ddd9cc341554][HTTP2 end_stream flag]] flag

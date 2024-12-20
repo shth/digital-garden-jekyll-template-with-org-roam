@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       570a8349-cc78-4b5b-a31d-b8c48a853166
+:END:
+#+title: Migrating existing system to event sourced
+#+category: Migrating existing system to event sourced
+#+date: [2022-07-14 Thu 11:40]
+
+Migrating existing system to [[id:e88ffc37-d8b6-46cf-b5cb-0eb44bd61cf4][Event sourcing]]
+1. extract all the data and turn them into events
+2. only bring the snapshot of current state

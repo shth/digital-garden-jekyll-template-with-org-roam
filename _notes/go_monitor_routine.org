@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       45d49f7a-15c7-4b34-b06c-3573060e39f3
+:END:
+#+title: Go Monitor routine
+#+category: Go Monitor routine
+#+date: [2022-09-06 Tue 22:16]

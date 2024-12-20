@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4297910b-d7b0-42a5-abdf-1b21d3a9d95c
+:END:
+#+title: Procedural programming
+#+category: Procedural programming
+#+date: [2022-12-03 Sat 12:38]

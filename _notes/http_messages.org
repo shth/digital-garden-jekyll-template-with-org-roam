@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       5a64b015-a77d-4215-90c1-d21c1a29659a
+:END:
+#+title: HTTP messages
+#+category: HTTP messages
+#+date: [2023-01-02 Mon 16:57]
+
+encoded with enhanced [[id:3d9e7d6a-68d4-4c97-9315-ceda93677fff][ASCII]]

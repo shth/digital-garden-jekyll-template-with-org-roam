@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7686e8bd-4c48-4b53-a8f2-0feee21ca3f3
+:END:
+#+title: ARM
+#+category: ARM
+#+date: [2023-10-07 Sat 17:35]

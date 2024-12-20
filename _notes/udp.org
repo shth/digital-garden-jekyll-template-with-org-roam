@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       54498b9b-a4c7-4b0e-87cf-1538d14b1afb
+:END:
+#+title: UDP
+#+category: UDP
+#+date: [2023-01-02 Mon 17:23]
+
+Cons:
+- lives in user space, so it's a few time slower than [[id:fa5cf477-c629-498d-86a9-365197a3763d][TCP]]
+- some firewall might block it because it's not as common as TCP

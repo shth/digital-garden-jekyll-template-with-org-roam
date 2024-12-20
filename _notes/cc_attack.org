@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       aa1a860b-c0c1-4dd1-b91f-8cbf081617a4
+:END:
+#+title: CC attack
+#+category: CC attack
+#+date: [2023-04-11 Tue 11:43]
+stands for challenge collapsar attack
+
+it is a type of [[id:33847458-4722-43de-ae05-7327a2ab381f][DDos attack]] where the attack traffic is imitating valid user traffic.

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ce81b7e6-fa8e-455f-b388-d6f1838f8225
+:END:
+#+title: Octet
+#+category: Octet
+#+date: [2023-03-06 Mon 23:10]
+exactly 8 bits
+
+byte can be different length depending on architecture

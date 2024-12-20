@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d59914e9-ac63-42f2-8e00-9d22ec9d5e30
+:END:
+#+title: 6 connections per domain
+#+category: 6 connections per domain
+#+date: [2023-03-06 Mon 22:08]
+[[id:8c2d7d8f-8366-4dba-a462-9f30c34c9926][limitation of HTTP 1]]
+
+each connection is used for 1 resource

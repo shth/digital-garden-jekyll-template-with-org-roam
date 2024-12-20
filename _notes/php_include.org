@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b66ace3b-ecb7-4c9c-b2a4-8d18d82bcdc4
+:END:
+#+title: PHP include
+#+category: PHP include
+#+date: [2023-03-24 Fri 16:01]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       72eef9ae-c188-4b6c-933d-fd252a1fe9ba
+:END:
+#+title: Polymorphism
+#+category: Polymorphism
+#+date: [2022-12-12 Mon 22:16]
+an [[id:5d96b112-2a23-4010-b9fc-6229f67ae081][OOP]] concept:
+an object variable that can refer to multiple actual types

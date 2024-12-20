@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       db12a6b9-ca19-4832-bddf-82e87017e150
+:END:
+#+title: HTTP Head Method
+#+category: HTTP Head Method
+#+date: [2023-01-19 Thu 09:25]
+
+no body allowed
+
+terminated at the first empty line

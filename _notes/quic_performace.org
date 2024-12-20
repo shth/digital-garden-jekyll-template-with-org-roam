@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bc77483a-54da-443a-bbdb-322f8d05c923
+:END:
+#+title: QUIC performace
+#+category: QUIC performace
+#+date: [2023-01-02 Mon 17:24]
+QUIC + [[id:54498b9b-a4c7-4b0e-87cf-1538d14b1afb][UDP]] is slower than [[id:fa5cf477-c629-498d-86a9-365197a3763d][TCP]] + [[id:54498b9b-a4c7-4b0e-87cf-1538d14b1afb][UDP]] because TCP is in kernel space while QUIC is in user space
+
+also hardwares are more optimized to TCP than to UDP because of its popularity

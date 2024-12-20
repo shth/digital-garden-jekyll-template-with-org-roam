@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       61499375-db21-4f09-963c-30e7abd84dc8
+:END:
+#+title: Lalamove Team Coyote S70 tech improvement
+#+category: Lalmove Team Coyote S70 tech improvement
+#+date: [2022-09-16 Fri 14:44]
+* improve performance for running all tests in local machine
+* add build task in MR CI pipeline
+make sure all merged commits are deployable to master
+* replace momentJS?
+* improve browser cache invalidation of pre env
+now it is using the release version in path
+e.g. https://web.pre.lalamove.com/locales/en-HK/translation.json?version=3.94.1
+
+which will not be updated when deploying to pre.
+
+This cause the browser to cache stale files e.g. translation files
+
+could append commit hash to make sure it is invalidated everytime
+* remove exhaustive deps eslint rule
+change it to warn, we are disabling it in many places
+
+also avoid
+useEffect(() => {
+  dispatch(...)
+}, [dispatch])
+
+look [[https://github.com/facebook/react/issues/14920#issuecomment-471070149][here]] for what it protect against

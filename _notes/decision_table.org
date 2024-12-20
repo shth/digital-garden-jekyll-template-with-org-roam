@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       abfbb4bd-d74b-409c-ab03-bb83ff2e7745
+:END:
+#+title: Decision table
+#+category: Decision table
+#+date: [2023-04-06 Thu 17:04]
+a [[id:945fb1fc-e582-4841-bd69-ef9fca81fb17][Software testing technique]]
+
+there are 4 components:
+- condition
+  define the input value
+- action
+  the system output based on input value
+- rule
+  a specific combination of condition and action
+- test case
+  the corresponding test case for a rule

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cc230b50-86bc-4c38-927b-4ada95335783
+:END:
+#+title: DNS well known hostname
+#+category: DNS well known hostname
+#+date: [2023-03-06 Mon 22:05]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       09893c20-d9e0-4029-8c76-23269e92e2eb
+:END:
+#+title: Java ==
+#+category: Java ==
+#+date: [2023-01-02 Mon 17:15]
+
+compares the address of two variables

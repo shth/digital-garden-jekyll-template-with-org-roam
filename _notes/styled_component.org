@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       13badf87-13ac-4f23-98a0-e7bd38973992
+:END:
+#+title: Styled-component
+#+category: Styled-component
+#+date: [2023-04-14 Fri 16:16]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c63717e9-a7df-4474-abf9-9132b9d9f813
+:END:
+#+title: Go sync.RWMutex
+#+category: Go sync.RWMutex
+#+date: [2022-09-10 Sat 10:08]
+Multiple read, single write allowed [[id:bc46fa6a-1cba-424b-b3e0-73304aadf2fa][Go Mutex]]
+
+the read lock must only be used in read-only functions

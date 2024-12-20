@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ed388d07-ecf2-45b4-ba9e-4a52fdaaeff9
+:END:
+#+title: HTTP2 Header frame
+#+category: HTTP2 Header frame
+#+date: [2023-03-06 Mon 23:14]
+send the normal HTTP headers, along with some [[id:077457af-3a65-4960-95ca-6ad05f66ed45][HTTP2 pseudo-headers]] (prefixed with colon, e.g. ':authority')

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       8e983728-2193-4373-a4ef-1d69921b67f0
+:END:
+#+title: Retail Pro Integration
+#+date: [2022-07-06 Wed 10:52]

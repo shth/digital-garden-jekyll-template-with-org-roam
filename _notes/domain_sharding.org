@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4fcdae84-c41a-48fc-952a-879e0fbd7a83
+:END:
+#+title: Domain Sharding
+#+category: Domain Sharding
+#+date: [2023-03-06 Mon 22:07]
+serving static assets from sub domain to allow client to make more connections ([[id:d59914e9-ac63-42f2-8e00-9d22ec9d5e30][6 connections per domain]])
+
+so that the client won't send [[id:3bf3b720-27f1-4fbb-a79b-82c50996b3cc][HTTP Cookie]] when fetching static files
+
+this technique is inefficient because setting up [[id:52476342-9bc4-4996-9aa1-cb6b30991ac9][HTTP Connections]] requires overhead
+* under [[id:20a4359e-7cb9-4028-9b9b-610759322ff6][HTTP2]]
+the performance will be negatively impacted because header compression ([[id:e50233dd-e821-46b6-a532-22b6d80a4c71][HPACK]]) works better in single connection

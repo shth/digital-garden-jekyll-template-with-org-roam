@@ -1,0 +1,2000 @@
+:PROPERTIES:
+:ID:       b239646e-dc8b-4b9a-947a-866a993744a2
+:END:
+#+title: Personal Finance
+#+category: Personal Finance
+* Reports
+** Net worth
+Usage:
+- "-M": by month
+- "-e PERIOD_EXPRESSION": end date (exclusive)
+#+NAME: Net worth
+#+BEGIN_SRC hledger :noweb yes :cmdline bs -X $ -R --infer-market-prices -M ^assets ^liabilities --tree
+<<Accounts>>
+<<Pricings>>
+<<Transactions>>
+<<Opening-balances>>
+<<Budget>>
+#+END_SRC
+
+#+RESULTS: Net worth
+#+begin_example
+Balance Sheet 2023-01-31, valued at period ends
+
+                             ||    2023-01-31
+=============================++===============
+ Assets                      ||
+-----------------------------++---------------
+ Assets                      || $216876.70234
+   Octopus                   ||    $292.80000
+   Vouchers                  ||   $1550.00000
+   Cash                      ||   $1416.00000
+   Account Receivable        ||    $549.00000
+     Christine               ||    $246.00000
+     Jason                   ||    $123.00000
+     Wingto Wong             ||    $180.00000
+   Brokerage                 ||  $79061.88670
+     Firstrade               ||  $72141.60145
+       Stock                 ||  $68965.80804
+       Cash                  ||   $2741.13891
+     Interactive Broker:Cash ||   $6920.28525
+   Citi Bank                 ||   $6920.61564
+   Joint:Savings             ||     $75184.77
+   Personal                  ||  $51901.63000
+     Savings:Wedding Ring    ||     $45358.31
+     Checking                ||   $6543.32000
+-----------------------------++---------------
+                             || $216876.70234
+=============================++===============
+ Liabilities                 ||
+-----------------------------++---------------
+ Liabilities:Visa Platinum   ||  $10434.30000
+-----------------------------++---------------
+                             ||  $10434.30000
+=============================++===============
+ Net:                        || $206442.40234
+#+end_example
+
+*** forecast
+#+NAME: Net worth forecast
+#+BEGIN_SRC hledger :noweb yes :cmdline bs -X $ -R --forecast --infer-market-prices -M ^assets ^liabilities --tree
+<<Accounts>>
+<<Pricings>>
+<<Transactions>>
+<<Opening-balances>>
+<<Budget>>
+#+END_SRC
+** Cash flow
+#+NAME: Cash flow
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -X $ -M --forecast --tree --infer-market-price ^Income ^Expenses
+<<Opening-balances>>
+<<Accounts>>
+<<Pricings>>
+<<Transactions>>
+#+END_SRC
+
+#+RESULTS: Cash flow
+#+begin_example
+Balance changes in 2023-01-01..2023-02-28, valued at period ends:
+
+                                 ||           Jan           Feb
+=================================++=============================
+ Expenses                        ||  $35165.02000             0
+   Irregular                     ||  $22013.00000             0
+     Gathering                   ||   $1517.00000             0
+     Leisure                     ||    $878.00000             0
+     Misc                        ||   $1387.00000             0
+     Shoes                       ||    $517.00000             0
+     Tax                         ||  $17714.00000             0
+   Regular                       ||  $13152.02000             0
+     Cell Phone                  ||    $127.75000             0
+     Dinner                      ||   $1110.00000             0
+     Groceries                   ||   $3273.25000             0
+       Transport                 ||    $506.50000             0
+     Housekeeping money          ||   $7500.00000             0
+       Christine                 ||   $3500.00000             0
+       Mum                       ||   $4000.00000             0
+     Lunch                       ||    $599.00000             0
+     Subscriptions               ||     $64.02000             0
+     Utilities                   ||    $478.00000             0
+ Income                          || $-46382.10000  $-1100.00000
+   Salary                        || $-46000.00000             0
+   Transportation Subsidy (Govt) ||   $-102.10000             0
+   Misc                          ||   $-160.00000             0
+   Red Packet                    ||             0  $-1100.00000
+   Redpacket                     ||   $-120.00000             0
+---------------------------------++-----------------------------
+                                 || $-11217.08000  $-1100.00000
+#+end_example
+
+** Budget
+#+NAME: Budget
+#+BEGIN_SRC ledger :cmdline balance
+~ monthly from 2023/01  * Monthly budget
+    Expenses:Regular:Bodybuilding  $300
+    Expenses:Regular:Subscriptions   $64.02000
+    Expenses:Regular:Lunch  $1000
+    Expenses:Regular:Housekeeping money:Mum  $4000
+    Expenses:Regular:Housekeeping money:Christine  $3500
+    Expenses:Regular:Insurance  $545
+    Expenses:Regular:Groceries  $4300
+    Expenses:Regular:Groceries:Transport  $200
+    Expenses:Regular:Cell Phone  $127.75
+    Expenses:Regular:Dinner  $500
+    Expenses:Regular:Utilities  $316
+    Expenses:Irregular:Shoes  $200
+    Expenses:Irregular:Books  $150
+    Expenses:Irregular:Festival  $1500
+    Expenses:Irregular:Gathering  $700
+    Expenses:Irregular:Leisure  $600
+    Expenses:Irregular:Misc  $500
+    Expenses:Irregular:Medical  $500
+    Expenses:Irregular:Travel  $100
+    Expenses:Irregular:Tax  $1794
+    Expenses:Irregular:Travel  $100
+    Income:Salary  -$46500
+    Assets:Personal:Savings:Investments  $2000
+    Assets:Personal:Savings:Wedding Ring  $3500
+    Assets:Joint:Savings
+#+END_SRC
+
+*** regular
+#+NAME: Regular Budget
+#+BEGIN_SRC hledger :noweb yes :cmdline balance tag:generated --forecast -M -b "last month" -e "this month" Expenses:Regular
+<<Budget>>
+#+END_SRC
+
+#+RESULTS: Regular Budget
+#+begin_example
+Balance changes in 2023-01:
+
+                                               ||          Jan
+===============================================++==============
+ Expenses:Regular:Bodybuilding                 ||         $300
+ Expenses:Regular:Cell Phone                   ||      $127.75
+ Expenses:Regular:Dinner                       ||         $500
+ Expenses:Regular:Groceries                    ||        $4300
+ Expenses:Regular:Groceries:Transport          ||         $200
+ Expenses:Regular:Housekeeping money:Christine ||        $3500
+ Expenses:Regular:Housekeeping money:Mum       ||        $4000
+ Expenses:Regular:Insurance                    ||         $545
+ Expenses:Regular:Lunch                        ||        $1000
+ Expenses:Regular:Subscriptions                ||    $64.02000
+ Expenses:Regular:Utilities                    ||         $316
+-----------------------------------------------++--------------
+                                               || $14852.77000
+#+end_example
+
+*** irregular
+#+NAME: Irregular Budget
+#+BEGIN_SRC hledger :noweb yes :cmdline balance tag:generated --forecast -M -b "last month" -e "this month" Irregular
+<<Budget>>
+#+END_SRC
+
+#+RESULTS: Irregular Budget
+#+begin_example
+Balance changes in 2023-01:
+
+                              ||   Jan
+==============================++=======
+ Expenses:Irregular:Books     ||  $150
+ Expenses:Irregular:Festival  || $1500
+ Expenses:Irregular:Gathering ||  $700
+ Expenses:Irregular:Leisure   ||  $600
+ Expenses:Irregular:Medical   ||  $500
+ Expenses:Irregular:Misc      ||  $500
+ Expenses:Irregular:Shoes     ||  $200
+ Expenses:Irregular:Tax       || $1794
+ Expenses:Irregular:Travel    ||  $200
+------------------------------++-------
+                              || $6144
+#+end_example
+
+
+*** report
+**** regular expenses
+#+NAME: Regular-Expense-Budget-report
+#+BEGIN_SRC hledger :noweb yes :cmdline balance --budget -X $ -E --tree Expenses:Regular not:broker not:Unbudgeted -b "2023" -M
+<<Pricings>>
+<<Budget>>
+<<Transactions>>
+<<Opening-balances>>
+#+END_SRC
+
+#+RESULTS: Regular-Expense-Budget-report
+#+begin_example
+Budget performance in 2023-01-01..2023-02-28, valued at period ends:
+
+                      ||                                 Jan                                 Feb
+======================++=========================================================================
+ Expenses:Regular     || $13733.04000 [ 92% of $14852.77000]  $3614.13000 [ 24% of $14852.77000]
+   Bodybuilding       ||            0 [  0% of         $300]            0 [  0% of         $300]
+   Cell Phone         ||   $127.75000 [100% of      $127.75]   $127.75000 [100% of      $127.75]
+   Dinner             ||  $1110.00000 [222% of         $500]   $452.00000 [ 90% of         $500]
+   Groceries          ||  $3854.27000 [ 86% of        $4500]  $1649.63000 [ 37% of        $4500]
+     Transport        ||   $506.50000 [253% of         $200]            0 [  0% of         $200]
+   Housekeeping money ||  $7500.00000 [100% of        $7500]            0 [  0% of        $7500]
+     Christine        ||  $3500.00000 [100% of        $3500]            0 [  0% of        $3500]
+     Mum              ||  $4000.00000 [100% of        $4000]            0 [  0% of        $4000]
+   Insurance          ||            0 [  0% of         $545]   $521.75000 [ 96% of         $545]
+   Lunch              ||   $599.00000 [ 60% of        $1000]   $677.00000 [ 68% of        $1000]
+   Subscriptions      ||    $64.02000 [100% of    $64.02000]            0 [  0% of    $64.02000]
+   Utilities          ||   $478.00000 [151% of         $316]   $186.00000 [ 59% of         $316]
+----------------------++-------------------------------------------------------------------------
+                      || $13733.04000 [ 92% of $14852.77000]  $3614.13000 [ 24% of $14852.77000]
+#+end_example
+**** irregular expenses
+#+NAME: Cumulative-Irregular-Expense-Budget-report
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -X $ --budget --cumulative --tree Expenses:Irregular not:broker not:Unbudgeted -b "this year" -M
+<<Pricings>>
+<<Budget>>
+<<Transactions>>
+#+END_SRC
+
+#+RESULTS: Cumulative-Irregular-Expense-Budget-report
+#+begin_example
+Budget performance in 2023-01-01..2023-02-28, valued at period ends:
+
+                    ||                   2023-01-31                     2023-02-28
+====================++=============================================================
+ Expenses:Irregular || $22013.00000 [358% of $6144]  $23154.90000 [188% of $12288]
+   Books            ||            0 [  0% of  $150]             0 [  0% of   $300]
+   Festival         ||            0 [  0% of $1500]    $769.90000 [ 26% of  $3000]
+   Gathering        ||  $1517.00000 [217% of  $700]   $1517.00000 [108% of  $1400]
+   Leisure          ||   $878.00000 [146% of  $600]    $878.00000 [ 73% of  $1200]
+   Medical          ||            0 [  0% of  $500]             0 [  0% of  $1000]
+   Misc             ||  $1387.00000 [277% of  $500]   $1387.00000 [139% of  $1000]
+   Shoes            ||   $517.00000 [258% of  $200]    $517.00000 [129% of   $400]
+   Tax              || $17714.00000 [987% of $1794]  $17714.00000 [494% of  $3588]
+   Travel           ||            0 [  0% of  $200]    $372.00000 [ 93% of   $400]
+--------------------++-------------------------------------------------------------
+                    || $22013.00000 [358% of $6144]  $23154.90000 [188% of $12288]
+#+end_example
+
+**** savings
+#+NAME: Saving-Budget-report
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -MB -X $ --budget --cumulative --tree Savings not:broker not:Unbudgeted -b 2023
+<<Pricings>>
+<<Budget>>
+<<Transactions>>
+#+END_SRC
+
+#+RESULTS: Saving-Budget-report
+#+begin_example
+Budget performance in 2023-01-01..2023-02-28, converted to cost, valued at period ends:
+
+                    ||                         2023-01-31                          2023-02-28
+====================++========================================================================
+ Assets             || $18686.01000 [73% of $25503.23000]  $13336.01000 [26% of $51006.46000]
+   Joint:Savings    || $18686.01000 [93% of $20003.23000]  $13336.01000 [33% of $40006.46000]
+   Personal:Savings ||            0 [ 0% of  $5500.00000]             0 [ 0% of $11000.00000]
+     Investments    ||            0 [ 0% of  $2000.00000]             0 [ 0% of  $4000.00000]
+     Wedding Ring   ||            0 [ 0% of  $3500.00000]             0 [ 0% of  $7000.00000]
+--------------------++------------------------------------------------------------------------
+                    || $18686.01000 [73% of $25503.23000]  $13336.01000 [26% of $51006.46000]
+#+end_example
+
+** Register
+#+NAME: Register
+#+BEGIN_SRC hledger :noweb yes :cmdline register Travel
+<<Opening-balances>>
+<<Accounts>>
+<<Pricings>>
+<<Assets>>
+<<Transactions>>
+#+END_SRC
+
+#+RESULTS: Register
+: 2023-01-30 Travel hotel         Un:Ex:Ir:Travel        $1457.99000   $1457.99000
+: 2023-02-08 USJ                  Un:Expenses:Travel     $1350.00000   $2807.99000
+: 2023-02-13 USJ fast pass        Un:Ex:Ir:Travel        $2048.00000   $4855.99000
+: 2023-02-17 Bag                  Ex:Irregular:Travel     $372.00000   $5227.99000
+
+* Transactions
+the command is written as `ledger` to get syntax highlight, change it to `hledger` when acutally executing
+#+NAME: Transactions
+#+BEGIN_SRC ledger :noweb yes :cmdline print
+2023/02/26 * Groceries
+    Assets:Octopus  =$243.4
+    Assets:Cash  =$10
+    Liabilities:Visa Platinum  =-$29268.18
+    Expenses:Regular:Groceries
+
+2023/02/25 * Dinner
+    Expenses:Regular:Dinner  $47
+    Assets:Octopus
+
+2023/02/20 * Lunch
+    Expenses:Regular:Lunch  $32
+    Assets:Octopus
+
+2023/02/20 * CSL
+    Expenses:Regular:Utilities  $186
+    Liabilities:Visa Platinum
+
+2023/02/19 * Groceries
+    Assets:Octopus  =$307.2
+    Assets:Cash  =$10
+    Liabilities:Visa Platinum  =-$28615.18
+    Expenses:Regular:Groceries
+
+2023/02/18 * Lunch
+    Expenses:Regular:Lunch  $72
+    Assets:Octopus
+
+2023/02/17 * Lunch
+    Expenses:Regular:Lunch  $130
+    Assets:Cash
+
+2023/02/17 * Bag
+    Expenses:Irregular:Travel  $372
+    Liabilities:Visa Platinum
+
+2023/02/17 * Cash
+    Income:Red Packet  $200
+    Assets:Cash
+
+2023/02/16 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/02/16 * Lunch
+    Expenses:Regular:Lunch  $78
+    Liabilities:Visa Platinum
+
+2023/02/15 * Dinner
+    Expenses:Regular:Dinner  $212
+    Liabilities:Visa Platinum
+
+2023/02/14 * Valentine's day cake
+    Expenses:Irregular:Festival  $148
+    Assets:Octopus
+
+2023/02/14 * Valentine's day meal ingredient
+    Expenses:Irregular:Festival  $378.3
+    Liabilities:Visa Platinum
+
+2023/02/13 * USJ fast pass
+    Unbudgeted:Expenses:Irregular:Travel  $2048
+    Assets:Joint:Savings
+
+2023/02/13 * Valentine's day meal ingredient
+    Expenses:Irregular:Festival  $243.6
+    Liabilities:Visa Platinum
+
+2023/02/12 * Cell phone installment
+    Expenses:Regular:Cell Phone  $127.75
+    Liabilities:Visa Platinum
+
+2023/02/11 * Lunch
+    Expenses:Regular:Lunch  $72
+    Liabilities:Visa Platinum
+
+2023/02/11 * Christine payback
+    Assets:Joint:Savings  $3000
+    Assets:Account Receivable:Christine
+
+2023/02/11 * Credit card repayment
+    Liabilities:Visa Platinum  $1350
+    Assets:Joint:Savings
+
+2023/02/11 * Groceries
+    Assets:Octopus  =$332
+    Assets:Cash  =$290
+    Liabilities:Visa Platinum  =-$26566.48
+    Expenses:Regular:Groceries
+
+2023/02/09 * Dinner
+    Expenses:Regular:Dinner  $193
+    Assets:Octopus
+
+2023/02/09 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/02/08 * USJ
+    Unbudgeted:Expenses:Travel  $1350
+    Liabilities:Visa Platinum
+
+2023/02/07 * ATM withdrawl
+    Assets:Account Receivable:Christine  $3000
+    Assets:Joint:Savings
+
+2023/02/10 * Lunch
+    Expenses:Regular:Lunch  $40
+    Liabilities:Visa Platinum
+
+2023/02/06 * Lunch
+    Expenses:Regular:Lunch  $32
+    Liabilities:Visa Platinum
+
+2023/02/04 * ATM withdrawl
+    Assets:Cash  $400
+    Assets:Personal:Checking
+
+2023/02/01 * Govt Rates
+    Ungudgeted:Expenses:Irregular:Misc  $1500
+    Assets:Joint:Savings
+
+2023/02/03 * Life + Medical
+    Expenses:Regular:Insurance  $521.75
+    Liabilities:Visa Platinum
+
+2023/02/03 * Lunch
+    Expenses:Regular:Lunch  $173
+    Assets:Octopus
+
+2023/02/03 * Pet gasteration
+    Unbudgedted:Expenses:Irregular:Medical  $2500
+    Assets:Joint:Savings
+
+2023/02/01 * Lunch
+    Expenses:Regular:Lunch  $48
+    Liabilities:Visa Platinum
+
+2023/01/31 * Stock interests
+    Assets:Brokerage:Firstrade:Stock  = 9.41368 BNDX
+    Assets:Brokerage:Firstrade:Stock  = 14.23071 VGIT
+    Assets:Brokerage:Firstrade:Stock  = 31.06925 VGK
+    Assets:Brokerage:Firstrade:Stock  = 26.86519 VPL
+    Assets:Brokerage:Firstrade:Stock  = 9.18538 VTI
+    Assets:Brokerage:Firstrade:Stock  = 9.12742 VTIP
+    Assets:Brokerage:Firstrade:Stock  = 43.59163 VWO
+    Income:Stock Interests
+
+2023/01/31 * Passport renewal
+    Expenses:Irregular:Misc  $370
+    Liabilities:Visa Platinum
+
+2023/02/01 * Red packet
+    Assets:Personal:Checking  $1100
+    Income:Red Packet
+
+2023/01/30 * Travel hotel
+    Unbudgeted:Expenses:Irregular:Travel  $1457.99
+    Assets:Joint:Savings
+
+2023/01/30 * Christine's change
+    Income:Misc
+    Assets:Cash  $160
+
+2023/01/29 * Gathering (BBQ)
+    Expenses:Irregular:Gathering
+    Assets:Cash  =$0
+
+2023/01/28 * Salaray (Lalamove)
+    Income:Salary  -$46000
+    Assets:Joint:Savings
+
+2023/01/28 * Housekeeping Money
+    Expenses:Regular:Housekeeping money:Mum  $4000
+    Expenses:Regular:Housekeeping money:Christine  $3500
+    Assets:Joint:Savings
+
+2023/01/28 * Fund transfer
+    Assets:Personal:Checking  $17356
+    Assets:Joint:Savings
+
+2023/01/28 * Transportation
+    Expenses:Regular:Groceries:Transport  $506.5
+    Assets:Octopus
+
+2023/01/28 * Credit card repayment
+    Liabilities:Visa Platinum  =-$25076.85
+    Liabilities:Union Pay  $1000
+    Assets:Personal:Checking  -$7624.67
+    Expenses:Regular:Groceries
+
+2023/01/27 * Redpacket (Company)
+    Income:Redpacket  -$120
+    Assets:Cash
+
+2023/01/26 * Groceries
+    Assets:Octopus  =$334.6
+    Assets:Cash  =$420
+    Liabilities:Visa Platinum  =-$32514.22
+    Expenses:Regular:Groceries
+
+2023/01/26 * Used joint saving to cover new year gift
+    Assets:Joint:Savings  -$1000
+    Liabilities:Visa Platinum
+
+2023/01/21 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/01/16 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/01/25 * Gathering with Kenny
+    Expenses:Irregular:Gathering
+    Assets:Payme  $80
+    Liabilities:Visa Platinum  -$296
+
+2023/01/25 * Dinner
+    Expenses:Regular:Dinner  $99.5
+    Assets:Octopus
+
+2023/01/25 * Gathering with FungJ
+    Expenses:Irregular:Gathering  $132
+    Assets:Personal:Checking
+
+2023/01/24 * Transportation Subsidy (Govt)
+    Income:Transportation Subsidy (Govt)  -$102.1
+    Assets:Octopus
+
+2023/01/21 * New Year Gifts for Christine family
+    Unbudgeted:Expenses:Irregular:Festival  $516.9
+    Liabilities:Visa Platinum
+
+2023/01/24 * Lunch
+    Expenses:Regular:Lunch  $71
+    Assets:Cash
+
+2023/01/21 * Lunch
+    Expenses:Regular:Lunch
+    Assets:Octopus  -$55
+    Liabilities:Visa Platinum  -$50
+
+2023/01/21 * New year gift for family
+    Unbudgeted:Expenses:Irregular:Festival  $652
+    Liabilities:Visa Platinum
+
+2023/01/20 * Dinner
+    Expenses:Regular:Dinner  $121.5
+    Assets:Octopus
+
+2023/01/20 * Lunch
+    Expenses:Regular:Lunch  $85
+    Liabilities:Visa Platinum
+
+2023/01/20 * CSL
+    Expenses:Regular:Utilities  $186
+    Liabilities:Visa Platinum
+
+2023/01/19 * Lunch
+    Expenses:Regular:Lunch  $50
+    Assets:Octopus
+
+2023/01/17 * Tax
+    Expenses:Irregular:Tax  $17714
+    Liabilities:Visa Platinum
+
+2023/01/16 * PCCW
+    Expenses:Regular:Utilities  $106
+    Liabilities:Visa Platinum
+
+2023/01/15 * Dinner
+    Expenses:Regular:Dinner  $171
+    Assets:Octopus
+
+2023/01/14 * Dinner
+    Expenses:Regular:Dinner
+    Assets:Cash  -$80
+    Assets:Octopus  -$38
+
+2023/01/14 * Groceries
+    Assets:Octopus  =$409.3
+    Assets:Cash  =$890
+    Liabilities:Visa Platinum  =-$12076.32
+    Expenses:Regular:Groceries
+
+2023/01/13 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/01/13 * Cell phone installment
+    Expenses:Regular:Cell Phone  $127.75
+    Liabilities:Visa Platinum
+
+2023/01/13 * Lunch
+    Expenses:Regular:Lunch  $51
+    Liabilities:Visa Platinum
+
+2023/01/13 * Dinner
+    Expenses:Regular:Dinner  $155
+    Assets:Octopus
+
+2023/01/12 * Dinner
+    Expenses:Regular:Dinner  $118
+    Assets:Octopus
+
+2023/01/11 * Necklace for sister 50th birthday
+    Assets:Cash  -$500
+    Expenses:Irregular:Misc
+
+2023/01/11 * Dinner
+    Expenses:Regular:Dinner  $173
+    Assets:Octopus
+
+2023/01/10 * Booked cafe de carol for Christine Mum
+    Liabilities:Visa Platinum  -$1076
+    Assets:Cash
+
+2023/01/09 * Football gear
+    Expenses:Irregular:Misc  $517
+    Liabilities:Visa Platinum
+
+2023/01/09 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/01/09 * Groceries
+    Expenses:Regular:Groceries  $50
+    Assets:Vouchers
+
+2023/01/09 * Groceries
+    Expenses:Regular:Groceries  $50
+    Assets:Vouchers
+
+2023/01/09 * Lunch
+    Expenses:Regular:Lunch  $58
+    Liabilities:Visa Platinum
+
+2023/01/08 * Board games
+    Expenses:Irregular:Leisure
+    Assets:Account Receivable:Wingto Wong  $180
+    Liabilities:Visa Platinum  -$1058
+
+2023/01/07 * Dinner
+    Expenses:Regular:Dinner  $42
+    Assets:Octopus
+
+2023/01/06 * Shoes
+    Expenses:Irregular:Shoes  $517
+    Liabilities:Visa Platinum
+
+2023/01/05 * Dinner
+    Expenses:Regular:Dinner  $112
+    Assets:Octopus
+
+2023/01/05 * Lunch
+    Expenses:Regular:Lunch  $83
+    Liabilities:Visa Platinum
+
+2023/01/05 * Groceries
+    Expenses:Regular:Groceries  $86.9
+    Assets:Vouchers  -$50
+    Liabilities:Visa Platinum
+
+2023/01/04 * Phone bill
+    Expenses:Regular:Utilities  $186
+    Liabilities:Visa Platinum
+
+2023/01/04 * Lunch
+    Expenses:Regular:Lunch  $61
+    Liabilities:Visa Platinum
+
+2023/01/03 * Bought stock
+    Assets:Brokerage:Firstrade:Stock  1 VWO@USD 39.4799
+    Assets:Brokerage:Firstrade:Stock  3 VTIP@USD 46.78
+    Assets:Brokerage:Firstrade:Stock  1 VGIT@USD 58.86
+    Assets:Brokerage:Firstrade:Stock  -2 BNDX@USD 47.87
+    Assets:Brokerage:Firstrade:Cash
+
+2023/01/03 * Lunch
+    Expenses:Regular:Lunch  $35
+    Liabilities:Visa Platinum
+
+2023/01/02 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2023/01/01 * Subscription
+    Expenses:Regular:Subscriptions  $64.02
+    Liabilities:Visa Platinum
+
+2023/01/01 * Gathering (Mo Lo Hotpot)
+    Expenses:Irregular:Gathering  $517
+    Liabilities:Visa Platinum
+
+2023/01/01 * Gathering (Fung J)
+    Expenses:Irregular:Gathering  $112
+    Assets:Personal:Checking
+#+end_src
+
+** opening balances
+#+NAME: Opening-balances
+#+BEGIN_SRC ledger
+2023-01-01 opening balances
+    Assets:Account Receivable:Christine              = $246.00000
+    Assets:Account Receivable:Jason                  = $123.00000
+    Assets:Brokerage:Firstrade                       = $434.65450
+    Assets:Brokerage:Firstrade:Cash                  = USD 352.51
+    Assets:Brokerage:Firstrade:Stock                      = 11.41368 BNDX
+    Assets:Brokerage:Firstrade:Stock                      = 13.23071 VGIT
+    Assets:Brokerage:Firstrade:Stock                      = 31.06925 VGK
+    Assets:Brokerage:Firstrade:Stock                      = 26.86519 VPL
+    Assets:Brokerage:Firstrade:Stock                      = 9.18538 VTI
+    Assets:Brokerage:Firstrade:Stock                      = 6.12742 VTIP
+    Assets:Brokerage:Firstrade:Stock                      = 42.59163 VWO
+    Assets:Brokerage:Interactive Broker:Cash         = $6920.28525
+    Assets:Citi Bank                                 = USD 889.99
+    Assets:Cash                                      = $340.00000
+    Assets:Joint:Savings                            = $75184.77
+    Assets:Octopus                                  = $292.80000
+    Assets:Personal:Checking                        = $6543.32
+    Assets:Personal:Savings:Investments             = $0
+    Assets:Personal:Savings:Wedding Ring            = $45358.31
+    Assets:Reimbursement:Medical                    = $0
+    Assets:Vouchers                                 = $1700.00000
+    Liabilities:Visa Platinum                       = $-7898.40000
+    equity:opening/closing balances
+#+end_src
+** accounts
+#+NAME: Accounts
+#+BEGIN_SRC ledger
+account Assets:Reimbursement:Medical
+account Assets:Joint:Savings
+account Assets:Octopus
+account Assets:Vouchers
+account Expenses:Octopus
+account Expenses:Subscriptions
+account Expenses:Groceries
+account Assets:Cash
+account Expenses:Interactive Broker:Commission
+account Expenses:Medical
+account Expenses:Books
+account Expenses:Lunch
+account Income:Salary
+account Income:Capital Gains
+account Income:Stock Interests
+account Income:Transportation Subsidy (Govt)
+account Liabilities:Union Pay
+account Assets:Personal:Savings:Wedding Ring
+account Assets:Personal:Savings:Tax
+account Assets:Personal:Savings:Travel
+account Assets:Personal:Savings:Festivals
+account Assets:Personal:Savings:Investments
+account Assets:Personal:Savings
+account Assets:Personal:Checking
+account Assets:Joint:Savings
+account Assets:Personal:Savings
+account Assets:Brokerage:Firstrade:Stock
+account Assets:Brokerage:Firstrade:Cash
+account Assets:Brokerage:Interactive Broker:Stock
+account Assets:Brokerage:Interactive Broker:Cash
+account Assets:Reimbursement:Medical
+account Equity:Opening Balances
+account Liabilities:Visa Platinum
+account Liabilities:Union Pay
+account Equity:Opening Balances
+commodity $
+commodity VTIP
+commodity TQQQ
+#+END_SRC
+* pricings
+#+NAME: Pricings
+#+BEGIN_SRC ledger
+P 2022/12/31 02:17:58 USD  $7.77606
+P 2022/08/21 02:17:58 BNDX USD 47.43
+P 2022/08/21 02:17:58 VGIT USD 58.48
+P 2022/08/21 02:17:58 VGK  USD 55.44
+P 2022/08/21 02:17:58 VPL  USD 64.35
+P 2022/08/21 02:17:58 VTI  USD 191.19
+P 2022/08/21 02:17:58 VTIP USD 46.71
+P 2022/08/21 02:17:58 VWO  USD 38.98
+P 2022/08/21 02:17:58 USD  $7.85
+P 2022/08/21 02:17:58 BNDX  USD 51.26
+P 2022/08/21 02:17:58 VGIT  USD 62.29
+P 2022/08/21 02:17:58 VGK  USD 55.37
+P 2022/08/21 02:17:58 VPL  USD 67.35
+P 2022/08/21 02:17:58 VTI  USD 206.13
+P 2022/08/21 02:17:58 VWO  USD 41.10
+P 2022/08/01 02:17:58 USD  $7.86993
+P 2022/08/01 02:17:58 BNDX  USD 51.26
+P 2022/08/01 02:17:58 VGIT  USD 62.29
+P 2022/08/01 02:17:58 VGK  USD 55.37
+P 2022/08/01 02:17:58 VPL  USD 67.35
+P 2022/08/01 02:17:58 VTI  USD 206.13
+P 2022/08/01 02:17:58 VWO  USD 41.10
+#+end_src
+
+* Asset allocation
+* Archives
+[[https://www.ledger-cli.org/3.0/doc/ledger3.html#Archiving-Previous-Years][tutorial]]
+1. copy the transactions here
+2. execute and get the closing and opening balance
+3.
+
+
+#+BEGIN_SRC hledger :noweb yes :cmdline close -X $
+<<Pricings>>
+#+end_src
+
+#+RESULTS:
+#+begin_example
+2023-01-01 opening balances
+    Assets:Account Receivable:Christine              $-369.00000 = $-369.00000
+    Assets:Account Receivable:Jason                  $-246.00000 = $-246.00000
+    Assets:Brokerage:Firstrade                        $434.65450 = $434.65450
+    Assets:Brokerage:Firstrade:Cash                  $4346.78050 = $4346.78050
+    Assets:Brokerage:Firstrade:Stock            $64706.556277135 = $64706.556277135
+    Assets:Brokerage:Firstrade:Stock                      5 VTIP = 5 VTIP
+    Assets:Brokerage:Interactive Broker:Cash         $6920.28525 = $6920.28525
+    Assets:Cash                                       $340.00000 = $340.00000
+    Assets:Joint:Savings                            $71436.77000 = $71436.77000
+    Assets:Octopus                                    $292.80000 = $292.80000
+    Assets:Personal:Checking                        $-2090.68000 = $-2090.68000
+    Assets:Personal:Savings                          $-986.00000 = $-986.00000
+    Assets:Personal:Savings:Investments              $2000.00000 = $2000.00000
+    Assets:Personal:Savings:Wedding Ring            $46862.00000 = $46862.00000
+    Assets:Reimbursement:Medical                     $-798.00000 = $-798.00000
+    Assets:Vouchers                                  $1700.00000 = $1700.00000
+    Liabilities:Visa Platinum                       $-7898.40000 = $-7898.40000
+    equity:opening/closing balances
+#+end_example
+
+** 2022
+*** Budget
+#+NAME: Budget-2022
+#+BEGIN_SRC ledger :cmdline balance
+; 2022/09/01  * Monthly budget
+~ monthly from 2022/10/01  * Monthly budget update
+    Expenses:Lunch  $1000
+    Assets:Joint:Savings
+~ monthly from 2022/09  * Monthly budget
+    Expenses:Lunch  $500
+    Expenses:Dinner  $500
+    Expenses:Gathering  $800
+    Expenses:Books  $150
+    Expenses:Subscriptions   $64.02000
+    Expenses:Cell Phone  $186
+    Expenses:Medical  $500
+    Expenses:Bodybuilding  $500
+    Expenses:Housekeeping money:Mum  $4000
+    Expenses:Housekeeping money:Christine  $3500
+    Expenses:Leisure  $250
+    Expenses:Misc  $500
+    Expenses:Travel  $100
+    Expenses:Festival  $1000
+    Expenses:Insurance  $545
+    Expenses:Utilities  $316
+    Expenses:Groceries  $4000
+    Expenses:Tax  $1794
+    Expenses:Travel  $100
+    Income:Salary  -$46500
+    Assets:Personal:Savings:Investments  $2000
+    Assets:Personal:Savings:Wedding Ring  $3500
+    Assets:Joint:Savings
+#+END_SRC
+
+#+RESULTS: Budget
+
+#+NAME: Expense-Budget-report-2022
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -MB --budget -X $ -E --cumulative --tree -b 2022-09-01 Expenses not:broker not:Unbudgeted
+<<Pricings>>
+<<Budget-2022>>
+<<Transactions-2022>>
+<<Expense-Budget-report-adjustments>>
+#+END_SRC
+
+#+NAME: Expense-Budget-report-2022
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -MB --budget -X $ -E --tree -b 2022-09-01 Expenses not:broker not:Unbudgeted
+<<Pricings>>
+<<Budget-2022>>
+<<Transactions-2022>>
+<<Expense-Budget-report-adjustments>>
+#+END_SRC
+
+#+NAME: Average-spending-2022
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -MA -b 2022-08-01 -e 2022-12-31 --depth 2 Expenses
+<<Transactions-2022>>
+#+END_SRC
+
+#+RESULTS: Average-spending-2022
+#+begin_example
+Balance changes in 2022-08-01..2022-12-31:
+
+                             ||                   Aug        Sep        Oct       Nov        Dec               Average
+=============================++========================================================================================
+ Expenses:Bodybuilding       ||               $195.00    $258.00    $142.00   $123.00          0               $143.60
+ Expenses:Books              ||               $399.04          0    $270.00         0          0               $133.81
+ Expenses:Cell Phone         ||               $186.00    $186.00    $372.00   $186.00          0               $186.00
+ Expenses:Dinner             ||               $314.00    $220.00    $211.00   $678.90    $344.00               $353.58
+ Expenses:Festival           ||                     0   $1358.20          0   $927.00   $4248.80              $1306.80
+ Expenses:Gathering          ||              $2033.20    $368.00    $327.00         0          0               $545.64
+ Expenses:Groceries          ||              $5797.68   $2006.60   $5610.00  $5161.32   $5180.23              $4751.17
+ Expenses:Housekeeping money ||                     0   $7000.00  $14500.00         0  $15000.00              $7300.00
+ Expenses:Insurance          ||                     0   $1700.00          0   $600.00    $600.00               $580.00
+ Expenses:Interactive Broker ||    $15.70, USD 13.980          0          0         0          0      $3.14, USD 2.796
+ Expenses:Leisure            ||              $1968.00    $438.00     $13.70         0    $488.00               $581.54
+ Expenses:Lunch              ||               $446.00   $1492.00    $736.00  $1021.00    $428.90               $824.78
+ Expenses:Medical            ||             $10320.00          0    $300.00         0          0              $2124.00
+ Expenses:Misc               ||              $1315.00    $360.00          0   $123.00          0               $359.60
+ Expenses:Subscriptions      ||                $64.02     $64.02     $64.02    $64.02          0                $51.22
+ Expenses:Utilities          ||               $316.00    $108.00    $316.00         0    $316.00               $211.20
+ Unbudgeted:Expenses         ||                     0          0  $15817.00   $550.00          0              $3273.40
+-----------------------------++----------------------------------------------------------------------------------------
+                             || $23369.64, USD 13.980  $15558.82  $38678.72  $9434.24  $26605.93  $22729.47, USD 2.796
+#+end_example
+
+
+#+RESULTS: Expense-Budget-report-2022
+#+begin_example
+Budget performance in 2022-09-01..2022-12-31, converted to cost, valued at period ends:
+
+                      ||                          2022-09-30                           2022-10-31                           2022-11-30                           2022-12-31
+======================++====================================================================================================================================================
+ Expenses             || $15558.82000 [ 80% of $19432.77000]  $38420.54000 [ 96% of $39865.54000]  $47304.78000 [ 78% of $60298.31000]  $73910.71000 [ 92% of $80731.08000]
+   Bodybuilding       ||   $258.00000 [ 52% of   $500.00000]    $400.00000 [ 40% of  $1000.00000]    $523.00000 [ 35% of  $1500.00000]    $523.00000 [ 26% of  $2000.00000]
+   Books              ||            0 [  0% of   $150.00000]    $270.00000 [ 90% of   $300.00000]    $270.00000 [ 60% of   $450.00000]    $270.00000 [ 45% of   $600.00000]
+   Cell Phone         ||   $186.00000 [ 59% of   $313.75000]    $558.00000 [ 89% of   $627.50000]    $744.00000 [ 79% of   $941.25000]    $744.00000 [ 59% of  $1255.00000]
+   Dinner             ||   $220.00000 [ 44% of   $500.00000]    $431.00000 [ 43% of  $1000.00000]   $1109.90000 [ 74% of  $1500.00000]   $1453.90000 [ 73% of  $2000.00000]
+   Festival           ||  $1358.20000 [136% of  $1000.00000]   $1358.20000 [ 68% of  $2000.00000]   $2285.20000 [ 76% of  $3000.00000]   $6534.00000 [163% of  $4000.00000]
+   Gathering          ||   $368.00000 [ 46% of   $800.00000]    $695.00000 [ 43% of  $1600.00000]    $695.00000 [ 29% of  $2400.00000]    $695.00000 [ 22% of  $3200.00000]
+   Groceries          ||  $2006.60000 [ 50% of  $4000.00000]   $7616.60000 [ 95% of  $8000.00000]  $12777.92000 [106% of $12000.00000]  $17958.15000 [112% of $16000.00000]
+   Housekeeping money ||  $7000.00000 [ 93% of  $7500.00000]  $21500.00000 [143% of $15000.00000]  $21500.00000 [ 96% of $22500.00000]  $36500.00000 [122% of $30000.00000]
+     Christine        ||  $3000.00000 [ 86% of  $3500.00000]  $10000.00000 [143% of  $7000.00000]  $10000.00000 [ 95% of $10500.00000]  $17000.00000 [121% of $14000.00000]
+     Mum              ||  $4000.00000 [100% of  $4000.00000]  $11500.00000 [144% of  $8000.00000]  $11500.00000 [ 96% of $12000.00000]  $19500.00000 [122% of $16000.00000]
+   Insurance          ||  $1700.00000 [312% of   $545.00000]   $1700.00000 [156% of  $1090.00000]   $2300.00000 [141% of  $1635.00000]   $2900.00000 [133% of  $2180.00000]
+   Leisure            ||   $438.00000 [175% of   $250.00000]    $451.70000 [ 90% of   $500.00000]    $451.70000 [ 60% of   $750.00000]    $939.70000 [ 94% of  $1000.00000]
+   Lunch              ||  $1492.00000 [298% of   $500.00000]   $2228.00000 [111% of  $2000.00000]   $3249.00000 [ 93% of  $3500.00000]   $3677.90000 [ 74% of  $5000.00000]
+   Medical            ||            0 [  0% of   $500.00000]    $300.00000 [ 30% of  $1000.00000]    $300.00000 [ 20% of  $1500.00000]    $300.00000 [ 15% of  $2000.00000]
+   Misc               ||   $360.00000 [ 72% of   $500.00000]    $360.00000 [ 36% of  $1000.00000]    $483.00000 [ 32% of  $1500.00000]    $483.00000 [ 24% of  $2000.00000]
+   Subscriptions      ||    $64.02000 [100% of    $64.02000]    $128.04000 [100% of   $128.04000]    $192.06000 [100% of   $192.06000]    $192.06000 [ 75% of   $256.08000]
+   Tax                ||            0 [  0% of  $1794.00000]             0 [  0% of  $3588.00000]             0 [  0% of  $5382.00000]             0 [  0% of  $7176.00000]
+   Travel             ||            0 [  0% of   $200.00000]             0 [  0% of   $400.00000]             0 [  0% of   $600.00000]             0 [  0% of   $800.00000]
+   Utilities          ||   $108.00000 [ 34% of   $316.00000]    $424.00000 [ 67% of   $632.00000]    $424.00000 [ 45% of   $948.00000]    $740.00000 [ 59% of  $1264.00000]
+----------------------++----------------------------------------------------------------------------------------------------------------------------------------------------
+                      || $15558.82000 [ 80% of $19432.77000]  $38420.54000 [ 96% of $39865.54000]  $47304.78000 [ 78% of $60298.31000]  $73910.71000 [ 92% of $80731.08000]
+#+end_example
+
+#+NAME: Expense-Budget-report-adjustments
+#+begin_src hledger
+# Adjustments to make the balance start from 0
+2022/08/28 * Opening balance
+    Expenses:Lunch  =$0
+    Expenses:Dinner  =$0
+    Expenses:Gathering  =$0
+    Expenses:Books  =$0
+    Expenses:Subscriptions   =$0
+    Expenses:Cell Phone  =$0
+    Expenses:Medical  =$0
+    Expenses:Protein diet  =$0
+    Expenses:Leisure  =$0
+    Expenses:Misc  =$0
+    Expenses:Utilities  =$0
+    Expenses:Groceries  =$0
+    Equity:Opening Balance
+
+
+#+end_src
+
+#+NAME: Savings-Budget-report
+#+BEGIN_SRC hledger :noweb yes :cmdline balance -MB --budget -X $ -E --tree --cumulative -e 2022-10 Assets:Personal:Savings
+<<Pricings>>
+<<Budget>>
+<<Transactions>>
+
+# Adjustments to make the balance start from 0
+2022/08/28 * Opening balance
+    Assets:Personal:Savings:Investments  =$0
+    Assets:Personal:Savings:Wedding Ring  =$0
+    Equity:Opening Balance
+#+END_SRC
+
+#+RESULTS: Savings-Budget-report
+: Budget performance in 2022-08-01..2022-09-30, converted to cost, valued at period ends:
+:
+:                          || 2022-08-31                       2022-09-30
+: =========================++=============================================
+:  Assets:Personal:Savings ||          0  $626.00000 [12% of $5372.25000]
+:    Investments           ||          0           0 [ 0% of $2000.00000]
+:    Wedding Ring          ||          0  $812.00000 [23% of $3500.00000]
+: -------------------------++---------------------------------------------
+:                          ||          0  $626.00000 [12% of $5372.25000]
+*** Transactions
+#+NAME: Transactions-2022
+#+BEGIN_SRC hledger :cmdline print
+2022/12/31 * Housekeeping Money
+    Expenses:Housekeeping money:Mum  $4000
+    Expenses:Housekeeping money:Christine  $3500
+    Assets:Joint:Savings
+
+2022/12/31 * Fund transfer
+    Assets:Personal:Checking  $12500
+    Assets:Joint:Savings
+
+2022/12/31 * Credit card repayment
+    Liabilities:Visa Platinum  $4979.61
+    Liabilities:Union Pay  $3000
+    Assets:Personal:Checking
+
+2022/12/31 * Groceries
+    Assets:Octopus  =$292.8
+    Assets:Cash  =$340
+    Liabilities:Visa Platinum  =-$7898.4
+    Expenses:Groceries
+
+2022/12/29 * Dinner
+    Expenses:Dinner  $158
+    Assets:Octopus
+
+2022/12/28 * Lunch
+    Expenses:Lunch  $70
+    Assets:Octopus
+
+2022/12/28 * Salaray (Lalamove)
+    Income:Salary  -$46000
+    Assets:Joint:Savings
+
+2022/12/23 * Dinner
+    Expenses:Dinner  $80
+    Assets:Octopus
+
+2022/12/25 * Movie
+    Expenses:Leisure  $180
+    Liabilities:Visa Platinum
+
+2022/12/23 * Christmas present
+    Expenses:Festival  $229
+    Assets:Octopus
+
+2022/12/24 * Christmas lunch
+    Expenses:Festival  $306
+    Liabilities:Visa Platinum
+
+2022/12/24 * Christmas dinner
+    Expenses:Festival  $3397
+    Liabilities:Visa Platinum  -$2897
+    Assets:Personal:Checking
+
+2022/12/21 * Lunch
+    Expenses:Lunch  $72
+    Liabilities:Visa Platinum
+
+2022/12/20 * Lunch
+    Expenses:Lunch  $32
+    Liabilities:Visa Platinum
+
+2022/12/19 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/12/18 * Consumption Voucher
+    Assets:Octopus  $1092.9
+    Income:Consumption Voucher
+
+2022/12/18 * Group Medical Reimbursement
+    Assets:Joint:Savings  -$550
+    Assets:Personal:Checking
+
+2022/12/18 * Groceries
+    Assets:Octopus  =$270.1
+    Assets:Cash  =$220
+    Liabilities:Visa Platinum  =-$8897.81
+    Expenses:Groceries
+
+2022/12/16 * Lunch
+    Expenses:Lunch  $49.9
+    Liabilities:Visa Platinum
+
+2022/12/18 * Insurance
+    Expenses:Insurance  $600
+    Assets:Personal:Checking
+
+2022/12/17 * ATM withdrawal
+    Assets:Cash  $500
+    Assets:Personal:Checking
+
+2022/12/16 * PSN renewal
+    Expenses:Leisure  $308
+    Liabilities:Visa Platinum
+
+2022/12/15 * PCCW
+    Expenses:Utilities  $316
+    Liabilities:Visa Platinum
+
+2022/12/15 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/12/12 * Lunch (Five Guys)
+    Expenses:Lunch  $70
+    Liabilities:Visa Platinum
+
+2022/12/17 * ATM withdrawal
+    Assets:Cash  $500
+    Assets:Personal:Checking
+
+2022/12/11 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/12/05 * Group Medical Reimbursement
+    Assets:Reimbursement:Medical  -$550
+    Assets:Joint:Savings
+
+2022/12/04 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/12/04 * Groceries
+    Assets:Octopus  =$191.3
+    Liabilities:Visa Platinum  =-$6515.38
+    Expenses:Groceries
+
+2022/12/04 * Groceries
+    Assets:Octopus  =$191.3
+    Liabilities:Visa Platinum  =-$6515.38
+    Expenses:Groceries
+
+2022/12/03 * Housekeeping Money
+    Expenses:Housekeeping money:Mum  $4000
+    Expenses:Housekeeping money:Christine  $3500
+    Assets:Joint:Savings
+
+2022/12/02 * Dinner
+    Expenses:Dinner  $106
+    Assets:Octopus
+
+2022/12/03 * Credit card repayment
+    Liabilities:Visa Platinum  $4227.76
+    Liabilities:Union Pay  $2000
+    Assets:Personal:Checking
+
+2022/12/03 * Serrini concert
+    Expenses:Festival  $316.8
+    Liabilities:Visa Platinum
+
+2022/11/30 * Groceries
+    Assets:Octopus  =$440.7
+    Liabilities:Visa Platinum  =-$9788.64
+    Expenses:Groceries
+
+2022/11/09 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/21 * Dinner
+    Expenses:Dinner  $80
+    Assets:Octopus
+
+2022/11/26 * Dental
+    Unbudgeted:Expenses:Medical  $550
+    Assets:Octopus
+
+2022/11/26 * Dinner
+    Expenses:Dinner  $112
+    Assets:Octopus
+
+2022/11/30 * Dinner
+    Expenses:Dinner  $42
+    Assets:Octopus
+
+2022/11/20 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/23 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/26 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/30 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/30 * Cell phone bill
+    Expenses:Cell Phone  $186
+    Liabilities:Visa Platinum
+
+2022/12/01 * Lunch
+    Expenses:Lunch  $47
+    Liabilities:Visa Platinum
+
+2022/11/30 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/11/28 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/11/26 * Protein diet
+    Expenses:Bodybuilding  $69
+    Liabilities:Visa Platinum
+
+2022/11/24 * Lunch
+    Expenses:Lunch  $32
+    Liabilities:Visa Platinum
+
+2022/11/23 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/11/22 * Lunch
+    Expenses:Lunch  $67
+    Liabilities:Visa Platinum
+
+2022/11/21 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/11/19 * Dinner
+    Expenses:Dinner  $252
+    Liabilities:Visa Platinum
+
+2022/11/18 * Disney Plus auto renew
+    Expenses:Misc  $123
+    Assets:Account Receivable:Jason  -$246
+    Assets:Account Receivable:Christine  -$369
+    Liabilities:Visa Platinum
+
+2022/11/17 * Lunch
+    Expenses:Lunch  $85
+    Liabilities:Visa Platinum
+
+2022/11/15 * Fat Belly
+    Expenses:Festival  $927
+    Liabilities:Visa Platinum
+
+2022/11/15 * Dinner
+    Expenses:Lunch  $124
+    Liabilities:Visa Platinum
+
+2022/11/11 * Lunch
+    Expenses:Lunch  $44
+    Liabilities:Visa Platinum
+
+2022/11/05 * Protain Diet
+    Expenses:Bodybuilding  $54
+    Liabilities:Visa Platinum
+
+2022/11/07 * Insurance
+    Expenses:Insurance  $600
+    Assets:Personal:Checking
+
+2022/10/13 * Bought stock
+    Assets:Brokerage:Firstrade:Stock  2 VTIP @ USD 47.36
+    Assets:Brokerage:Firstrade:Stock  2 VWO @ USD 35.22
+    Assets:Brokerage:Firstrade:Stock  1 VPL @ USD 56.21
+    Assets:Brokerage:Firstrade:Stock  1 VGIT @ USD 57.47
+    Assets:Brokerage:Firstrade:Stock  1 VGK @ USD 45.1
+    Assets:Brokerage:Firstrade:Cash
+
+2022/11/07 * Groceries
+    Assets:Cash  =$60
+    Assets:Octopus  =$62.1
+    Liabilities:Visa Platinum  =-$5090.31
+    Expenses:Groceries
+
+2022/11/06 * Dinner
+    Expenses:Dinner  $192.9
+    Assets:Octopus  -$60.9
+    Liabilities:Visa Platinum
+
+2022/11/06 * Lunch
+    Expenses:Lunch  $144
+    Assets:Octopus
+
+2022/11/05 * Lunch
+    Expenses:Lunch  $234.5
+    Liabilities:Visa Platinum
+
+2022/11/05 * Transportation Subsidy (Govt)
+    Income:Transportation Subsidy (Govt)  -$34
+    Assets:Octopus
+
+2022/11/01 * Subscription
+    Expenses:Subscriptions  $64.02
+    Liabilities:Visa Platinum
+
+2022/11/03 * Lunch
+    Expenses:Lunch  $46.5
+    Liabilities:Visa Platinum
+
+2022/11/01 * ATM withdrawal
+    Assets:Cash  $500
+    Assets:Personal:Checking
+
+2022/11/01 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/11/04 * Lunch
+    Expenses:Lunch  $68
+    Liabilities:Visa Platinum
+
+2022/10/29 * Groceries
+    Assets:Cash  =$100
+    Assets:Octopus  =$371.4
+    Liabilities:Visa Platinum  =-$13360.88
+    Expenses:Groceries
+
+2022/10/29 * Fund transfer
+    Assets:Personal:Checking  $11500
+    Assets:Joint:Savings
+
+2022/10/29 * Credit card repayment
+    Liabilities:Visa Platinum  $8514.78
+    Liabilities:Union Pay  $1000
+    Assets:Personal:Checking
+
+2022/10/29=2022/11/01 * Housekeeping Money
+    Expenses:Housekeeping money:Mum  $4000
+    Expenses:Housekeeping money:Christine  $3500
+    Assets:Joint:Savings
+
+2022/10/29 * Mortgage
+    Unbudgeted:Expenses:Mortgage  $12000
+    Assets:Joint:Savings
+
+2022/10/27 * Salaray (Lalamove)
+    Income:Salary  -$46000
+    Assets:Joint:Savings
+
+2022/10/27 * Lunch
+    Expenses:Lunch  $44
+    Expenses:Bodybuilding  $39
+    Liabilities:Visa Platinum
+
+2022/10/26 * Cell phone bill
+    Expenses:Cell Phone  $186
+    Liabilities:Visa Platinum
+
+2022/10/25 * Lunch
+    Expenses:Cell Phone  $186
+    Liabilities:Visa Platinum
+
+2022/10/24 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/10/22 * Credit card repayment
+    Liabilities:Visa Platinum  $3817
+    Assets:Joint:Savings
+
+2022/10/22 * Book (Powerful Command-Line Applications in Go)
+    Expenses:Books  $270
+    Liabilities:Visa Platinum
+
+2022/10/22 * Groceries
+    Assets:Cash  =$250
+    Assets:Octopus  =$140
+    Liabilities:Visa Platinum  =-$11895
+    Expenses:Groceries
+
+2022/10/20 * Lunch
+    Expenses:Lunch  $70
+    Assets:Octopus
+
+2022/10/21 * Lunch
+    Expenses:Lunch  $70
+    Assets:Octopus
+
+2022/10/21 * Lunch
+    Expenses:Lunch  $70
+    Assets:Octopus
+
+2022/10/21 * Dinner
+    Expenses:Dinner  $171
+    Assets:Octopus
+
+2022/10/16 * Pet medical
+    Unbudgeted:Expenses:Medical  $2757
+    Liabilities:Visa Platinum
+
+2022/10/15 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/10/15 * Octopus auto add-value
+    Expenses:Utilities  $316
+    Liabilities:Visa Platinum
+
+2022/10/12 * ATM withdrawal
+    Assets:Cash  $400
+    Assets:Personal:Savings
+
+2022/10/12 * Lunch
+    Expenses:Lunch  $70
+    Assets:Cash
+
+2022/10/12 * Taxi for cat's trip to doctor
+    Expenses:Medical  $300
+    Assets:Cash
+
+2022/10/12 * Dinner
+    Expenses:Dinner  $40
+    Assets:Cash
+
+2022/10/12 * Groceries
+    Assets:Cash  =$110
+    Assets:Octopus  =$46.5
+    Expenses:Groceries
+
+2022/10/13 * Lunch
+    Expenses:Lunch  $42
+    Assets:Octopus
+
+2022/10/10 * Justin concert
+    Unbudgeted:Expenses:Leisure  $1060
+    Liabilities:Visa Platinum
+
+2022/10/10 * Lunch
+    Expenses:Lunch  $62
+    Assets:Octopus
+
+2022/10/08 * Protain Diet
+    Expenses:Bodybuilding  $103
+    Assets:Octopus
+
+2022/10/09 * Lunch
+    Expenses:Lunch  $250
+    Assets:Octopus
+
+2022/10/07 * Gathering
+    Expenses:Gathering
+    Assets:Cash  -$150
+    Assets:Octopus  -$177
+
+2022/10/08 * ATM withdrawl
+    Assets:Cash  $400
+    Assets:Personal:Savings
+
+2022/10/05 * Lunch
+    Expenses:Lunch  $58
+    Liabilities:Visa Platinum
+
+2022/10/01 * Consumption Voucher
+    Assets:Octopus  $2000
+    Income:Consumption Voucher
+
+2022/10/01 * Subscription
+    Expenses:Subscriptions  $64.02
+    Liabilities:Visa Platinum
+
+2022/10/01 * Bought PS4 game
+    Expenses:Leisure  $13.7
+    Liabilities:Visa Platinum
+
+2022/09/30 * Groceries
+    Liabilities:Visa Platinum  =-$20685.36
+    Assets:Cash  =$520
+    Assets:Octopus  =$359.6
+    Liabilities:Union Pay  =-$3000
+    Expenses:Groceries
+
+2022/09/30 * Transfer payme
+    Assets:Payme  =$0
+    Assets:Personal:Savings
+
+2022/09/29 * Lunch
+    Assets:Payme  =$1148
+    Expenses:Lunch
+
+2022/09/30 * Credit card repayment
+    Liabilities:Visa Platinum  =-$8849.36
+    Liabilities:Union Pay  =-$1000
+    Assets:Personal:Checking  -$10000
+    Assets:Personal:Savings  -$1148
+    Assets:Personal:Savings:Wedding Ring
+
+2022/09/28 * Government gym room monthly pass
+    Expenses:Bodybuilding  $180
+    Assets:Cash
+
+2022/09/30 * Protein diet
+    Expenses:Bodybuilding  $46
+    Liabilities:Visa Platinum
+
+2022/09/26 * ATM withdrawal
+    Assets:Cash  $500
+    Assets:Personal:Checking
+
+2022/09/30 * Saving
+    Assets:Personal:Savings:Wedding Ring  $3500
+    Assets:Personal:Checking
+
+2022/09/30 * Fund transfer
+    Assets:Personal:Checking  $11500
+    Assets:Joint:Savings
+
+2022/09/30 * Salary (lalamove)
+    Income:Salary  -$47500
+    Assets:Joint:Savings
+
+2022/10/01 * Housekeeping Money
+    Expenses:Housekeeping money:Mum  $3500
+    Expenses:Housekeeping money:Christine  $3500
+    Assets:Joint:Savings
+
+2022/09/19 * Lunch
+    Expenses:Lunch  $275
+    Liabilities:Visa Platinum
+
+2022/09/30 * Christine's birthday Sushiro
+    Expenses:Festival  $312
+    Liabilities:Visa Platinum
+
+2022/09/29 * Cell phone data plan
+    Expenses:Cell Phone  $186
+    Assets:Payme
+
+2022/09/29 * Christine's birthday Cake
+    Expenses:Festival  $120
+    Liabilities:Visa Platinum
+
+2022/09/29 * Christine's birthday Tonkichi
+    Expenses:Festival  $926.2
+    Liabilities:Visa Platinum
+
+2022/09/28 * Lunch
+    Expenses:Lunch  $70
+    Assets:Octopus
+
+2022/09/27 * Octopus auto add-value
+    Assets:Octopus  $500
+    Liabilities:Union Pay
+
+2022/09/27 * Lunch
+    Expenses:Lunch  $60
+    Assets:Octopus
+
+2022/09/26 * Lunch
+    Expenses:Lunch  $60
+    Assets:Octopus
+
+2022/09/25 * Lunch
+    Expenses:Lunch  $126
+    Liabilities:Visa Platinum
+
+2022/09/24 * Saving reimbursement
+    Assets:Personal:Savings  $512.5
+    Assets:Personal:Checking
+
+2022/09/24 * Adjustment
+    Assets:Personal:Checking  =$2781.47
+    Equity:Adjustments
+
+2022/09/05 * Insurance
+    Expenses:Insurance  $700
+    Assets:Personal:Checking
+
+2022/08/28 * Investment savings (citi bank)
+    Assets:Personal:Savings:Investments  $2000
+    Assets:Personal:Checking
+
+2022/08/28 * Credit card repayment
+    Liabilities:Union Pay  $1000
+    Assets:Personal:Checking
+
+2022/09/22 * Lunch
+    Expenses:Lunch  $60
+    Assets:Octopus
+
+2022/09/21 * Lunch
+    Expenses:Lunch  $58
+    Assets:Octopus
+
+2022/09/20 * Insurance
+    Expenses:Insurance  $1000
+    Assets:Personal:Checking
+
+2022/09/21 * Sandalwood
+    Expenses:Misc  $360
+    Assets:Personal:Checking
+
+2022/09/21 * reimbursement joint account
+    Liabilities:Visa Platinum  $4000
+    Equity:Adjustments
+
+2022/09/18 * Bought cabinet (reimbursed from joint account)
+    Liabilities:Visa Platinum  -$1916
+    Equity:Adjustments
+
+2022/09/18 * Bought shoes (reimbursed from joint account)
+    Liabilities:Visa Platinum  -$2014.5
+    Equity:Adjustments
+
+2022/09/07 * Salary (Lalamove)
+    Income:Salary  -$4596.77
+    Assets:Joint:Savings
+
+2022/09/17 * Gathering (Fung J)
+    Expenses:Gathering  $368
+    Assets:Payme
+
+2022/09/18 * Protein diet
+    Expenses:Bodybuilding  $32
+    Assets:Octopus
+
+2022/09/15 * Netvigator
+    Expenses:Utilities  $108
+    Assets:Octopus
+
+2022/09/19 * Dinner
+    Expenses:Dinner  $60
+    Assets:Octopus
+
+2022/09/19 * Octopus auto add-value
+    Assets:Octopus  $500.00
+    Liabilities:Union Pay
+
+2022/09/15 * ATM withdrawl
+    Assets:Cash  $512.5
+    Assets:Personal:Savings
+
+2022/09/19 * ATM withdrawl
+    Assets:Cash  $400.00
+    Assets:Personal:Checking
+
+2022/09/18 * Lunch
+    Expenses:Lunch  $370
+    Liabilities:Visa Platinum
+
+2022/09/18 * Dinner
+    Expenses:Dinner  $116
+    Assets:Octopus
+
+2022/09/19 * Pre pay Mom
+    Expenses:Housekeeping money:Mum  $500
+    Assets:Personal:Checking
+
+2022/09/19 * Lunch
+    Expenses:Lunch  $47
+    Assets:Payme
+
+2022/09/16 * Lunch
+    Expenses:Lunch  $50
+    Assets:Cash
+
+2022/09/15 * Lunch
+    Expenses:Lunch  $61
+    Assets:Payme
+
+2022/09/15 * ATM withdrawl
+    Assets:Personal:Checking  $500.00
+    Assets:Cash
+
+2022/09/14 * Octopus auto add-value
+    Assets:Octopus  $500.00
+    Liabilities:Union Pay
+
+2022/09/14 * Lunch
+    Expenses:Lunch  $44
+    Assets:Payme
+
+2022/09/14 * Dinner
+    Expenses:Dinner  $44
+    Assets:Octopus
+
+2022/09/09 * Bought 9upper
+    Expenses:Leisure  $200
+    Assets:Payme
+
+2022/09/09 * Bought PS4 game
+    Expenses:Leisure  $238
+    Liabilities:Visa Platinum
+
+2022/09/04 * Patreon subscription
+    Expenses:Subscriptions  $64.02
+    Liabilities:Visa Platinum
+
+2022/09/03 * House Keeping money
+    Expenses:Housekeeping money:Mum  $3500
+    Expenses:Housekeeping money:Christine  $3000
+    Assets:Personal:Checking
+
+2022/08/24 * Group Medical Reimbursement
+    Assets:Reimbursement:Medical  -$248
+    Assets:Joint:Savings
+
+2022/08/28 * Group Medical Reimbursement transfer
+    Assets:Joint:Savings  -$248
+    Assets:Personal:Savings
+
+2022/08/28 * Groceries
+    Liabilities:Visa Platinum  =-$45748.27
+    Assets:Cash  =$55
+    Assets:Octopus  =$205.3
+    Expenses:Groceries
+
+2022/08/28 * Cell phone data plan
+    Liabilities:Visa Platinum  -$186
+    Expenses:Cell Phone
+
+2022/08/28 * Redistribution of funds
+    Assets:Personal:Savings  =$0
+    Assets:Personal:Checking  $25961
+    Equity:Adjustments
+
+2022/08/28 * Salary transfer
+    Assets:Joint:Savings  -$20500
+    Assets:Personal:Checking
+
+2022/08/28 * Saving
+    Assets:Personal:Checking  -$3500
+    Assets:Personal:Savings:Wedding Ring
+
+2022/08/28 * Credit card repayment
+    Liabilities:Visa Platinum  =-$18524.24
+    Liabilities:Union Pay  =-$500
+    Assets:Personal:Checking
+
+2022/08/27 * Sandalwood spray (For Christine)
+    Assets:Personal:Savings  -$240
+    Expenses:Misc
+
+2022/08/19 * ATM withdrawl
+    Assets:Personal:Savings  -$400
+    Expenses:Misc
+
+2022/08/27 * Terence Lam concert
+    Assets:Personal:Savings  -$1600
+    Expenses:Leisure
+
+2022/08/24 * Protein diet
+    Assets:Octopus  -$78
+    Expenses:Bodybuilding
+
+2022/08/24 * Octopus auto add-value
+    Assets:Octopus  $500.00
+    Liabilities:Union Pay
+
+2022/08/24 * Locobike
+    Liabilities:Visa Platinum  -$169
+    Expenses:Misc
+
+2022/08/22 * Hypebeast colleague gathering dinner paybacks
+    Assets:Account Receivable:Warren  -$297
+    Assets:Account Receivable:Derek  -$297
+    Assets:Account Receivable:Thomas  -$297
+    Assets:Account Receivable:Anson  -$297
+    Assets:Account Receivable:Pyan  -$297
+    Assets:Account Receivable:Kyle  -$297
+    Assets:Account Receivable:Felix  -$297
+    Assets:Payme
+
+2022/08/21 * Hypebeast colleague gathering dinner
+    Liabilities:Visa Platinum  -$2968
+    Assets:Account Receivable:Warren  $297
+    Assets:Account Receivable:Derek  $297
+    Assets:Account Receivable:Thomas  $297
+    Assets:Account Receivable:Anson  $297
+    Assets:Account Receivable:Pyan  $297
+    Assets:Account Receivable:Kyle  $297
+    Assets:Account Receivable:Felix  $297
+    Expenses:Gathering
+
+2022/08/19=2022/08/24 * Last salary Hypebeast
+    Income:Salary  -$28657
+    Assets:Joint:Savings
+
+2022/08/19 * Toys
+    Expenses:Leisure  $368
+    Liabilities:Visa Platinum
+
+2022/08/19 * Gift for colleagues (cake)
+    Expenses:Misc  $177
+    Assets:Octopus
+
+2022/08/19 * Lunch with colleagues
+    Expenses:Lunch  $73
+    Liabilities:Visa Platinum
+
+2022/08/18 * Gift for colleagues (snacks)
+    Expenses:Misc  $329
+    Assets:Octopus
+
+2022/08/18 * Lunch with colleagues
+    Expenses:Lunch  $87
+    Liabilities:Visa Platinum
+
+2022/08/17 * ATM withdrawal
+    Expenses:Medical  $310
+    Assets:Cash
+    Assets:Personal:Savings  -$400
+
+2022/08/16 * Netvigator
+    Expenses:Utilities  $316
+    Liabilities:Visa Platinum
+
+2022/08/16 * Gathering (Fung J)
+    Expenses:Gathering  $350
+    Liabilities:Visa Platinum
+
+~ monthly from 2022/09 to 2024/09  * Cell phone repayment
+    Liabilities:Visa Platinum  -$127.75
+    Expenses:Cell Phone  $127.75
+    Liabilities:Visa Platinum  $127.75
+    Assets:Personal:Savings  -$127.75
+
+2022/08/14 * Gathering (Christine colleague)
+    Expenses:Gathering  $794.2
+    Liabilities:Visa Platinum
+
+2022/08/13 * Lucnh outside
+    Expenses:Lunch  $119
+    Assets:Octopus
+
+2022/08/13 * Protein diet shopping
+    Expenses:Bodybuilding  $117
+    Assets:Octopus
+
+2022/08/12 * Dinner
+    Expenses:Dinner  $148
+    Assets:Octopus
+
+2022/08/10 * Sold stock
+    Assets:Brokerage:Interactive Broker:Stock  -5 TQQQ_PUT @ USD 123
+    Expenses:Interactive Broker:Commission  USD 3.52
+    Assets:Brokerage:Interactive Broker:Cash  USD 380
+    Income:Capital Gains
+
+2022/08/10 * Bought stock
+    Assets:Brokerage:Interactive Broker:Stock  5 TQQQ_PUT @ USD 123
+    Expenses:Interactive Broker:Commission  USD 3.5
+    Assets:Brokerage:Interactive Broker:Cash
+
+2022/08/10 * Sold stock
+    Assets:Brokerage:Interactive Broker:Stock  -33 TQQQ @ USD 35.30
+    Expenses:Interactive Broker:Commission  USD 1.03
+    Assets:Brokerage:Interactive Broker:Cash  USD 1108.965
+    Income:Capital Gains
+
+2022/08/10 * Consumption voucher
+    Income:Consumption Voucher  -$2000
+    Income:Transportation Subsidy (Govt)  -$33
+    Assets:Octopus
+
+2022/08/08 * Dinner
+    Expenses:Dinner  $166
+    Liabilities:Visa Platinum
+
+2022/08/06 * Lunch outside
+    Expenses:Lunch  $167
+    Liabilities:Visa Platinum
+
+2022/08/06 * Bought CPAP Machine
+    Expenses:Medical  $9200  ; CPAP machine
+    Liabilities:Visa Platinum
+
+2022/08/06 * Bought books
+    Expenses:Books  $399.04
+    Liabilities:Visa Platinum
+
+2022/08/06 * Bought stock
+    Assets:Brokerage:Firstrade:Stock  2 VTIP @ USD 49.85
+    Assets:Brokerage:Firstrade:Stock  2 VWO @ USD 41.14
+    Assets:Brokerage:Firstrade:Stock  1 VTIP @ USD 65.95
+    Assets:Brokerage:Firstrade:Cash
+
+2022/08/04 * Groceries
+    Expenses:Groceries  $100
+    Assets:Vouchers
+
+2022/08/04 * ATM withdrawal
+    Assets:Cash  $400
+    Assets:Personal:Savings
+
+2022/08/04 * Bought stock
+    Assets:Brokerage:Interactive Broker:Stock  33 TQQQ @ USD 35.30
+    Expenses:Interactive Broker:Commission  USD 1
+    Assets:Brokerage:Interactive Broker:Cash
+
+2022/08/04 * Bought stock
+    Assets:Brokerage:Firstrade  1 VGK @ USD 54.85
+    Assets:Brokerage:Firstrade:Cash
+
+2022/08/04 * Patreon subscription
+    Liabilities:Visa Platinum  -$64.02
+    Expenses:Subscriptions
+
+2022/08/04 * Group Medical Reimbursement
+    Assets:Joint:Savings  -$1490
+    Assets:Personal:Savings
+
+2022/08/03 * Group medical unclaimed amount
+    Assets:Reimbursement:Medical  -$810
+    Expenses:Medical
+
+2022/08/03 * Group Medical Reimbursement
+    Assets:Reimbursement:Medical  -$1490
+    Assets:Joint:Savings
+
+2022/08/02 * Octopus auto add-value
+    Assets:Octopus  $500.00
+    Liabilities:Union Pay
+
+2022/08/02 * Stock interests
+    Assets:Brokerage:Firstrade:Stock  = 13.3306 BNDX
+    Assets:Brokerage:Firstrade:Stock  = 11.14303 VGIT
+    Assets:Brokerage:Firstrade:Stock  = 27.82279 VGK
+    Assets:Brokerage:Firstrade:Stock  = 23.52565 VPL
+    Assets:Brokerage:Firstrade:Stock  = 9.12652 VTI
+    Assets:Brokerage:Firstrade:Stock  = 36.73449 VWO
+    Income:Stock Interests
+
+2022/08/01 * Opening balance
+    Expenses:Interactive Broker:Commission  USD 4.93
+    Expenses:Interactive Broker:Commission  $15.7
+    Income:Capital Gains  USD 85
+    Equity:Opening Balances
+
+2022/08/01 * Opening balance
+    Assets:Personal:Checking  $17.00
+    Assets:Joint:Savings  $0
+    Assets:Personal:Savings  $69813
+    Assets:Vouchers  $1800
+    Assets:Brokerage:Firstrade:Cash  USD 1180.45
+    Assets:Brokerage:Firstrade:Stock  13 BNDX
+    Assets:Brokerage:Firstrade:Stock  11 VGIT
+    Assets:Brokerage:Firstrade:Stock  27 VGK
+    Assets:Brokerage:Firstrade:Stock  23 VPL
+    Assets:Brokerage:Firstrade:Stock  9 VTI
+    Assets:Brokerage:Firstrade:Stock  36 VWO
+    Assets:Brokerage:Interactive Broker:Cash  USD 1177
+    Assets:Reimbursement:Medical  $2300
+    Liabilities:Visa Platinum  -$27224.03
+    Liabilities:Union Pay  -$500.00
+    Equity:Opening Balances
+
+2022/08/01 * Distribution of funds
+    Assets:Personal:Savings:Wedding Ring  $42550.00
+    Assets:Personal:Savings
+
+#+end_src
+
+#+NAME: Closing-balance-2022
+#+BEGIN_SRC hledger :cmdline print
+2022-12-31 closing balances
+    Assets:Account Receivable:Christine                $369.00000 = $0.00000
+    Assets:Account Receivable:Jason                    $246.00000 = $0.00000
+    Assets:Brokerage:Firstrade                        $-434.65450 = $0.00000
+    Assets:Brokerage:Firstrade:Cash                  $-4346.78050 = $0.00000
+    Assets:Brokerage:Firstrade:Stock            $-64706.556277135 = $0.00000
+    Assets:Brokerage:Firstrade:Stock                      -5 VTIP = 0 VTIP
+    Assets:Brokerage:Interactive Broker:Cash         $-6920.28525 = $0.00000
+    Assets:Cash                                       $-340.00000 = $0.00000
+    Assets:Joint:Savings                            $-71436.77000 = $0.00000
+    Assets:Octopus                                    $-292.80000 = $0.00000
+    Assets:Personal:Checking                          $2090.68000 = $0.00000
+    Assets:Personal:Savings                            $986.00000 = $0.00000
+    Assets:Personal:Savings:Investments              $-2000.00000 = $0.00000
+    Assets:Personal:Savings:Wedding Ring            $-46862.00000 = $0.00000
+    Assets:Reimbursement:Medical                       $798.00000 = $0.00000
+    Assets:Vouchers                                  $-1700.00000 = $0.00000
+    Equity:Adjustments                                $-244.50000 = $0.00000
+    Equity:Opening Balances                         $126117.08600 = $0.00000
+    Expenses:Bodybuilding                             $-718.00000 = $0.00000
+    Expenses:Books                                    $-669.04000 = $0.00000
+    Expenses:Cell Phone                               $-930.00000 = $0.00000
+    Expenses:Dinner                                  $-1767.90000 = $0.00000
+    Expenses:Festival                                $-6534.00000 = $0.00000
+    Expenses:Gathering                               $-2728.20000 = $0.00000
+    Expenses:Groceries                              $-23755.83000 = $0.00000
+    Expenses:Housekeeping money:Christine           $-17000.00000 = $0.00000
+    Expenses:Housekeeping money:Mum                 $-19500.00000 = $0.00000
+    Expenses:Insurance                               $-2900.00000 = $0.00000
+    Expenses:Interactive Broker:Commission            $-125.44300 = $0.00000
+    Expenses:Leisure                                 $-2907.70000 = $0.00000
+    Expenses:Lunch                                   $-4123.90000 = $0.00000
+    Expenses:Medical                                $-10620.00000 = $0.00000
+    Expenses:Misc                                    $-1798.00000 = $0.00000
+    Expenses:Subscriptions                            $-256.08000 = $0.00000
+    Expenses:Utilities                               $-1056.00000 = $0.00000
+    Income:Capital Gains                             $-2915.37225 = $0.00000
+    Income:Consumption Voucher                        $5092.90000 = $0.00000
+    Income:Salary                                   $172753.77000 = $0.00000
+    Income:Stock Interests                        $1280.204777135 = $0.00000
+    Income:Transportation Subsidy (Govt)                $67.00000 = $0.00000
+    Liabilities:Visa Platinum                         $7898.40000 = $0.00000
+    Unbudgeted:Expenses:Leisure                      $-1060.00000 = $0.00000
+    Unbudgeted:Expenses:Medical                      $-3307.00000 = $0.00000
+    Unbudgeted:Expenses:Mortgage                    $-12000.00000 = $0.00000
+    equity:opening/closing balances
+#+end_src
+
+* Optimization
+https://github.com/apauley/hledger-flow
+* Tasks
+** DONE update W8Ben
+CLOSED: [2023-01-29 Sun 12:23] SCHEDULED: <2026-01-11 Sun>
+https://invest.firstrade.com/cgi-bin/main#/content/myaccount/profile/w8ben

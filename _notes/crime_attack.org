@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d2bb4e8d-1525-4891-bd4d-8707aaba360a
+:END:
+#+title: CRIME attack
+#+category: CRIME attack
+#+date: [2023-03-06 Mon 23:40]

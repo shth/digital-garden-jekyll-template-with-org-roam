@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       50448fd5-850e-4791-99c3-d2eadb106848
+:END:
+#+title: Java Array List
+#+category: Java Array List
+#+date: [2022-12-03 Sat 12:23]

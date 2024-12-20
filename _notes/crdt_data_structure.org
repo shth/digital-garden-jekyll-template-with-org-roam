@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5ec84b63-4d67-4398-aa53-e08ea7ef9ec3
+:END:
+#+title: CRDT data structure
+#+category: CRDT data structure
+#+date: [2022-07-25 Mon 23:32]

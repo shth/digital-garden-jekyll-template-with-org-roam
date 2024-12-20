@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       0dda0d16-c8ba-4b5b-ba01-1bffb860609c
+:END:
+#+title: HTTP Connection header
+#+category: HTTP Connection header
+#+date: [2023-01-02 Mon 16:59]
+- a hop by hop header
+  should be removed by [[id:b48d5830-ca09-4875-9398-7710c84930c9][HTTP proxy]]
+- is used for [[id:db9c7da8-d9dd-4ef5-a57c-7d60cfa5856b][HTTP Persistent connection]]
+  enabled by default
+
+  also requires the [[id:10a49fac-dfe5-4714-8431-0ac3a505390c][HTTP Content length header]] for client to determine the end of message

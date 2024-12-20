@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       374d5326-3227-4db9-ba6b-65660f740783
+:END:
+#+title: Thai in unicode
+#+category: Thai in unicode
+#+date: [2023-01-19 Thu 10:55]
+each tone marker will take up a unicode code point
+
+so it will count as 1 character by mb_strlen() etc

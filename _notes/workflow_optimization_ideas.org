@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       87e61432-9899-4127-8fa2-6321982bfb3e
+:END:
+#+title: Workflow optimization ideas
+#+category: Workflow optimization ideas
+#+date: [2023-05-23 Tue 14:21]

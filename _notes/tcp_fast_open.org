@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       97463acc-e14f-4e0f-b8d2-e8c9ba71492c
+:END:
+#+title: TCP fast open
+#+category: TCP fast open
+#+date: [2023-03-07 Tue 00:11]
+allow packet to be sent with the first [[id:77952751-f45e-4248-8fd6-87a6406ac7ec][TCP SYN packet]]

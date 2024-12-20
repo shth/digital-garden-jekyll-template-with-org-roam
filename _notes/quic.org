@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       87ac7ba1-abcb-47d6-8bda-2a87f66b1656
+:END:
+#+title: QUIC
+#+category: QUIC
+#+date: [2023-01-02 Mon 17:22]
+
+a transport layer protocol
+
+designed to be used with [[id:54498b9b-a4c7-4b0e-87cf-1538d14b1afb][UDP]]
+
+feature:
+- [[id:c485582e-c5a9-4211-9247-c7c5dd01bde8][Removal of head of line blocking]]
+- 1 round trip connection setup by sending the connection layer and encryption layer together

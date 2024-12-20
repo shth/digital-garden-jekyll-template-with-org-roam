@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7d11cea0-bec3-4e62-b478-499403bfe2f5
+:END:
+#+title: Go Memory Model
+#+category: Go Memory Model
+#+date: [2022-09-11 Sun 13:43]
+[[https://go.dev/ref/mem][link]]

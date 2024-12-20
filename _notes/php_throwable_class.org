@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       36a040bf-e114-4087-8f94-e3eb9c8d79d0
+:END:
+#+title: PHP Throwable Class
+#+category: PHP Throwable Class
+#+date: [2023-03-09 Thu 16:06]

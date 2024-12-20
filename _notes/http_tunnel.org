@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       ce19cdb8-1356-431f-97c8-be1f97b929c9
+:END:
+#+title: HTTP tunnel
+#+category: HTTP tunnel
+#+date: [2023-01-02 Mon 16:58]
+
+transmit non HTTP data over HTTP connections

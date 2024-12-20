@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       cad8d138-0e98-428f-90a6-1ef8fc9e813d
+:END:
+#+title: HTTP Content Negotiation
+#+category: HTTP Content Negotiation
+#+date: [2023-01-30 Mon 15:15]
+* Client driven
+server will respond with [[id:6a1f5a0f-b928-4af1-843a-8dd7123fd7e3][HTTP 300 status code]] and a list of response to let the client choose which one to use
+* Server driven
+client will send [[id:edfa23b7-4b40-4282-a941-6c85c28c60fb][HTTP Accept Header]], [[id:d5f2f858-9800-4962-9ebd-360af046744b][HTTP Accept-Language Header]] and [[id:75d081f5-1390-4722-9e46-d73c7376582d][HTTP Accept-Charset Header]] and let the server decide which one to use
+* Transparent
+the proxy will determine the langauge for the client
+
+use the [[id:51e4aa8e-9e2a-46b2-b6a8-84a4989828a3][HTTP Vary Header]] to communicate with server

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cd1bf3f8-1db7-4b80-b3c1-5f37406a607c
+:END:
+#+title: AMQP
+#+category: AMQP
+#+date: [2022-07-14 Thu 11:23]

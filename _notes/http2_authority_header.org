@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1b5c81f6-36a2-4925-b2de-2a4308df7099
+:END:
+#+title: HTTP2 :authority header
+#+category: HTTP2 :authority header
+#+date: [2023-03-06 Mon 23:30]

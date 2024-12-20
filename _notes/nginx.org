@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4632d74b-9cb7-479f-b123-728945607737
+:END:
+#+title: Nginx
+#+category: Nginx
+#+date: [2023-05-22 Mon 11:20]

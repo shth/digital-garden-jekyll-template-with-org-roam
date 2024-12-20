@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       e82f3ffa-cef1-4170-af91-1fb583e4a4cd
+:END:
+#+title: HTTP Canonicalizing URL
+#+category: HTTP Canonicalizing URL
+#+date: [2023-01-10 Tue 13:26]
+
+converting [[id:2e8741a1-3be0-4036-bea8-4ddfcedbd486][HTTP URL]] to see if two URLs point to the same resource
+
+e.g.
+- adding 80 port if not specified
+- decoding encoded characters

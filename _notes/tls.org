@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a80d8cbf-d729-465c-88ff-48db0876cca0
+:END:
+#+title: TLS
+#+category: TLS
+#+date: [2023-01-02 Mon 17:12]
+
+TLS is the successor of [[id:f5d2a868-6e29-4593-be61-5720b7ec5061][SSL]]

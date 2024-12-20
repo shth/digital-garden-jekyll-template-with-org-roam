@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       dbb4e759-829a-4135-8d0e-285b37658fd2
+:END:
+#+title: Attribute value column
+#+category: Attribute value column
+#+date: [2023-03-01 Wed 17:36]

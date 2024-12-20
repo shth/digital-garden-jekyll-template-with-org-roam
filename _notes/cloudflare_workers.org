@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       bee1c52d-12ca-4e97-8cfb-d693dab01dc4
+:END:
+#+title: Cloudflare Workers
+#+category: Cloudflare Workers
+#+date: [2022-12-15 Thu 16:57]
+[[https://developers.cloudflare.com/workers/get-started/guide/][getting started]]

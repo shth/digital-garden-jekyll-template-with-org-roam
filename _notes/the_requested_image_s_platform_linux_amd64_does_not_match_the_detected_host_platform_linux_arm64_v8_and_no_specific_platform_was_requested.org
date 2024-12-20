@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       097d3b3a-e238-49e0-995e-0e99bbe7e65b
+:END:
+#+title: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+#+category: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+#+date: [2023-10-07 Sat 17:26]
+a problem encountered when trying to run docker images built for other platform on [[id:53e01920-f088-4682-859e-3e339acba6f3][Mac M1 machine]]
+
+solution:
+1. install Docker Desktop 4.16
+2. Enable [[id:1653d294-1e00-4dc0-9a5b-22f385940a10][Rosetta 2]] Virtualization feature in Docker Desktop
+3. run the command with "--platform linux/amd64" option
+
+readings:
+- https://collabnix.com/warning-the-requested-images-platform-linux-amd64-does-not-match-the-detected-host-platform-linux-arm64-v8/

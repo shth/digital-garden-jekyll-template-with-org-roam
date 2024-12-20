@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       94c092e8-900f-4a3f-a862-77520f2214da
+:END:
+#+title: Go Select Statement
+#+category: Go Select Statement
+#+date: [2022-08-12 Fri 20:34]

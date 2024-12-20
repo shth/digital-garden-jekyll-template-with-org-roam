@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       174ef6eb-7432-4338-b2ab-f6ecf6fc5c65
+:END:
+#+title: Example of sql anti pattern - mixing data with metadata
+#+category: Example of sql anti pattern - mixing data with metadata
+#+date: [2023-05-18 Thu 15:08]
+table `[[id:fad8dae5-bd6d-43f9-9103-6245ee02fe36][Lalamove t_unpaid_order table]]`
+
+when the order become paid, it needs to be removed from the table
+this leads to the query code to loop for 5 times, when a record is found, it needs to check whether the order is paid or not.
+if yes, then it is deleted from `t_unpaid_order` table and then the loop continue
+if no, the record is returned as unpaid order

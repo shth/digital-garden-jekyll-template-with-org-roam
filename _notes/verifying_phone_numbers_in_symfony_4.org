@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       46a61043-e16b-4050-9e4a-f4ebbbcb83ce
+:END:
+#+title: Verifying phone numbers in Symfony 4
+#+date: [2022-07-08 Fri 15:42]
+CS wants to prevent people from creating multiple account and cheating referral [[id:d7ee7ed3-9d5a-41f0-b11c-18801c3618a3][Hypecoin]]
+so they want to verify phone number when registering
+
+[[https://www.twilio.com/blog/verify-phone-numbers-in-symfony-4-php-with-authy-and-twilio-sms][link]]
+
+- create application in twilio
+- create registration controller
+  - request twillio to send sms
+  - save twillio id in session
+  - redirect to verify page
+- create verify controller
+  - take twillio id and code
+  - verify against twillio api

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6624fbef-f649-4082-90d5-d346162bfd1d
+:END:
+#+title: TLS Session resumption
+#+category: TLS Session resumption
+#+date: [2023-03-06 Mon 23:27]
+reduce the [[id:a80d8cbf-d729-465c-88ff-48db0876cca0][TLS]] handshake time

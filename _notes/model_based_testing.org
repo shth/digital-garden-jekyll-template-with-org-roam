@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       26a81596-8c31-4cd1-af30-497fa66b940d
+:END:
+#+title: Model Based testing
+#+category: Model Based testing
+
+* resources
+** article
+[[https://www.tedinski.com/2018/12/26/model-based-testing.html][link]]
+CLOSED: [2023-02-01 Wed 14:22]
+*** take two implementations, try both, and take note of the difference in behaviour
+*** build an abstract model, then generate tests automatically
+*** a model describes the system behaviour
+*** saves time from developer writing tests, since they now only need to update the model
+can be achieved through [[id:55c4b464-f6a1-4cd5-aa57-afeb72191db8][Finite State Machine]]
+
+** [[id:13a5da62-f48d-4752-b5ad-f1985fed53f9][Youtube: Write fewer tests! Model-based testing in React — David Khourshid]]
+** [[id:0563aa48-2681-49df-85fd-70d12eb2330d][Youtube: Model based testing: A practical example]]
+** testing graph
+https://stately.ai/viz/49cf3be4-dcb2-4d2a-a391-69aab8df9743
+
+[[id:da6fd4b3-3258-483f-981a-1124dbe05ef1][Lalamove Potential tech sharing topic]]

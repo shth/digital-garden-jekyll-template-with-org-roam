@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       283c9855-6da5-4618-be59-1f45efbd192e
+:END:
+#+title: Java String Immutability
+#+category: Java String Immutability
+#+date: [2023-01-02 Mon 17:19]
+
+Strings are immutable, so the values can be shared, made possible by the [[id:5c401a03-02cc-4d2c-ab3b-bff8395e6332][Java Compiler]]

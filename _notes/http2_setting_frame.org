@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f1461b41-44c6-4853-a99b-fa3c9a2d14eb
+:END:
+#+title: HTTP2 Setting frame
+#+category: HTTP2 Setting frame
+#+date: [2023-03-06 Mon 23:12]
+must be the first frame after the [[id:7e16d1a1-6756-415d-b83b-9046fee5ff1f][HTTP2 Preface message]]

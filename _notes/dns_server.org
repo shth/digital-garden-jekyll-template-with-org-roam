@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       66967ca0-3b0a-4fdb-8267-920795719519
+:END:
+#+title: DNS Server
+#+category: DNS Server
+#+date: [2023-03-06 Mon 21:57]

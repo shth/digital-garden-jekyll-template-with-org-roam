@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       840591cf-5f75-497d-9c4c-d3fccb5379d9
+:END:
+#+title: HBase rows
+#+category: HBase rows
+#+date: [2023-07-15 Sat 10:50]
+each row identified by [[id:2ed33a8e-d258-4f02-865c-3c0f06b8bb48][HBase row key]]
+
+- contain [[id:93bb530e-4ace-4ecc-9e03-70bd2c038a5d][HBase Column families]]

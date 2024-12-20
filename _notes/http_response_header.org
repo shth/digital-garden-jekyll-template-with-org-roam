@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       892bca56-66ea-4d0f-a0af-cf6306199101
+:END:
+#+title: HTTP Response header
+#+category: HTTP Response header
+#+date: [2023-01-02 Mon 17:05]

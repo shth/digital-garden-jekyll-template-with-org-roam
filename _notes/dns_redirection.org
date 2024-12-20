@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       65d224fb-be6f-44df-a4b9-3df6a15d4eda
+:END:
+#+title: DNS redirection
+#+category: DNS redirection
+#+date: [2023-03-06 Mon 21:57]
+use [[id:66967ca0-3b0a-4fdb-8267-920795719519][DNS Server]] to return the IP address of the origin server
+
+could assign multiple IP address to single domain
+
+Then rotate the address to balance the load
+
+Cons:
+- The client might cache the [[id:5b72ae0c-fa7b-4f02-afeb-0f75f046477b][DNS Lookup]] result, which breaks the rotation

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ef23b150-d451-484e-ad18-db4479377bb1
+:END:
+#+title: HTTP direction
+#+category: HTTP direction
+#+date: [2023-03-06 Mon 21:54]
+A redirecting server redirect the request to other origin servers using [[id:2a7fac0e-a8c4-40f4-b869-1dbed75b0ef6][HTTP 302 status code]]
+
+Cons:
+- significantly increase server load, since each request need to be redirected by a server
+- increased delay because of the added round trip

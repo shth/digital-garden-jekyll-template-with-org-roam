@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f5781adf-156b-4715-8708-71a8dda8bb14
+:END:
+#+title: Browser Error
+#+category: Browser Error
+#+date: [2023-03-24 Fri 09:51]

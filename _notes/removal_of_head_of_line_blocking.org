@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c485582e-c5a9-4211-9247-c7c5dd01bde8
+:END:
+#+title: Removal of head of line blocking
+#+category: Removal of head of line blocking
+#+date: [2023-01-02 Mon 17:32]
+
+a QUIC feature to deal with [[id:8f171f0c-1c33-41b5-8e50-55a9ffc5eabb][Head of line blocking]]
+
+made it incompatible with [[id:20a4359e-7cb9-4028-9b9b-610759322ff6][HTTP2]]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       df37c438-f23c-4a6b-afec-a7fbf6535020
+:END:
+#+title: PHP require vs include
+#+category: PHP require vs include
+#+date: [2023-03-24 Fri 15:58]
+[[id:aaec7ae2-4c84-4d52-865e-4c00f16d6187][PHP require]] will raise [[id:561c4b52-c722-4a96-bcd5-b2b159d9cc49][PHP fatal errors]] if the required file is not found
+[[id:b66ace3b-ecb7-4c9c-b2a4-8d18d82bcdc4][PHP include]] won't

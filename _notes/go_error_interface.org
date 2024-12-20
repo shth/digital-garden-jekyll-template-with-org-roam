@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       d6c8edf4-25ae-482a-ab01-b1930c875d61
+:END:
+#+title: Go Error Interface
+#+category: Go Error Interface
+#+date: [2022-08-08 Mon 19:40]
+
+The `error` [[id:7ddc8ec4-846f-48f5-9aa7-20385b6250d3][Interface]] only has an `Error` method, which returns the error message string
+
+* Creating error
+- `errors.New`
+  less common
+
+- `fmt.Errorf()`
+  more common, let you use formatting on error message as well
+* Distinguishing errors
+use [[id:5e6a2afd-1768-4876-9901-93fbff54b529][Go Type Assertion]]
+e.g.
+#+begin_example go
+if e, ok := err.(*PathError); ok {
+    // do something
+}
+#+end_example

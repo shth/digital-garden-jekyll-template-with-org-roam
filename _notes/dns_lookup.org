@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5b72ae0c-fa7b-4f02-afeb-0f75f046477b
+:END:
+#+title: DNS Lookup
+#+category: DNS Lookup
+#+date: [2023-03-06 Mon 21:58]

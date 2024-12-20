@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       97704069-75f9-4422-bff2-be7cb9b1740d
+:END:
+#+title: AWS VPC
+#+category: AWS VPC
+#+date: [2023-08-08 Tue 08:18]
+stands for virtual private cloud
+a virtual network created on AWS network
+
+- subnet
+  used to provide high availability and connectivity options
+  e.g. public and private subnet
+
+  tied to a [[id:e12d95c3-e8d3-4591-b5dc-fcef056e8231][AWS Availibility zone]]
+[[id:00e07642-1d83-4ac3-ad9e-27ce819a9c2a][AWS Developer Associate Exam pre]]

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       077457af-3a65-4960-95ca-6ad05f66ed45
+:END:
+#+title: HTTP2 pseudo-headers
+#+category: HTTP2 pseudo-headers
+#+date: [2023-03-06 Mon 23:14]
+only a limited set of header allowed, new headers cannot be added without changing the http2 spec, unlike http1
+* [[id:1b5c81f6-36a2-4925-b2de-2a4308df7099][HTTP2 :authority header]]
+belongs to the [[id:eef224a0-a3c5-41e8-93e7-701de23ecaf9][HTTP2 Origin frame]]
+
+tell the client which domain to use

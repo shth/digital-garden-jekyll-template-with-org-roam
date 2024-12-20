@@ -1,0 +1,96 @@
+:PROPERTIES:
+:ID:       c2dc41c3-18be-4b93-a689-7da08936f542
+:END:
+#+title: Youtube: Event sourcing - what could possibly go wrong
+#+category: Youtube: Event sourcing - what could possibly go wrong
+[[https://www.youtube.com/watch?v=LolGWcENf8o][link]]
+
+
+mentioned articles:
+- [[id:193a1cb2-831c-439a-b2d6-7509697c045c][Entry level event sourcing]]
+- [[id:6732751c-fd46-4548-8698-d06c73c6987f][Implementing event sourcing using a relational database]]
+- [[id:13ea2ed1-e7f0-47fc-8c39-f2ecd0eca096][Transaction event sourcing with Slick]]
+mentioned blogs:
+- [[https://softwaremill.com/blog/#tags=event%20sourcing]]
+
+* TODO take notes
+** advantages
+- debugging
+  replaying states, time travel
+- performance
+- scalability
+- works well with microservice communication
+** Event sourcing level 1
+use a big transaction to do all the update to event store and read models
+
+pros:
+- easy to implement
+- easy to reason about
+- 0 eventual consistency
+
+cons:
+- performance
+  because the read model and event store needs to be on the same database
+- scalability
+  same as performance
+
+** Event sourcing level 2
+use transaction to store the event only
+with a projector (querying the database in intervals) to update the read model after each update to event store
+
+cons:
+- eventual consistency
+- increased event store load
+- lags
+  between update of event store to querying of projector
+** Event sourcing level 3
+use transaction to store the event only
+then publish the event to [[id:fb9c2b7c-d56e-47c7-a9cf-01a691c3f99d][Event Bus]] (at-least-once delivery)
+with an [[id:fb9c2b7c-d56e-47c7-a9cf-01a691c3f99d][Event Bus]] to publish event store updates to projectors, which then update the read model
+
+
+*** Scalability
+is bound to the scalability of command service and the event store
+**** Single writer pattern
+[[id:441ec402-9c85-4bff-82cb-8298e5406310][Read more]]
+
+sharded cluster
+
+locing vs single sriter
+
+** alternatives
+*** [[id:23669273-b6ae-449d-bf76-8bd581bc1534][Change Capture Data]] logging
+using this instead of event bus
+
+for single host databases
+*** [[id:fb9c2b7c-d56e-47c7-a9cf-01a691c3f99d][Event Bus]] instead of event store
+with Kafka
+
+*** Command sourcing
+*** Event collaboration
+** [[id:cc73c909-d978-468b-a98b-149be4541366][Akka persistence]]
+
+** [[id:f7b3d06b-bd80-4800-9a2b-eeb59c276336][Lagom]]
+** [[id:136525b0-4c2a-4f45-8b25-01abf2032f92][Cassandra]]
+- partitioning by design
+- replication by design
+- leaderlss (no single point of failure)
+- optimised for writes
+** Event serialization
+[[id:1f5aaaa5-7c2e-4719-a4f6-bb6413dd6c64][Read more]]
+
+*** [[id:b6f3a12f-c17e-4fac-841e-5b6cef0661f3][Protobuf]]
+- schema first
+- lot of boilerplate code
+*** [[id:f0b23677-0c6d-4670-a036-88f7335ad007][Avro]]
+- less boilerplate
+- domain first
+** Event payload
+*** delta event
+*** rich event (event enrichment)
+*** metadata
+- sequence number
+- created at
+- event id
+- command id
+- correlation id

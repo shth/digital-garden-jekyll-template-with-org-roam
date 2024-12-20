@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       876fd66a-578b-4052-b575-a59655cdbbd6
+:END:
+#+title: Java String Comparison
+#+category: Java String Comparison
+#+date: [2023-01-02 Mon 17:17]
+don't use
+
+Strings cannot be compared by [[id:09893c20-d9e0-4029-8c76-23269e92e2eb][==]] because it only compare the address

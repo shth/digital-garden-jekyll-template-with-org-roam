@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       3ddb2b5f-c899-48c1-8509-d879d70a00bc
+:END:
+#+title: HTTP range requests
+#+category: HTTP range requests
+#+date: [2023-01-30 Mon 15:14]
+used for interrupted downloads
+
+[[id:07620dbd-4f2b-483f-b7ec-d03dc53964c3][HTTP Accept-Ranges header]] is used

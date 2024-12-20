@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       dccae9f2-d0b6-4dfd-82a9-4006f6b8b4b5
+:END:
+#+title: HTTP2 Negotiation
+#+category: HTTP2 Negotiation
+#+date: [2023-03-06 Mon 22:32]
+* [[id:0e3bd95d-cbbf-42d2-9e99-4a6528c91ab5][ALPN]]
+stands for (application layer protocol negotiation)
+
+for [[id:5abc82c9-0e32-4dee-9697-fced68ae9518][h2]] connections
+* [[id:dbf5d043-76b1-4e5c-9484-02e967d2e506][HTTP upgrade header]]
+for [[id:0c83e254-ae3e-4fb5-9522-a3499b94af97][h2c]]

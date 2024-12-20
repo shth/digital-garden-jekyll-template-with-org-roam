@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fe7d6c16-6161-4149-9d1c-c0e21380efb8
+:END:
+#+title: NX
+#+category: NX
+#+date: [2023-01-27 Fri 15:32]

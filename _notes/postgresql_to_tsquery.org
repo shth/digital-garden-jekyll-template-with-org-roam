@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e3930501-5e3a-4fbc-9e92-ce54d3a08872
+:END:
+#+title: Postgresql to_tsquery
+#+category: Postgresql to_tsquery
+#+date: [2023-06-24 Sat 13:52]

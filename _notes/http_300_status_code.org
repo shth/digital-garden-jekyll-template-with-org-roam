@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6a1f5a0f-b928-4af1-843a-8dd7123fd7e3
+:END:
+#+title: HTTP 300 status code
+#+category: HTTP 300 status code
+#+date: [2023-01-30 Mon 15:16]

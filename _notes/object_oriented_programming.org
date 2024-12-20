@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7c51c454-46a9-4cb6-bce8-c0f2b1884bb3
+:END:
+#+title: Object Oriented Programming
+#+category: Object Oriented Programming
+#+date: [2022-12-03 Sat 12:39]

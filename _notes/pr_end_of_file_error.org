@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1b2c7cc6-e58f-4955-9368-dd74c9af9f5e
+:END:
+#+title: PR_END_OF_FILE_ERROR
+#+category: PR_END_OF_FILE_ERROR
+#+date: [2023-03-24 Fri 09:51]
+this is a [[id:f5781adf-156b-4715-8708-71a8dda8bb14][Browser Error]]
+
+it happens when the browser reach the end of [[id:8ba92c44-57f6-40e3-91d9-6bc1b9df3fd5][TLS cipher suite]] but can't find a match
+
+- could happend when using [[id:08e5f305-5981-40e1-9ea7-f4d2869a6f1c][VPN]]

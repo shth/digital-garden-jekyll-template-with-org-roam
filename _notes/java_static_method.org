@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c9622f4d-24d2-4ac8-a42a-de790bfd3b98
+:END:
+#+title: Java Static Method
+#+category: Java Static Method
+#+date: [2022-12-03 Sat 13:15]

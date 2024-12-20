@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       c004a1f2-6a65-4d94-9b1d-723c8810a63e
+:END:
+#+title: HTTP Transfer-encoding Header
+#+category: HTTP Transfer-encoding Header
+#+date: [2023-01-30 Mon 15:11]
+response header that specify the encoding used on the body for transfer
+
+* chunked encoding
+used for dynamically generated data which length cannot be pre-determined
+
+need to be the last encoding applied to the body

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       de42de0d-f437-4108-9519-e71101f37476
+:END:
+#+title: Full-text search
+#+category: Full-text search
+#+date: [2023-06-24 Sat 13:49]

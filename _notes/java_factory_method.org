@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e1344b18-f009-4ff6-9e98-a2fcb84f376d
+:END:
+#+title: Java Factory Method
+#+category: Java Factory Method
+#+date: [2022-12-03 Sat 13:14]
+
+a [[id:c9622f4d-24d2-4ac8-a42a-de790bfd3b98][Java Static Method]] that returns a new instance of the class

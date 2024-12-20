@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       702b9fcc-19d4-462d-9706-47c785fb0e53
+:END:
+#+title: UTF-16 encoding
+#+category: UTF-16 encoding
+#+date: [2023-01-19 Thu 10:13]
+
+https://en.wikipedia.org/wiki/UTF-16

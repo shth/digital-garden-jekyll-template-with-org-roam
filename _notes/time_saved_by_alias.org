@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       b160080f-f31c-4477-8d2d-7614ebfbfe27
+:END:
+#+title: Time saved by alias
+#+category: Time saved by alias
+#+date: [2023-03-06 Mon 17:38]
+
+* gpstg
+save 15 seconds each
+<2023-03-06 Mon> used 100 times => 30 minutes
+* links
+[[id:da6fd4b3-3258-483f-981a-1124dbe05ef1][Lalamove Potential tech sharing topic]]

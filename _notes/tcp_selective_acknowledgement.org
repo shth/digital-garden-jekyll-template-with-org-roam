@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       391ee57f-d967-45c1-b47e-926674d1aaf4
+:END:
+#+title: TCP Selective acknowledgement
+#+category: TCP Selective acknowledgement
+#+date: [2023-03-06 Mon 23:47]
+TCP setting to only resend the missing packet instead of all packets after it

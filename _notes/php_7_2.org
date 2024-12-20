@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       bf8ee9b7-d9eb-46f2-835b-bb0a416dc259
+:END:
+#+title: PHP 7.2
+#+category: PHP 7.2
+#+date: [2023-03-09 Thu 16:13]

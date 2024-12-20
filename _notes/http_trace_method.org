@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f3706eb0-8559-4d6d-ab15-06c52f842edc
+:END:
+#+title: HTTP Trace Method
+#+category: HTTP Trace Method
+#+date: [2023-01-10 Tue 13:07]
+For debugging [[id:b48d5830-ca09-4875-9398-7710c84930c9][HTTP proxy]] flows
+
+When it reaches its destination, the whole request is packed into the body of response and sent back to client
+this includes [[id:f6c59a22-e540-40ec-8e20-40e93999a49c][HTTP Via Header]]

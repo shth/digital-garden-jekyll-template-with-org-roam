@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       79f07505-f524-48c5-834e-601a7f58e3e7
+:END:
+#+title: Java String
+#+category: Java String
+#+date: [2023-01-02 Mon 17:14]
+
+In Java, Strings are instance of the "String" class

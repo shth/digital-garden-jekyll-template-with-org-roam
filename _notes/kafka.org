@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       24ec92e1-e063-4cc8-b4b1-dc928d0cc9a2
+:END:
+#+title: Kafka
+#+category: Kafka
+#+date: [2022-07-14 Thu 11:23]

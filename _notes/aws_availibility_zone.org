@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e12d95c3-e8d3-4591-b5dc-fcef056e8231
+:END:
+#+title: AWS Availibility zone
+#+category: AWS Availibility zone
+#+date: [2023-08-08 Tue 08:22]

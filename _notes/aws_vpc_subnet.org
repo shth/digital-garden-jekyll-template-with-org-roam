@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       90879d36-28e5-417c-a279-5ab1fedc3414
+:END:
+#+title: AWS VPC subnet
+#+category: AWS VPC subnet
+#+date: [2023-08-08 Tue 08:36]

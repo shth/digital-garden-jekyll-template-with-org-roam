@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID:       dd32691f-36d5-4ec1-b918-8af0a16d76ea
+:END:
+#+title: Go Channel
+#+category: Go Channel
+#+date: [2022-08-10 Wed 18:52]
+
+A data structure for sending and receiving data between goroutines
+
+* Buffered channel
+a channel with underlying queue
+
+values sent to the channel is pushed to the queue
+the first value is received when a goroutine receive from it
+
+whether the sending/receiving goroutine blocks depends on the queue
+| queue state | receiving | sending     |
+|-------------+-----------+-------------|
+| empty       | blocks    | not blocked |
+| full        | not block | blocked     |
+* Unbuffered channel
+aka synchronous channel
+
+If a goroutine send a value, it is blocked until the value is received
+If a goroutine receive a value, it is blocked until the value is sent
+
+The Receipt of the value happen before (guaranteed) the sendind goroutine is awakened
+* Unidirectional channel
+every channel is bi-directional by default (can send and receive)
+
+a unidirectional channel can be denoted as
+#+begin_example
+chan<- T : sending only channel
+<-chan T : receiving only channel
+#+end_example
+
+* Closing channel
+** Use the [[id:e506a660-2ddf-461d-8729-95985bb05dcf][Go Range Loop]]
+#+begin_example
+for val := range channel {
+    // val is every value received from channel
+}
+#+end_example
+
+** using the second received value from channel
+#+begin_example
+val, ok := <-channel
+if !ok {
+    // channel is closed/drained
+}
+#+end_example
+[[id:a88f28c4-f273-4c7b-bbd2-ef9627b4f8af][Go Programming Blueprint]]
+
+* Coordination of multiple goroutines
+
+use [[id:54cc00f6-2c8d-4108-b412-fd9f491e42d3][Go Wait Group]]
+
+a wait group provide 3 methods:
+- Add()
+  add to the counter of running goroutines in the group
+- Done()
+  signal a finished goroutine, equivalent to Add(-1)
+- Wait()
+  block the current goroutine until all routines has finished running
+* Limiting number of concurrent goroutines
+using a buffered channel as set of "tokens", or [[id:c906789c-168f-4a77-b50a-e8d53f4ba69a][Counting Semaphore]]
+
+a goroutine must obtain a token (receive a value from tokens channel) before running its code
+and must return the token (sending a value to tokens channel) after running its code
+* Multiplexing channels
+
+with [[id:94c092e8-900f-4a3f-a862-77520f2214da][Go Select Statement]], we can wait for multiple channels simultaneously and run code depending on which communication happen first
+if multiple case trigger at the same time, it will randomly pick a case
+if non of the case is triggered, it will execute the default block
+
+#+begin_example
+select {
+    case <-ch1:
+    // ...
+    case ch2 <- y:
+    // ...
+    default:
+    // ...
+}
+#+end_example
+
+* Cancelling [[id:76bd2de6-53b6-4be1-a6da-b8d529ec7d9a][goroutine]]
+create a channel and do not send any value to it
+when need to cancel, CLOSE it
+
+#+begin_example
+var done = make(chan struct{})
+
+func cancelled() {
+    select {
+        // normally this won't trigger, but when the "done" channel is closed, it will start to receive zero values, which notify that it is time to cancel
+        case <-done:
+            return true
+        default:
+            return false
+    }
+}
+#+end_example

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       25b6ecb4-37cf-4899-bcfd-9c8d3513f24c
+:END:
+#+title: ngram
+#+category: ngram
+#+date: [2023-06-24 Sat 14:17]
+breaking down words into groups of n-characters
+e.g. [[id:48fe055d-ccaf-4c66-aec2-63e1f75c7e1d][trigram]] breaks the word into 3-charater groups

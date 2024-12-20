@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f6c59a22-e540-40ec-8e20-40e93999a49c
+:END:
+#+title: HTTP Via Header
+#+category: HTTP Via Header
+#+date: [2023-01-10 Tue 13:06]
+Each [[id:b48d5830-ca09-4875-9398-7710c84930c9][HTTP proxy]] append its domain to this header
+
+useful for:
+- detecting routing loops

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4ea5115e-490b-4e39-8b93-cf4322ab5ed7
+:END:
+#+title: Linux file mode
+#+category: Linux file mode
+#+date: [2023-05-22 Mon 14:32]

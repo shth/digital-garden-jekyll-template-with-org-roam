@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d7fc1960-f19c-43bc-a6f3-32a2582b63b3
+:END:
+#+title: PHP
+#+category: PHP
+#+date: [2023-02-28 Tue 18:06]

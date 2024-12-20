@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ce6d20ad-87cf-4b05-8999-a832967c52ef
+:END:
+#+title: Stem word
+#+category: Stem word
+#+date: [2023-06-24 Sat 13:51]

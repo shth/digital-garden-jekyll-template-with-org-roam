@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       21770cd8-0f4b-42bb-a30f-c5e2e76c63a8
+:END:
+#+title: FE Optimizations
+#+category: FE Optimizations
+#+date: [2023-01-02 Mon 16:55]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       08e5f305-5981-40e1-9ea7-f4d2869a6f1c
+:END:
+#+title: VPN
+#+category: VPN
+#+date: [2023-03-24 Fri 09:52]

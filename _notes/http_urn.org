@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ff0bd505-cc22-4404-bacc-8c9e125ccbed
+:END:
+#+title: HTTP URN
+#+category: HTTP URN
+#+date: [2023-01-02 Mon 16:57]

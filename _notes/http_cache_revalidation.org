@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       99f921aa-7cf8-413f-b235-e3bfe0357ffa
+:END:
+#+title: HTTP Cache Revalidation
+#+category: HTTP Cache Revalidation
+#+date: [2023-01-10 Tue 13:11]

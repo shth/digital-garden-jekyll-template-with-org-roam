@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1653d294-1e00-4dc0-9a5b-22f385940a10
+:END:
+#+title: Rosetta 2
+#+category: Rosetta 2
+#+date: [2023-10-07 Sat 17:28]
+a library that allow [[id:53e01920-f088-4682-859e-3e339acba6f3][Mac M1 machine]] to run applications designed for [[id:1bcfbcea-960d-42e0-84ed-cec8a39222e6][Mac Intel processors]]
+
+- translates [[id:98305694-bf8d-46ec-9617-1907e0e4f7e2][x86]] instructions to [[id:7686e8bd-4c48-4b53-a8f2-0feee21ca3f3][ARM]] instructions

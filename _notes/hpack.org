@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e50233dd-e821-46b6-a532-22b6d80a4c71
+:END:
+#+title: HPACK
+#+category: HPACK
+#+date: [2023-03-06 Mon 23:20]
+uses [[id:d6337823-c2c4-460d-bfb2-e6eaa99d8442][Lookup Table]] for compression, with both static and dynamic table
+
+the dynamic table size is set in the [[id:f1461b41-44c6-4853-a99b-fa3c9a2d14eb][HTTP2 Setting frame]] with header-table-size value
+
+works on the connection level only

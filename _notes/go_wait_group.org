@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       54cc00f6-2c8d-4108-b412-fd9f491e42d3
+:END:
+#+title: Go Wait Group
+#+category: Go Wait Group
+#+date: [2022-08-12 Fri 18:46]

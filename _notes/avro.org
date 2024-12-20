@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f0b23677-0c6d-4670-a036-88f7335ad007
+:END:
+#+title: Avro
+#+category: Avro
+#+date: [2022-07-19 Tue 09:54]

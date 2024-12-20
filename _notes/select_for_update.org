@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3cc4b38f-c1ac-42f8-97f9-f6576b6ad050
+:END:
+#+title: SELECT FOR UPDATE
+#+category: SELECT FOR UPDATE
+#+date: [2023-11-14 Tue 17:20]

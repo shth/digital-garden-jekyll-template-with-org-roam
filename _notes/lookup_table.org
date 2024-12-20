@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d6337823-c2c4-460d-bfb2-e6eaa99d8442
+:END:
+#+title: Lookup Table
+#+category: Lookup Table
+#+date: [2023-03-06 Mon 23:38]
+a compression method:
+
+replace repeated pattern with reference to the lookup table. The table can be dynamic or static

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       33847458-4722-43de-ae05-7327a2ab381f
+:END:
+#+title: DDos attack
+#+category: DDos attack
+#+date: [2023-04-11 Tue 11:43]

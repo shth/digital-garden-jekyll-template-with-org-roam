@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       51e4aa8e-9e2a-46b2-b6a8-84a4989828a3
+:END:
+#+title: HTTP Vary Header
+#+category: HTTP Vary Header
+#+date: [2023-01-30 Mon 15:19]
+response header to tell proxies which headers should be used for [[id:cad8d138-0e98-428f-90a6-1ef8fc9e813d][HTTP Content Negotiation]]

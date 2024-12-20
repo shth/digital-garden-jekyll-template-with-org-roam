@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       535c980a-edfd-438e-bd45-71189dcb3f9e
+:END:
+#+title: HTTP3
+#+category: HTTP3
+#+date: [2023-01-02 Mon 17:26]
+
+HTTP2 on top of [[id:87ac7ba1-abcb-47d6-8bda-2a87f66b1656][QUIC]]
+
+features:
+- [[id:14cecdfc-774d-4d99-bc03-f04c402cc362][Connection migration]]
+- [[id:e156518d-18c3-45c1-95c0-990043fae781][0-rtt]]

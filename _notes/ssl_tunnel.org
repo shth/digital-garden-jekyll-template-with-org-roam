@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5dc455ed-638e-42f5-acd3-09b483877d06
+:END:
+#+title: SSL Tunnel
+#+category: SSL Tunnel
+#+date: [2023-01-10 Tue 13:24]
+
+transmit [[id:f5d2a868-6e29-4593-be61-5720b7ec5061][SSL]] traffic inside of HTTP messages
+
+used [[id:35034ba3-3cf3-4e65-a062-fa2f07f9352e][HTTP Connect Method]] to tell the proxy which host and port to connect to on the origin server

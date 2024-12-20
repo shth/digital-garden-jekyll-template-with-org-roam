@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       de268ab7-ab66-4782-9e43-1307a935d7de
+:END:
+#+title: HBase region
+#+category: HBase region
+#+date: [2023-07-15 Sat 10:49]
+a chunk of [[id:840591cf-5f75-497d-9c4c-d3fccb5379d9][HBase rows]]
+
+- regions never overlap
+- stored in [[id:92203421-a820-4d09-9a29-60c3c53d6283][HBase region server]]

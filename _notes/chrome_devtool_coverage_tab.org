@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       5ece13f2-a8f6-4769-b082-d88529ffde28
+:END:
+#+title: Chrome devtool coverage tab
+#+category: Chrome devtool coverage tab
+#+date: [2023-01-02 Mon 16:54]
+- shows how much of downloaded css and js is executed
+- useful for [[id:21770cd8-0f4b-42bb-a30f-c5e2e76c63a8][FE Optimizations]]

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       f6856275-fbc0-45d9-84cc-871e96645e31
+:END:
+#+title: fingerprintJS
+#+category: fingerprintJS
+#+date: [2023-05-24 Wed 11:59]
+generate signature base on
+- user agent
+- screen resolution
+- installed fonts
+- plugin and extension
+- [[id:ebde6acb-4012-4963-98bc-f8fa66cb2510][Canvas fingerprinting]]

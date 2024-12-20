@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fb83913f-337b-4cc9-be3d-95ddae85a634
+:END:
+#+title: HBase columns
+#+category: HBase columns
+#+date: [2023-07-15 Sat 10:52]

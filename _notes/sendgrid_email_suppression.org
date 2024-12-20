@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2af6067b-489f-4648-9d3d-121f1e282651
+:END:
+#+title: Sendgrid email suppression
+#+category: Sendgrid email suppression
+#+date: [2023-05-19 Fri 15:13]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       20548195-5c08-41a1-9342-f11f5fd54dee
+:END:
+#+title: Go Map
+#+category: Go Map
+#+date: [2022-08-05 Fri 22:54]
+A key value pair
+* Key
+must be comparable with == or !=

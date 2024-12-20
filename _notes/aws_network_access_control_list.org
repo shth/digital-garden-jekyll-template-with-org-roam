@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       14acb3f4-dc89-4130-973f-e96c70db19e9
+:END:
+#+title: AWS Network access control list
+#+category: AWS Network access control list
+#+date: [2023-08-08 Tue 08:35]
+define what traffic is allowed in and out of [[id:90879d36-28e5-417c-a279-5ab1fedc3414][AWS VPC subnet]]

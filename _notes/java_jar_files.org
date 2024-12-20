@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       18dcf0aa-c853-416f-bf91-b0c7f13f00da
+:END:
+#+title: Java JAR files
+#+category: Java JAR files
+#+date: [2022-12-03 Sat 13:39]
+Java Archive files can contain class files and other file types such as image and sound files

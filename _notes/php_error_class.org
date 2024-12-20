@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       327f5baa-dbb5-45ae-b60e-7911967b8226
+:END:
+#+title: PHP Error Class
+#+category: PHP Error Class
+#+date: [2023-03-09 Thu 16:05]

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5b0bd1bc-a017-4669-9259-86842f9ecc79
+:END:
+#+title: HTTP Basic Authentication
+#+category: HTTP Basic Authentication
+#+date: [2023-01-19 Thu 09:18]
+server respond with WWW-authenticate header, 401 status code.
+then client respond with Authorization header, with user name and password encoded in Base64
+
+realm=xxx
+specify the group of permission needed for this request

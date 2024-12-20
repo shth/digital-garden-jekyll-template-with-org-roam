@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       69b95a19-d1fa-44fc-ad7b-d9f62ad9bbe4
+:END:
+#+title: CSS specified, computed and actual values spec
+#+category: CSS specified, computed and actual values spec
+#+date: [2022-12-19 Mon 09:58]
+[[https://www.w3.org/TR/CSS2/cascade.html#used-value][link]]

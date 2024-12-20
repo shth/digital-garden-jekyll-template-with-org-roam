@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9dfdddf3-e74a-46bd-bc14-0b51f89abee5
+:END:
+#+title: Common word
+#+category: Common word
+#+date: [2023-06-24 Sat 13:52]

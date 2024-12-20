@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       69b9c7fd-711f-4cfb-bd75-c81ba4815d4f
+:END:
+#+title: TCP slow start restart
+#+category: TCP slow start restart
+#+date: [2023-03-06 Mon 23:59]
+TCP will throttle back connecttion after idle period
+
+which is not desirable for web servers because it receive request in bursts

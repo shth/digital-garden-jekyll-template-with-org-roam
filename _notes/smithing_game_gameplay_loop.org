@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       e334279c-1480-4a98-9dd0-0e76fde819e4
+:END:
+#+title: Smithing game gameplay loop
+#+category: Smithing game gameplay loop
+#+date: [2023-04-10 Mon 11:44]
+1. Crafting
+   create a piece of weapon based on a blueprint
+   the blueprint will be rated according to how much it match the blueprint based on color and shape
+   1. select material
+      affects
+      1. color
+      2. number of hits
+   2. select temperature
+      affects
+      1. number of hits
+   3. hammer
+      affects
+      1. shape
+   4. submit
+      submit the weapon for rating
+2. React
+   1. after submitting your weapon, you can see and rate other's weapon on the same blueprint
+   2. you can react to their weapon with a few reactions
+      1. WTF
+      2. LOL
+      3. Cool

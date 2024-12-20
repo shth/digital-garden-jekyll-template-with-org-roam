@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       935a5c8f-541d-4b3e-b700-49e1915fc125
+:END:
+#+title: Git
+#+category: Git
+#+date: [2022-07-13 Wed 20:42]

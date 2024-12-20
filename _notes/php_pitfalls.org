@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       53f1efb5-07ec-4c18-b45f-6fb973520541
+:END:
+#+title: PHP Pitfalls
+#+category: PHP Pitfalls
+#+date: [2023-02-28 Tue 18:13]
+
+[[id:d7fc1960-f19c-43bc-a6f3-32a2582b63b3][PHP]]

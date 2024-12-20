@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a2836acb-ebe3-41c9-92c2-82294e7d4b58
+:END:
+#+title: HTTP2 Goaway frame
+#+category: HTTP2 Goaway frame
+#+date: [2023-03-06 Mon 23:17]
+used to shut down the connection

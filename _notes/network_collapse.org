@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ba20cc15-248b-49a1-98d8-8254f0bf7df1
+:END:
+#+title: Network Collapse
+#+category: Network Collapse
+#+date: [2023-03-06 Mon 23:42]
+when the network spend more time transmitting lost packet than new packets

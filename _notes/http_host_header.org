@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       71c374d7-91ad-4622-9109-d1483ced2174
+:END:
+#+title: HTTP Host Header
+#+category: HTTP Host Header
+#+date: [2023-01-10 Tue 13:05]
+used for:
+- [[id:9f4479d2-4122-45e0-9fbf-f9353d1f0f5f][Virtual hosting]]
+- intercepting [[id:b48d5830-ca09-4875-9398-7710c84930c9][HTTP proxy]] to determine the original ip address

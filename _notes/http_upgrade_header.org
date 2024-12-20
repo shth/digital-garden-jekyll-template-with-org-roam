@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       dbf5d043-76b1-4e5c-9484-02e967d2e506
+:END:
+#+title: HTTP upgrade header
+#+category: HTTP upgrade header
+#+date: [2023-03-06 Mon 22:34]
+indicate that the client/server wants to use [[id:20a4359e-7cb9-4028-9b9b-610759322ff6][HTTP2]]
+
+must be used with [[id:4760ab5d-501e-4d64-bf57-b0a32fc319bc][http2-setting header]]
+
+if server agrees to use HTTP2, then it will response with [[id:751627eb-908c-44e8-bc43-eef2ffe1266d][HTTP 101 status code]]

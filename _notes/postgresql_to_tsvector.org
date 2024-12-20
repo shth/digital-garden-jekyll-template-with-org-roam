@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c23c1893-8b13-4cd0-b7fa-9bb82e55e89c
+:END:
+#+title: Postgresql to_tsvector
+#+category: Postgresql to_tsvector
+#+date: [2023-06-24 Sat 13:48]

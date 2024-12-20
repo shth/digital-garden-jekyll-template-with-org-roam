@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       10a49fac-dfe5-4714-8431-0ac3a505390c
+:END:
+#+title: HTTP Content-length header
+#+category: HTTP Content length header
+#+date: [2023-01-02 Mon 17:01]
+the length of the entity body,
+will be the length of encoded body if [[id:7a4c6b38-a80f-467d-ba8b-1c0b3c0a85be][HTTP Content-Encoding header]] is used
+
+usage:
+detect message truncation due to server crash
+
+essential in [[id:db9c7da8-d9dd-4ef5-a57c-7d60cfa5856b][HTTP Persistent connection]]:
+let the client know when the message end
+
+should be ignored if the method doesn't support body, e.g. [[id:db12a6b9-ca19-4832-bddf-82e87017e150][HTTP Head Method]]

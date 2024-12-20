@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       945fb1fc-e582-4841-bd69-ef9fca81fb17
+:END:
+#+title: Software testing technique
+#+category: Software testing technique
+#+date: [2023-04-06 Thu 17:04]

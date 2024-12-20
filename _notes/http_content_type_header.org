@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       bfa8401e-79a6-42ce-b704-f2b0170fda36
+:END:
+#+title: HTTP Content-type Header
+#+category: HTTP Content-type Header
+#+date: [2023-01-30 Mon 15:04]
+* Multipart/form-data
+Used for text input and file upload in form submission
+
+each parts can have its own set of directives
+** directives
+- boundary=xxx
+  arbitrary string used to delimit the different parts
+
+* Multipart/byterange
+a multipart response with [[id:1978cc09-191f-4daa-bebc-048621f72c79][HTTP Content-range Header]] to indicate the range of each part
+
+used with [[id:fc8619dc-d6f4-4746-b7a7-467e863f655d][HTTP 206 status code]]

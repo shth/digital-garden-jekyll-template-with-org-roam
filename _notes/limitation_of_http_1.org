@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8c2d7d8f-8366-4dba-a462-9f30c34c9926
+:END:
+#+title: limitation of HTTP 1
+#+category: limitation of HTTP 1
+#+date: [2023-03-06 Mon 22:09]

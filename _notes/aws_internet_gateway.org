@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       54209931-23e7-48f5-98b1-2b1a1f964ffe
+:END:
+#+title: AWS Internet gateway
+#+category: AWS Internet gateway
+#+date: [2023-08-08 Tue 08:24]
+connects a [[id:97704069-75f9-4422-bff2-be7cb9b1740d][AWS VPC]] to the internet
+
+similar to a modem

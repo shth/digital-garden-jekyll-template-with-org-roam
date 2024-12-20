@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       f3ce2112-ccce-4173-ad84-8f339cec1fbd
+:END:
+#+title: Go Interface
+#+category: Go Interface
+#+date: [2022-08-05 Fri 22:56]
+* Interface value
+
+when a variable is initialized as an interface type, it becomes interface value
+
+it has following structure
+- type descriptor
+
+ the current run time type after variable assignment
+
+  e.g.
+ #+begin_src go
+var x io.Writer
+
+x = os.Stdout
+ #+end_src
+ x's type descriptor will be *os.File(os.Stdout's type)
+- value
+ the value of the run time type
+
+Since interface values can be compared with == or !=, they can be the key of a [[id:20548195-5c08-41a1-9342-f11f5fd54dee][Go Map]]
+two interface values are equal if their type descriptor and value is equal
+CAVEAT: not all run time value are comparable, e.g. slices, maps. So it could cause panic

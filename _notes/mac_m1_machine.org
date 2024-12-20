@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       53e01920-f088-4682-859e-3e339acba6f3
+:END:
+#+title: Mac M1 machine
+#+category: Mac M1 machine
+#+date: [2023-10-07 Sat 17:27]

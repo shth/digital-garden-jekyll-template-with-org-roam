@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       495184c3-7dd2-4125-8ae6-d32e511d6319
+:END:
+#+title: Go Defer
+#+category: Go Defer
+#+date: [2022-09-10 Sat 09:55]

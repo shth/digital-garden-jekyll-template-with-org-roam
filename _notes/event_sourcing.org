@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       e88ffc37-d8b6-46cf-b5cb-0eb44bd61cf4
+:END:
+#+title: Event sourcing
+#+category: Event sourcing
+#+date: [2022-07-13 Wed 20:28]
+
+- A pattern of [[id:dbc0743d-0aa9-413b-a186-68806b96c5a0][Event Driven Architecture]]
+- a system that store a log of events
+- the application state is derived from the events
+- can replayed at anytime to recreate application state
+- sort of like what [[id:935a5c8f-541d-4b3e-b700-49e1915fc125][Git]] does, and all other accounting/journal system
+- no update/delete operations, only append
+- only model that doesn't lose information
+
+- can do projection
+  - can run report on any point in time of the history of the system
+  - start from the very beginning of the event logs
+- prevent super user attack
+- because the event logs should never be updated/deleted
+- you don't need a [[id:75ab30b5-8d7b-4b74-ae4a-23aa45817a20][Service Bus]]
+- Consumer driven subscription
+  functions like a blog
+
+  consumer will remember where they are in the event stream
+  examples:
+  - [[id:24ec92e1-e063-4cc8-b4b1-dc928d0cc9a2][Kafka]]
+
+- Server deriven subscription
+  need a control channel for the client to communicate with the server, e.g. getting old events before the subscription
+  - [[id:cd1bf3f8-1db7-4b80-b3c1-5f37406a607c][AMQP]]
+- [[id:d76faf25-a955-43b3-8e8d-a0dda521e6a5][CQRS]]
+  building out actors for you domain model
+* partial reversal
+append an event to patch the original event
+* full reversal
+append an event to fullly overwrite the first event, then append an event of the original intention
+* optimization techniques
+
+** snapshots
+taking snapshots of application state and apply events starting from there
+
+save the time to process events before that
+
+- don't save the snapshots in the event logs cause that will cause concurrency problems
+  - store them separately
+- avoid them if possible
+  - because of versioning problems
+** read models
+a different representation of the application state that you can query from, to avoid processing all the events form the start
+
+* reference
+* books
+- database refactoring patterns
+* sidenotes
+- Greg Young: if i'm going to build a topic based pub-sub, I'll use [[id:b584a488-8c54-4485-b3be-867c87101b2c][Ruby On Rails]] with [[id:e951d482-41de-4aa0-870a-a7529595c987][MySQL]]

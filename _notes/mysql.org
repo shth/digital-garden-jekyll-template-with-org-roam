@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e951d482-41de-4aa0-870a-a7529595c987
+:END:
+#+title: MySQL
+#+category: MySQL
+#+date: [2022-07-14 Thu 11:15]

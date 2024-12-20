@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       f3c722e9-3407-40eb-b2f8-6521dac9f6fb
+:END:
+#+title: NPM peer dependencies
+#+category: NPM peer dependencies
+#+date: [2023-02-09 Thu 17:52]
+it's saying "if you install me, you should install these packages as well"
+
+these will be installed at consumer package's node_module/
+
+* if using dependencies
+packageA package.json
+#+begin_src javascript
+{
+  "dependencies": {
+    "packageB": "x.x.x"
+  }
+}
+#+end_src
+packageB package.json
+#+begin_src javascript
+{
+  "dependencies": {
+    "packageC": "x.x.x"
+  }
+}
+#+end_src
+
+the result would be
+node_module/packageB
+node_module/packageB/node_module/packageC
+* if using peer-dependencies
+packageA package.json
+#+begin_src javascript
+{
+  "dependencies": {
+    "packageB": "x.x.x"
+  }
+}
+#+end_src
+packageB package.json
+#+begin_src javascript
+{
+  "peerDependencies": {
+    "packageC": "x.x.x"
+  }
+}
+#+end_src
+
+the result would be
+node_module/packageB
+node_module/packageC

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       eef224a0-a3c5-41e8-93e7-701de23ecaf9
+:END:
+#+title: HTTP2 Origin frame
+#+category: HTTP2 Origin frame
+#+date: [2023-03-06 Mon 23:30]

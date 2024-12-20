@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b1d68ed7-5433-43e9-b765-d7206011cac9
+:END:
+#+title: T digest
+#+category: T digest
+#+date: [2023-01-02 Mon 17:37]

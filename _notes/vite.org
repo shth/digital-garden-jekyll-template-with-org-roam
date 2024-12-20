@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       44ed96ba-590b-42fb-939a-e6c0ea623833
+:END:
+#+title: Vite
+#+category: Vite
+#+date: [2022-09-16 Fri 14:26]
+Uses [[id:0e6b6166-260e-46ac-a446-889a12fb8124][Rollup]] bundler

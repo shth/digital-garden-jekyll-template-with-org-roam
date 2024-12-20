@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5152b3f7-dd74-45d3-a7ab-beaa549ebab8
+:END:
+#+title: XState
+#+category: XState
+#+date: [2023-02-04 Sat 00:02]

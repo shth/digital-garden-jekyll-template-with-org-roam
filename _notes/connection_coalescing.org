@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e8d897ba-7edf-453b-9dfb-4c799a86bd5f
+:END:
+#+title: Connection coalescing
+#+category: Connection coalescing
+#+date: [2023-03-06 Mon 23:28]
+allow single connection to be used for several domain
+
+possible when different domains resolve to the same IP and the [[id:1409f1f8-06a1-4c74-8e10-bf38d2ff4007][TLS Certificate]] cover them

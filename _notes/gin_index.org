@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b9bd48fe-a2bc-4cf3-b07c-8b4ab0bd899c
+:END:
+#+title: GIN index
+#+category: GIN index
+#+date: [2023-06-24 Sat 13:54]
+command data structure for indexing [[id:de42de0d-f437-4108-9519-e71101f37476][Full-text search]]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       80c41d70-018f-4ff7-91da-feff08e4918b
+:END:
+#+title: Encapsulation
+#+category: Encapsulation
+#+date: [2022-12-03 Sat 12:42]

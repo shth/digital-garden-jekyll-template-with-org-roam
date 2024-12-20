@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3d9e7d6a-68d4-4c97-9315-ceda93677fff
+:END:
+#+title: ASCII
+#+category: ASCII
+#+date: [2023-01-02 Mon 16:58]

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4bb15433-bbd5-45f3-ab38-0a5bbf2eb8cf
+:END:
+#+title: HTTP2 Priority Frame
+#+category: HTTP2 Priority Frame
+#+date: [2023-03-06 Mon 23:13]
+set the priority of each data stream

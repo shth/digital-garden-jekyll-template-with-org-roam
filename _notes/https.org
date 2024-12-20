@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ec5b68a4-dc08-453a-a0ea-53df340f6aac
+:END:
+#+title: HTTPS
+#+category: HTTPS
+#+date: [2023-01-02 Mon 17:12]
+
+HTTPS = [[id:b10ceeb9-aad3-47f5-894d-33ad1a23d74b][HTTP]] + [[id:a80d8cbf-d729-465c-88ff-48db0876cca0][TLS]]
+
+connections are made to port 443

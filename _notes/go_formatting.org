@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9ba4d5c6-fd8a-46ca-b994-b331f2c0ec1b
+:END:
+#+title: Go Formatting
+#+category: Go Formatting
+#+date: [2022-11-26 Sat 10:42]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9475e0e3-7c32-4c96-b631-819ab6166ee8
+:END:
+#+title: Peronsal User
+#+category: Peronsal User
+#+date: [2022-09-06 Tue 11:20]

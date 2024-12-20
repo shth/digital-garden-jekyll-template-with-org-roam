@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       04c46b9f-8f3e-426d-9d0a-c3064204825e
+:END:
+#+title: AWS KMS
+#+category: AWS KMS
+#+date: [2023-04-06 Thu 15:39]
+stands for key management system
+
+provides:
+- key policies
+- key rotation
+- key usage auditing

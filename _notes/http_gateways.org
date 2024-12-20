@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       def1d088-1965-4640-805e-8d7641c04bfc
+:END:
+#+title: HTTP Gateways
+#+category: HTTP Gateways
+#+date: [2023-01-02 Mon 17:02]
+
+HTTPS/HTTP gateway:
+sit in front of origin servers and decrypt HTTPS messages before sending it to origin servers
+they offload the decryption workload from origin servers and are often faster

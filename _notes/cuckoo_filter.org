@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d7c07802-1464-4a54-b359-3f99d7c1c484
+:END:
+#+title: Cuckoo filter
+#+category: Cuckoo filter
+#+date: [2023-01-02 Mon 17:37]
+
+faster on read than [[id:4b036bd5-8792-4ece-97a4-63ce6354a2da][Bloom filter]] and allow deletion

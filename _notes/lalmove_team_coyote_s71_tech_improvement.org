@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       bdebb25b-5dca-4844-91f6-6ff872370662
+:END:
+#+title: Lalamove Team Coyote S71 tech improvement
+#+category: Lalmove Team Coyote S71 tech improvement
+#+date: [2022-09-28 Wed 17:55]
+* add eslint rules in jest to prevent mutating global state without cleaning up
+e.g. feature flags
+* add e2e test in staging
+to avoid big bang after big deployment freeze

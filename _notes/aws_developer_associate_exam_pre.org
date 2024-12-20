@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       00e07642-1d83-4ac3-ad9e-27ce819a9c2a
+:END:
+#+title: AWS Developer Associate Exam pre
+#+category: AWS Developer Associate Exam pre
+#+date: [2023-08-08 Tue 08:17]

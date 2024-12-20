@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       11ad0795-2d1b-4299-8b21-b980f2632efd
+:END:
+#+title: DNS pre fetch
+#+category: DNS pre fetch
+#+date: [2023-03-06 Mon 23:27]
+using [[id:a8e99d19-5b3f-4522-8b05-958b0d581cd9][HTML Link tag]]

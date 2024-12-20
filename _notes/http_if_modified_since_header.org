@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       77b76896-8f8d-44f8-8737-5acacc413955
+:END:
+#+title: HTTP If-Modified-Since header
+#+category: HTTP If-Modified-Since header
+#+date: [2023-01-10 Tue 13:12]
+a request header to check if cache entry is not modified, if yes, server will return [[id:5996e0a9-84cb-4feb-ba43-c63b9027c4b7][HTTP 304 status code]]
+
+the value is often compared with the string stored on server, instead of actual time comparison

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       48fe055d-ccaf-4c66-aec2-63e1f75c7e1d
+:END:
+#+title: trigram
+#+category: trigram
+#+date: [2023-06-24 Sat 14:18]
+
+can be used to string match with some leniency for typos

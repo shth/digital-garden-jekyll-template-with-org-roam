@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       bc46fa6a-1cba-424b-b3e0-73304aadf2fa
+:END:
+#+title: Go Mutex
+#+category: Go Mutex
+#+date: [2022-09-10 Sat 09:47]
+
+an unbuffered channel which act as [[id:c906789c-168f-4a77-b50a-e8d53f4ba69a][Counting Semaphore]] for how many [[id:76bd2de6-53b6-4be1-a6da-b8d529ec7d9a][Go goroutine]] can run at a time
+
+usually it is to guard some variable to ensure that only 1 [[id:76bd2de6-53b6-4be1-a6da-b8d529ec7d9a][Go goroutine]] can access it
+
+#+begin_src go
+var mu sync.Mutex
+
+func() {
+  mu.Lock()    // acquire access
+  // ...
+  mu.Unlock()  // release access
+}
+#+end_src
+* Gotchas
+- make sure to unlock the lock in every path, including error path
+  otherwise will lead to deadlock
+
+  you may use `[[id:495184c3-7dd2-4125-8ae6-d32e511d6319][Go Defer]]` statement to make sure it is done after the function has returned

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       75ab30b5-8d7b-4b74-ae4a-23aa45817a20
+:END:
+#+title: Service Bus
+#+category: Service Bus
+#+date: [2022-07-14 Thu 11:20]

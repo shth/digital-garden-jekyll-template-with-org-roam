@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7780e387-9f9a-42e8-8d8b-b4063f9eec9b
+:END:
+#+title: HTTP Accept-Encoding header
+#+category: HTTP Accept-Encoding header
+#+date: [2023-01-30 Mon 15:09]
+client request header that specify the list of encoding that is supported

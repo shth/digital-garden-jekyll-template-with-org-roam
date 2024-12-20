@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9437402f-cf1d-4b3a-9ef0-dc17988a5f5e
+:END:
+#+title: Git log -S flag
+#+category: Git log
+#+date: [2023-03-06 Mon 12:43]

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7481b982-b73b-4801-ad65-178ff5c0ba00
+:END:
+#+title: Someday
+* [[https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html][building an HTML engine from scratch]]
+* [2021-05-31 Mon] read something interesting about address validation
+Nearly every [[id:13d3942c-96f7-4b7e-908b-4349c84309dd][Database]] course examines postal addresses as a good baseline tutorial for data modelling in standard form

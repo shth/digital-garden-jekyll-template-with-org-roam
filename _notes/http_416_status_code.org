@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       03769f83-c0b2-46b7-a80d-1890f3a65be3
+:END:
+#+title: HTTP 416 status code
+#+category: HTTP 416 status code
+#+date: [2023-01-02 Mon 17:09]

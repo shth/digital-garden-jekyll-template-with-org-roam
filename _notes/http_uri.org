@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e3a7ad4b-4740-400a-b0f4-4574ef8ea0d8
+:END:
+#+title: HTTP URI
+#+category: Http URI
+#+date: [2023-01-02 Mon 16:56]
+stands for "Universal Resource Identifier"
+
+includes [[id:2e8741a1-3be0-4036-bea8-4ddfcedbd486][HTTP URL]] and [[id:ff0bd505-cc22-4404-bacc-8c9e125ccbed][HTTP URN]]

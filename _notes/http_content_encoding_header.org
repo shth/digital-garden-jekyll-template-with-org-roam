@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7a4c6b38-a80f-467d-ba8b-1c0b3c0a85be
+:END:
+#+title: HTTP Content-Encoding header
+#+category: HTTP Content-Encoding header
+#+date: [2023-01-19 Thu 09:26]
+Server response header to specify the encoding used on the entity body
+
+most popular is gzip

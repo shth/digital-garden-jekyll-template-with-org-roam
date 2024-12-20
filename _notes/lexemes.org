@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       98eaa6ae-dc2d-45dd-9b33-01bcfc84edcb
+:END:
+#+title: Lexemes
+#+category: Lexemes
+#+date: [2023-06-24 Sat 13:48]

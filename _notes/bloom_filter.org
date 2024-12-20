@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4b036bd5-8792-4ece-97a4-63ce6354a2da
+:END:
+#+title: Bloom filter
+#+category: Bloom filter
+#+date: [2023-01-02 Mon 17:38]
+
+used to determine if a value has not appeared before
+
+faster when adding items compared to [[id:d7c07802-1464-4a54-b359-3f99d7c1c484][Cuckoo filter]]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5876fb39-0f52-45bb-96d0-74bbebad30e0
+:END:
+#+title: Java primitive types
+#+category: Java primitive types
+#+date: [2022-12-03 Sat 13:09]

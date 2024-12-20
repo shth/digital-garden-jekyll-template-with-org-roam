@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       d1205378-4c9d-43ce-9236-3e9a5189a66e
+:END:
+#+title: Java Array
+#+category: Java Array
+#+date: [2022-12-03 Sat 12:23]
+
+fixed in size
+for variable size, use [[id:50448fd5-850e-4791-99c3-d2eadb106848][Java Array List]]
+
+used "{}" to denote
+e.g. int[] a = { 1, 2, 3 }
+
+interation: [[id:385ab114-19a1-4ddf-9416-3bf61545b4f7][Java For each loop]]
+for (variable: collection) statement
+
+e.g.
+for (int element: a) {
+  System.out.println(element);
+}

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8a404302-ff83-45da-9192-3e45790ce324
+:END:
+#+title: Java Object Equal
+#+category: Java Object Equal
+#+date: [2022-12-12 Mon 22:41]
+it's a class method of "Object" class. Any class can override it to control the comparison logic because "Object" is the superclass of all clasess in Java
+
+it needs to be:
+- reflexive
+  x.equals(x) == true
+- symmetric
+  x.equals(y) == y.equals(x)
+- transitive
+  if x.equals(y) && y.equals(z) == true
+  then x.equals(z) == true

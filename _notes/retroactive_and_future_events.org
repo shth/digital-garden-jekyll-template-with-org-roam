@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       4364d939-0dd7-4e17-8c12-04bac6dec9fb
+:END:
+#+title: Retroactive and future events
+#+category: Retroactive and future events
+#+date: [2022-07-25 Mon 22:32]
+To handle adding retroactive events for [[id:e88ffc37-d8b6-46cf-b5cb-0eb44bd61cf4][Event sourcing]], there are 3 strategies:
+-

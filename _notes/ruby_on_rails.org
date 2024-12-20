@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b584a488-8c54-4485-b3be-867c87101b2c
+:END:
+#+title: Ruby On Rails
+#+category: Ruby On Rails
+#+date: [2022-07-14 Thu 11:15]

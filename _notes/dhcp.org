@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8889b548-84e6-4379-807b-e5f05ac2af86
+:END:
+#+title: DHCP
+#+category: DHCP
+#+date: [2023-03-06 Mon 22:05]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0946dc0b-5608-4feb-a68e-b06df78a2f3f
+:END:
+#+title: Postgresql full text search
+#+category: Postresql full text search
+#+date: [2023-06-24 Sat 13:47]
+[[id:c23c1893-8b13-4cd0-b7fa-9bb82e55e89c][Postgresql to_tsvector]] and [[id:e3930501-5e3a-4fbc-9e92-ce54d3a08872][Postgresql to_tsquery]] turns a string into [[id:98eaa6ae-dc2d-45dd-9b33-01bcfc84edcb][Lexemes]], which ignore the [[id:558f924a-7af8-467b-bddd-42aa95ba123c][Stop words]] like "a", "the", and transform the [[id:9dfdddf3-e74a-46bd-bc14-0b51f89abee5][Common word]] into its [[id:ce6d20ad-87cf-4b05-8999-a832967c52ef][Stem word]] for comparison.
+
+Useful in [[id:de42de0d-f437-4108-9519-e71101f37476][Full-text search]] scenarios

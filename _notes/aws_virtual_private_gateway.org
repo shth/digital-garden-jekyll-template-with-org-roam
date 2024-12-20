@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5e7605d6-1bb2-427b-91d0-d6c9f5e9f3d4
+:END:
+#+title: AWS Virtual private gateway
+#+category: AWS Virtual private gateway
+#+date: [2023-08-08 Tue 08:26]
+connects a [[id:97704069-75f9-4422-bff2-be7cb9b1740d][AWS VPC]] to a private network
+
+useful for creating [[id:08e5f305-5981-40e1-9ea7-f4d2869a6f1c][VPN]]

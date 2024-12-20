@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c8e9f7ba-1498-4c90-a05a-529235fda893
+:END:
+#+title: Advantage of having a web server in front of application server
+#+category: Advantage of having a web server in front of application server
+#+date: [2023-03-06 Mon 22:27]
+- Offload serving static assets
+- Offload [[id:20a4359e-7cb9-4028-9b9b-610759322ff6][HTTP2]]

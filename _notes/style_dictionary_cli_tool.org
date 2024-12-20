@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c8984161-1e2c-4d31-b85e-6e852c6d6e15
+:END:
+#+title: Style Dictionary CLI tool
+#+category: Style Dictionary CLI tool
+#+date: [2023-04-06 Thu 16:13]

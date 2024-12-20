@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2e720087-c790-433b-8861-3c331d7f611f
+:END:
+#+title: HTTP2 Window update frame
+#+category: HTTP2 Window update frame
+#+date: [2023-03-06 Mon 23:12]
+control the amount of data available to be sent on the connection/stream
+
+if it is set on stream id 0, then it applis to the whole connection
+
+i.e. set the flow control window
+
+only affect [[id:d08248b1-1a71-4d81-af6f-ea1bc937ba10][HTTP2 data frame]]
+
+each data sent subtract it and every acknowledge data add it back

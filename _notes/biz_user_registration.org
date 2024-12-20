@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       754af2bb-f3c3-4462-98f3-422674f9ce0b
+:END:
+#+title: Biz User Registration
+#+category: Biz User Registration
+#+date: [2022-09-06 Tue 10:39]
+
+ways to create business user
+1. Register directly as business user at [[id:1cb641a8-0e04-4645-a63a-ee6ba1ceeca5][Sign Up Page]]
+2. Register as individual user, then upgrade to business user
+
+[[id:9475e0e3-7c32-4c96-b631-819ab6166ee8][Peronsal User]] will be created also when creating a Business user
+
+Business user need to do OTP verfication, after OTP:
+- under t_ep table
+  - ep_id + staff_id will be created
+  - platform id will be assigned

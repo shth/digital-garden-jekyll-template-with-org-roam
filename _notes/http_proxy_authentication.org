@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4c433a12-638b-4a6e-b6db-08bef93764b2
+:END:
+#+title: HTTP Proxy Authentication
+#+category: HTTP Proxy Authentication
+#+date: [2023-01-19 Thu 09:19]
+[[id:7334bad2-bd89-4eea-bdb5-5184d0275ab1][HTTP 407 status code]]

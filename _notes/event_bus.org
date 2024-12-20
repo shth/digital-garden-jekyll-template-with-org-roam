@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fb9c2b7c-d56e-47c7-a9cf-01a691c3f99d
+:END:
+#+title: Event Bus
+#+category: Event Bus
+#+date: [2022-07-19 Tue 09:31]

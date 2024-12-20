@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ed48b76d-45e4-47e1-acb1-a87f88834cfd
+:END:
+#+title: SPDY
+#+category: SPDY
+#+date: [2023-03-06 Mon 22:26]

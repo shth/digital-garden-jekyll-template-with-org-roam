@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       12016c9f-0f66-40fc-b1d3-325d74da6ad2
+:END:
+#+title: Event sourcing projection model
+#+category: Event sourcing projection model
+#+date: [2022-07-25 Mon 23:21]

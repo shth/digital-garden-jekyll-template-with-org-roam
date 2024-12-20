@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       57e0a986-d0dd-4efb-a990-5d88b997f0e1
+:END:
+#+title: Java Object Method
+#+category: Java Object Method
+#+date: [2022-12-03 Sat 13:04]
+
+can access all objects of its class
+e.g.
+
+#+begin_src java
+class Employee
+{
+    public boolean equals(Employee other)
+    {
+        return name.equals(other.name);
+    }
+}
+#+end_src

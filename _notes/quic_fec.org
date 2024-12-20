@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bdfe770c-df29-453f-81ef-e162262b9f43
+:END:
+#+title: QUIC FEC
+#+category: QUIC FEC
+#+date: [2023-03-07 Tue 00:14]
+stands for forward erasure correction
+
+include part of the packet in neighbouring packets so that if one packet is dropped, it can be reassembled from other neightbouring packet

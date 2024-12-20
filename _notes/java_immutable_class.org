@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       96337a72-e565-4c25-ad04-5cd2e339a1a0
+:END:
+#+title: Java Immutable class
+#+category: Java Immutable class
+#+date: [2022-12-03 Sat 13:10]

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ebde6acb-4012-4963-98bc-f8fa66cb2510
+:END:
+#+title: Canvas fingerprinting
+#+category: Canvas fingerprinting
+#+date: [2023-05-24 Wed 13:58]
+
+render a hidden image and analyze the pixel data to generate a unique identifier
+
+[[https://fingerprint.com/blog/canvas-fingerprinting/][how canvas fingerprinting work]]

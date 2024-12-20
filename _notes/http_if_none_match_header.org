@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       95603726-cd2c-42a1-a151-551fa98839ab
+:END:
+#+title: HTTP If-None-Match Header
+#+category: HTTP If-None-Match Header
+#+date: [2023-01-10 Tue 13:16]
+an arbitrary, comma separated string of identifiers of the file
+
+if one of the identifier is request is same as the one on server, the cache is considered fresh
+
+useful scenarios:
+- document can be changed often but content not modified
+- document content can be modified but not in significant way
+- document content can be modified in sub seconds interval

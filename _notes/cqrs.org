@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d76faf25-a955-43b3-8e8d-a0dda521e6a5
+:END:
+#+title: CQRS
+#+category: CQRS
+#+date: [2022-07-14 Thu 11:32]
+[[https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs][introduction]]
+
+advantage:
+- can scale the read and write operation independently
+- can separate the read and write business logic to reduce complexity
+-

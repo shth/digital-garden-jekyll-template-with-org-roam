@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       0a513b66-64eb-4dc1-94cd-de698ba27596
+:END:
+#+title: CSV
+#+category: CSV
+#+date: [2023-03-21 Tue 18:12]
